@@ -35,7 +35,10 @@ public class GameController : MonoBehaviour
     public BeatRow p2Row;
 
     [SerializeField] private float stateTime = 120.0f;
-    private float stateTimeKeep;
+    private float stateTimeKeep = 0.0f;
+
+    [SerializeField] private float timeBetweenBeats = 0.5f;
+    private float timeBetweenKeep = 0.0f;
 
     [SerializeField] private int beatTempo;
 
@@ -53,8 +56,7 @@ public class GameController : MonoBehaviour
         currentState = GameState.CharacterStage;
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
-        stateTimeKeep = stateTime;
-        StartCoroutine(debugSpawn());
+        //StartCoroutine(debugSpawn());
     }
 
     // Update is called once per frame
@@ -76,11 +78,15 @@ public class GameController : MonoBehaviour
 
                         break;
                 }
-
                 currentState = GameState.SlapState;
                 break;
             case GameState.SlapState:
-
+                timeBetweenKeep += Time.deltaTime;
+                if (timeBetweenKeep > timeBetweenBeats)
+                {
+                    spawnBeats();
+                    timeBetweenKeep = 0.0f;
+                }
                 break;
         }
     }
@@ -165,5 +171,14 @@ public class GameController : MonoBehaviour
         spawnBeats(0);
         yield return new WaitForSeconds(2.0f);
         spawnBeats(1);
+    }
+
+    public int getP1Health()
+    {
+        return p1Health;
+    }
+    public int getP2Health()
+    {
+        return p2Health;
     }
 }

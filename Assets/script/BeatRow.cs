@@ -120,6 +120,4 @@ public class BeatRow : MonoBehaviour
     {
         isP1 = b;
     }
-
-    
 }
