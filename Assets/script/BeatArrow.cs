@@ -9,6 +9,8 @@ public class BeatArrow : MonoBehaviour
 
     RectTransform rect;
 
+    private bool isDone = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +20,10 @@ public class BeatArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rect.position -= new Vector3 (0f, beatTempo * Time.deltaTime, 0f);
+        if (!isDone)
+        {
+            rect.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+        }
     }
 
     public void setDirection(int s)
@@ -45,14 +50,16 @@ public class BeatArrow : MonoBehaviour
     public int getDirection() { return direction; }
 
     public void beatDone(bool isCorrect) {
+        isDone = true;
         if (isCorrect)
         {
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
+        Debug.Log("Destroy");
         Destroy(this.gameObject);
     }
 
@@ -61,8 +68,8 @@ public class BeatArrow : MonoBehaviour
         beatTempo = bpm;
     }
 
-/*    IEnumerator setOpacity()  FOR CINDERELLA
+    IEnumerator deadAnimation()
     {
-
-    }*/
+        yield return WaitForSeconds(1.0f);
+    }
 }

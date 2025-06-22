@@ -11,9 +11,7 @@ public class BeatRow : MonoBehaviour
     private float correctKeep;*/
     private bool isP1;
 
-    public Transform wrongColTop;
-    public Transform correctCol;
-    public Transform wrongColBot;
+    public ArrowChecker correctCol;
 
     KeyCode keyToPress;
 
@@ -32,35 +30,18 @@ public class BeatRow : MonoBehaviour
                         {
                             correctKeep -= Time.deltaTime;
                         }*/
+            if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
+            {
+                //right
+                Debug.Log("Correct" + isP1);
 
-            if (Input.GetKeyDown(keyToPress) && wrongColTop != null)
-            {
-                if (wrongColTop.gameObject.tag != "Beat") { }
-                else
-                {
-                    //wrong
-                    GameController.instance.minusPlayerHealth(isP1);
-                    GameController.instance.dequeCurrentBeat(isP1, false);
-                }
+                resolveBeat(true);
             }
-            else if (Input.GetKeyDown(keyToPress) && correctCol != null)
+            else if (Input.GetKeyDown(keyToPress))
             {
-                if (correctCol.gameObject.tag != "Beat") { }
-                else
-                {
-                    //right
-                    GameController.instance.dequeCurrentBeat(isP1, true);
-                }
-            }
-            else if (Input.GetKeyDown(keyToPress) && wrongColBot != null)
-            {
-                if (wrongColBot.gameObject.tag != "Beat") { }
-                else
-                {
-                    //wrong
-                    GameController.instance.minusPlayerHealth(isP1);
-                    GameController.instance.dequeCurrentBeat(isP1, false);
-                }
+                //wrong
+                Debug.Log("Wrong" + isP1);
+                resolveBeat(false);
             }
         }
         else
@@ -77,7 +58,7 @@ public class BeatRow : MonoBehaviour
                 Input.GetKeyDown(KeyCode.RightArrow))
             {
                 //no beat sound?? just incase
-                Debug.Log("no beat");
+                Debug.Log("no beat" + isP1);
             }
             
         }
@@ -116,15 +97,25 @@ public class BeatRow : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Out");
+        
         if (collision != null)
         {
             if (collision.gameObject.tag == "Beat")
             {
-                isPressAble = false;
-                GameController.instance.dequeCurrentBeat(isP1, false);
+                Debug.Log("Out" + isP1);
+                resolveBeat(false);
             }
         }
+    }
+
+    private void resolveBeat(bool correct)
+    {
+        if (!correct)
+        {
+            GameController.instance.minusPlayerHealth(isP1);
+        }
+        GameController.instance.dequeCurrentBeat(isP1, correct);
+        isPressAble = false;
     }
 
     public void setIsP1(bool b)
