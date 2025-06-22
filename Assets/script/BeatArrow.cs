@@ -54,13 +54,14 @@ public class BeatArrow : MonoBehaviour
         if (isCorrect)
         {
             //Debug.Log("Correct");
+            StartCoroutine(deadCorrectAnimation());
         }
         else
         {
             //Debug.Log("Wrong");
+            StartCoroutine(deadWrongAnimation());
         }
-        Debug.Log("Destroy");
-        Destroy(this.gameObject);
+        
     }
 
     public void setBeatTempo(int bpm)
@@ -68,8 +69,17 @@ public class BeatArrow : MonoBehaviour
         beatTempo = bpm;
     }
 
-    IEnumerator deadAnimation()
+    IEnumerator deadWrongAnimation()
     {
-        yield return WaitForSeconds(1.0f);
+        rect.localScale += new Vector3(1.0f, 1.0f, 1.0f); // place holder anim
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
+    }
+
+    IEnumerator deadCorrectAnimation()
+    {
+        rect.localScale -= new Vector3(0.25f, 0.25f, 0.25f); // place holder anim
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 }

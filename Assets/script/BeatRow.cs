@@ -9,7 +9,7 @@ public class BeatRow : MonoBehaviour
     private float wrongKeep;
     [SerializeField] private float correctWindowTime;
     private float correctKeep;*/
-    private bool isP1;
+    [SerializeField] private bool isP1;
 
     public ArrowChecker correctCol;
 
@@ -25,11 +25,6 @@ public class BeatRow : MonoBehaviour
     {
         if (isPressAble)
         {
-            /*            wrongKeep -= Time.deltaTime;
-                        if (wrongKeep < 0.0f)
-                        {
-                            correctKeep -= Time.deltaTime;
-                        }*/
             if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
             {
                 //right
@@ -103,7 +98,10 @@ public class BeatRow : MonoBehaviour
             if (collision.gameObject.tag == "Beat")
             {
                 Debug.Log("Out" + isP1);
-                resolveBeat(false);
+                if (isPressAble)
+                {
+                    resolveBeat(false);
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -53,7 +54,7 @@ public class GameController : MonoBehaviour
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
         stateTimeKeep = stateTime;
-        spawnBeats(0);
+        StartCoroutine(debugSpawn());
     }
 
     // Update is called once per frame
@@ -112,7 +113,7 @@ public class GameController : MonoBehaviour
 
     public void dequeCurrentBeat(bool isP1, bool correct)
     {
-        
+        Debug.Log("Brs");
         if (isP1)
         {
             spawnedArrow1.Peek().beatDone(correct);
@@ -157,5 +158,12 @@ public class GameController : MonoBehaviour
         p2BA.setBeatTempo(beatTempo);
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
+    }
+
+    IEnumerator debugSpawn()
+    {
+        spawnBeats(0);
+        yield return new WaitForSeconds(2.0f);
+        spawnBeats(1);
     }
 }
