@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
         Cinderella
     };
     CharacterState currentCharacter;
-    private int[] randCharacter = { 0, 1, 2 };
+    private List<int> randCharacter = new List<int>();
     private int stateCount = 0;
 
     enum GameState
@@ -62,6 +62,11 @@ public class GameController : MonoBehaviour
 
     public RectTransform[] spawnPoints;
 
+
+    [Header("EndState")]
+
+    [SerializeField] private GameObject EndStateObjects;
+
     private void Awake()
     {
         instance = this;
@@ -75,7 +80,10 @@ public class GameController : MonoBehaviour
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
         //StartCoroutine(debugSpawn());
-        currentCharacter = (CharacterState)Random.Range(0, 3);
+        randCharacter.Add(0);
+        randCharacter.Add(1);
+        randCharacter.Add(2);
+        characterRand();
     }
 
     // Update is called once per frame
@@ -125,6 +133,9 @@ public class GameController : MonoBehaviour
                     stateCount++;
                     if (stateCount >= 3)
                     {
+                        CharacterStateObjects.SetActive(false);
+                        SlapStateObjects.SetActive(false);
+                        EndStateObjects.SetActive(true);
                         currentState = GameState.GameEndState;
                     }
                     else
@@ -132,7 +143,7 @@ public class GameController : MonoBehaviour
                         ReadyCheckP1.resetReady();
                         ReadyCheckP2.resetReady();
                         clearBeats();
-                        currentCharacter = (CharacterState)Random.Range(0, 3);
+                        characterRand();
                         currentState = GameState.CharacterStage;
                     }
 
@@ -143,6 +154,13 @@ public class GameController : MonoBehaviour
 
                 break;
         }
+    }
+
+    private void characterRand()
+    {
+        int r = randCharacter[Random.Range(0, randCharacter.Count)];
+        currentCharacter = (CharacterState)r;
+        randCharacter.Remove(r);
     }
 
     public int getCurrentBeatDirection(bool isP1)
