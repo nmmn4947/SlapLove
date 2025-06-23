@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class GameController : MonoBehaviour
 {
+    //[Header("General")]
     public static GameController instance;
     enum CharacterState
     {
@@ -13,16 +15,32 @@ public class GameController : MonoBehaviour
         Cinderella
     };
     CharacterState currentCharacter;
+    private int[] randCharacter = { 0, 1, 2 };
+    private int stateCount = 0;
 
     enum GameState
     {
         CharacterStage,
-        SlapState
+        SlapState,
+        GameEndState
     };
     GameState currentState;
 
     int p1Health = 3;
     int p2Health = 3;
+
+    [Header("CharacterState")]
+
+    [SerializeField] private GameObject CharacterStateObjects;
+
+    [SerializeField] private ReadyCheck ReadyCheckP1;
+    [SerializeField] private ReadyCheck ReadyCheckP2;
+
+
+
+    [Header("Slap/RhythmState")]
+
+    [SerializeField] private GameObject SlapStateObjects;
 
     [SerializeField] private GameObject[] arrowPrefabs;
 
@@ -57,6 +75,7 @@ public class GameController : MonoBehaviour
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
         //StartCoroutine(debugSpawn());
+        currentCharacter = (CharacterState)Random.Range(0, 3);
     }
 
     // Update is called once per frame
@@ -65,7 +84,12 @@ public class GameController : MonoBehaviour
         switch (currentState)
         {
             case GameState.CharacterStage:
-                currentCharacter = (CharacterState)Random.Range(0, 2);
+
+                CharacterStateObjects.SetActive(true);
+                SlapStateObjects.SetActive(false);
+
+
+                
                 switch (currentCharacter)
                 {
                     case CharacterState.Chessur:
@@ -78,15 +102,45 @@ public class GameController : MonoBehaviour
 
                         break;
                 }
-                currentState = GameState.SlapState;
-                break;
-            case GameState.SlapState:
-                timeBetweenKeep += Time.deltaTime;
-                if (timeBetweenKeep > timeBetweenBeats)
+
+                if (ReadyCheckP1.getIsReady() && ReadyCheckP2.getIsReady())
                 {
-                    spawnBeats();
-                    timeBetweenKeep = 0.0f;
+                    //Maybe some Animation to go to next state
+                    resetHealth();
+                    currentState = GameState.SlapState;
+                    stateTimeKeep = 0.0f;
                 }
+                break;
+
+            case GameState.SlapState:
+                CharacterStateObjects.SetActive(false);
+                SlapStateObjects.SetActive(true);
+
+                defaultBeatSpawning();
+
+                //Next state
+                stateTimeKeep += Time.deltaTime;
+                if (stateTimeKeep > stateTime || p1Health <= 0 || p2Health <= 0)
+                {
+                    stateCount++;
+                    if (stateCount >= 3)
+                    {
+                        currentState = GameState.GameEndState;
+                    }
+                    else
+                    {
+                        ReadyCheckP1.resetReady();
+                        ReadyCheckP2.resetReady();
+                        clearBeats();
+                        currentCharacter = (CharacterState)Random.Range(0, 3);
+                        currentState = GameState.CharacterStage;
+                    }
+
+                }
+                break;
+
+            case GameState.GameEndState:
+
                 break;
         }
     }
@@ -101,7 +155,25 @@ public class GameController : MonoBehaviour
         {
             return spawnedArrow2.Peek().getDirection(); // peek = front
         }
-        
+
+    }
+
+    IEnumerator dequeCurrentBeat(bool isP1)
+    {
+/*        if (spawnedArrow1.Count == 0)
+        {
+            yield return null;
+        }*/
+        yield return new WaitForSeconds(0.5f);
+        if (isP1)
+        {
+            spawnedArrow1.Dequeue();
+        }
+        else
+        {
+            spawnedArrow2.Dequeue();
+        }
+
     }
 
     public void minusPlayerHealth(bool p1)
@@ -114,23 +186,22 @@ public class GameController : MonoBehaviour
         {
             p2Health -= 1;
         }
-        
+
     }
 
-    public void dequeCurrentBeat(bool isP1, bool correct)
+    public void doneCurrentBeat(bool isP1, bool correct)
     {
-        Debug.Log("Brs");
         if (isP1)
         {
             spawnedArrow1.Peek().beatDone(correct);
-            spawnedArrow1.Dequeue();
+            //spawnedArrow1.Dequeue();
         }
         else
         {
             spawnedArrow2.Peek().beatDone(correct);
-            spawnedArrow2.Dequeue();
+            //spawnedArrow2.Dequeue();
         }
-        
+        StartCoroutine(dequeCurrentBeat(isP1));
     }
 
     private void spawnBeats()
@@ -180,5 +251,52 @@ public class GameController : MonoBehaviour
     public int getP2Health()
     {
         return p2Health;
+    }
+
+    private void resetHealth()
+    {
+        p1Health = 3;
+        p2Health = 3;
+    }
+
+    public int getStateCount()
+    {
+        return stateCount;
+    }
+
+    public float getCurrentStateTime()
+    {
+        return stateTime - stateTimeKeep;
+    }
+
+    public int getCurrentCharState()
+    {
+        return (int)currentCharacter;
+    }
+
+    private void clearBeats()
+    {
+        foreach (BeatArrow arr in spawnedArrow1)
+        {
+            arr.killBeat();
+        }
+        spawnedArrow1.Clear();
+
+        foreach (BeatArrow arr1 in spawnedArrow2)
+        {
+            arr1.killBeat();
+        }
+        spawnedArrow2.Clear();
+    }
+
+    private void defaultBeatSpawning()
+    {
+        timeBetweenKeep += Time.deltaTime;
+        Debug.Log(timeBetweenKeep);
+        if (timeBetweenKeep > timeBetweenBeats)
+        {
+            spawnBeats();
+            timeBetweenKeep = 0.0f;
+        }
     }
 }
