@@ -6,7 +6,7 @@ public class BeatArrow : MonoBehaviour
 {
     private int direction;
 
-    private int beatTempo = 120;
+    private float speed = 120;
 
     RectTransform rect;
 
@@ -24,7 +24,7 @@ public class BeatArrow : MonoBehaviour
     {
         if (!isDone)
         {
-            rect.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+            rect.position -= new Vector3(0f, speed * Time.deltaTime, 0f);
         }
     }
 
@@ -72,9 +72,9 @@ public class BeatArrow : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void setBeatTempo(int bpm)
+    public void setSpeed(float bpm)
     {
-        beatTempo = bpm;
+        speed = bpm;
     }
 
     IEnumerator deadWrongAnimation()

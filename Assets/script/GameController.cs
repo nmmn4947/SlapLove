@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class GameController : MonoBehaviour
 {
@@ -56,13 +57,16 @@ public class GameController : MonoBehaviour
     private float stateTimeKeep = 0.0f;
 
     [SerializeField] private float timeBetweenBeats = 0.5f;
+    float totalTime;
     private float timeBetweenKeep = 0.0f;
 
     [SerializeField] private int beatTempo;
     float beatDuration;
-    float distanceToMove;
+    [SerializeField] float toHitBoxDuration;
+    [SerializeField] float speed;
 
     public RectTransform[] spawnPoints;
+    public RectTransform hitBoxPoint;
 
 
     [Header("EndState")]
@@ -77,7 +81,10 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        beatDuration = 60f / beatTempo;
+
+        float distance = Mathf.Abs(spawnPoints[0].position.y - hitBoxPoint.position.y);
+        speed = distance / toHitBoxDuration;
+
         currentState = GameState.CharacterStage;
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
@@ -229,13 +236,13 @@ public class GameController : MonoBehaviour
         int rand = Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
-        p1BA.setBeatTempo(beatTempo);
+        p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
         spawnedArrow1.Enqueue(p1BA);
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
         BeatArrow p2BA = p2.GetComponent<BeatArrow>();
-        p2BA.setBeatTempo(beatTempo);
+        p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
     }
@@ -246,13 +253,13 @@ public class GameController : MonoBehaviour
         int rand = i;
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
-        p1BA.setBeatTempo(beatTempo);
+        p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
         spawnedArrow1.Enqueue(p1BA);
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
         BeatArrow p2BA = p2.GetComponent<BeatArrow>();
-        p2BA.setBeatTempo(beatTempo);
+        p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
     }

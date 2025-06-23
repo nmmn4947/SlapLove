@@ -1531,7 +1531,7 @@ Canvas:
   m_GameObject: {fileID: 662301801}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1148782570}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2670,6 +2670,8 @@ MonoBehaviour:
   stateTime: 120
   timeBetweenBeats: 2
   beatTempo: 120
+  toHitBoxDuration: 12
+  speed: 0
   spawnPoints:
   - {fileID: 1727258635}
   - {fileID: 872625288}
@@ -2679,6 +2681,7 @@ MonoBehaviour:
   - {fileID: 2039806287}
   - {fileID: 247828938}
   - {fileID: 1699399928}
+  hitBoxPoint: {fileID: 328591425}
   EndStateObjects: {fileID: 0}
 --- !u!4 &1064890576
 Transform:
