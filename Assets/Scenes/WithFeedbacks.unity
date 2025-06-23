@@ -2652,10 +2652,10 @@ MonoBehaviour:
   ReadyCheckP2: {fileID: 466855188}
   SlapStateObjects: {fileID: 391344705}
   arrowPrefabs:
-  - {fileID: 8355755160706368498, guid: a5187c4732b56f249a1b3e5a71141232, type: 3}
-  - {fileID: 9032089223375930019, guid: f390c6dcc468aea4ebd88cfc9f2d1b4c, type: 3}
+  - {fileID: 1423551744614779759, guid: 049aca58f8dd3bd44bd2185df659f996, type: 3}
+  - {fileID: 1423551744614779759, guid: 5896420f4dc42d8459480e29975ed215, type: 3}
   - {fileID: 6579514134988118119, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
-  - {fileID: 144532988779063605, guid: 059d3692fb886c8469b236a645e65803, type: 3}
+  - {fileID: 1423551744614779759, guid: 3233d8e30d78ca443a24e82cd65c142b, type: 3}
   headArrows:
   - {fileID: 328591424}
   - {fileID: 421547335}

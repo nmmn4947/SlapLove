@@ -97,6 +97,6 @@ public class BeatArrow : MonoBehaviour
 
     public void OnEndAnimation() //trigger at the end of both correct and wrong animations
     {
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 0.3f);
     }
 }

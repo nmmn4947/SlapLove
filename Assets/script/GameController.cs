@@ -191,7 +191,7 @@ public class GameController : MonoBehaviour
         {
             yield return null;
         }*/
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0f); //temporary remove delay
         if (isP1)
         {
             spawnedArrow1.Dequeue();
