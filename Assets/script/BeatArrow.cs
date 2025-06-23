@@ -1,4 +1,5 @@
 using System.Collections;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class BeatArrow : MonoBehaviour
@@ -10,6 +11,7 @@ public class BeatArrow : MonoBehaviour
     RectTransform rect;
 
     private bool isDone = false;
+    [SerializeField] private MMF_Player correct_MMFPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,12 +56,13 @@ public class BeatArrow : MonoBehaviour
         if (isCorrect)
         {
             //Debug.Log("Correct");
-            StartCoroutine(deadCorrectAnimation());
+            //StartCoroutine(deadCorrectAnimation());
+            onCorrectAnimation();
         }
         else
         {
             //Debug.Log("Wrong");
-            StartCoroutine(deadWrongAnimation());
+            //StartCoroutine(deadWrongAnimation());
         }
         
     }
@@ -78,13 +81,22 @@ public class BeatArrow : MonoBehaviour
     {
         rect.localScale += new Vector3(1.0f, 1.0f, 1.0f); // place holder anim
         yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
+    void onCorrectAnimation()
+    {
+        correct_MMFPlayer.PlayFeedbacks(); // play correct animation
+    }
     IEnumerator deadCorrectAnimation()
     {
         rect.localScale -= new Vector3(0.25f, 0.25f, 0.25f); // place holder anim
         yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+    }
+
+    public void OnEndAnimation() //trigger at the end of both correct and wrong animations
+    {
+        Destroy(gameObject);
     }
 }
