@@ -112,7 +112,7 @@ public class BeatRow : MonoBehaviour
         {
             GameController.instance.minusPlayerHealth(isP1);
         }
-        GameController.instance.dequeCurrentBeat(isP1, correct);
+        GameController.instance.doneCurrentBeat(isP1, correct);
         isPressAble = false;
     }
 

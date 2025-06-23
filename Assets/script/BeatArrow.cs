@@ -64,6 +64,11 @@ public class BeatArrow : MonoBehaviour
         
     }
 
+    public void killBeat()
+    {
+        Destroy(gameObject);
+    }
+
     public void setBeatTempo(int bpm)
     {
         beatTempo = bpm;
