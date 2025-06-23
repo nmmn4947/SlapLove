@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d79a096962a8241ae62e1cd60fbd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 6009340787529067699}
   glowColor: {r: 1, g: 1, b: 1, a: 1}
   maxIntensity: 5
   speed: 1

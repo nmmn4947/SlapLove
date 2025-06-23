@@ -384,10 +384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d79a096962a8241ae62e1cd60fbd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 5167472297413645199}
   glowColor: {r: 1, g: 1, b: 1, a: 1}
   maxIntensity: 5
-  speed: 1
+  speed: 4
 --- !u!1 &2999871224111918106
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc33236284acd3439e3a5660f7b4428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correct_MMFPlayer: {fileID: 0}
+  correct_MMFPlayer: {fileID: 8386927575495835365}
 --- !u!61 &7826396189684579794
 BoxCollider2D:
   m_ObjectHideFlags: 0

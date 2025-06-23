@@ -1,21 +1,29 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using MoreMountains.Feedbacks;
+using Unity.VisualScripting;
 
 public class MaterialController : MonoBehaviour
 {
     [SerializeField] private Image image;
-    [SerializeField] private Color glowColor = Color.white;
     [SerializeField] private float maxIntensity = 5f;
-    [SerializeField] private float speed = 1f;
-
-    private Material mat;
+    float feedbackTime = 0.5f; // Time to reach max intensity
+    
     private float currentIntensity = 0f;
+    private MMF_Player mMF_Player;
 
     void Start()
     {
-        mat = image.material;
-        mat.EnableKeyword("_EMISSION");
+        
+        mMF_Player = GetComponent<MMF_Player>();
+        feedbackTime = mMF_Player.TotalDuration;
+        Material newMat = new Material(image.material);
+        image.material = newMat;
+
+        currentIntensity = newMat.GetFloat("_GlowAmount");
+
+        newMat.EnableKeyword("_EMISSION");
     }
 
 
@@ -26,19 +34,25 @@ public class MaterialController : MonoBehaviour
 
     IEnumerator GlowCoroutine()
     {
-        while (currentIntensity < maxIntensity)
+        float timeElapsed = 0;
+        float lerpedValue = 0f;
+        
+        while (timeElapsed < feedbackTime)
         {
-            currentIntensity += Time.deltaTime * speed;
-            mat.SetColor("_EmissionColor", glowColor * currentIntensity);
-            yield return new WaitForSeconds(0.05f);
+            float time = timeElapsed / feedbackTime;
+            lerpedValue = Mathf.Lerp(currentIntensity, maxIntensity, time);
+            image.material.SetFloat("_GlowAmount", lerpedValue);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+            
         }
-
+        lerpedValue = maxIntensity;
         yield return new WaitForSeconds(0); // Wait for a second before resetting
     }
 
     public void ResetGlow()
     {
         currentIntensity = 0f;
-        mat.SetColor("_EmissionColor", Color.black);
+        image.material.SetColor("_EmissionColor", Color.black);
     }
 }

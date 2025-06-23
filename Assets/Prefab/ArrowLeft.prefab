@@ -384,10 +384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d79a096962a8241ae62e1cd60fbd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 5514960607846329745}
   glowColor: {r: 1, g: 1, b: 1, a: 1}
   maxIntensity: 5
-  speed: 1
+  speed: 4
 --- !u!1 &6813245367136176013
 GameObject:
   m_ObjectHideFlags: 0

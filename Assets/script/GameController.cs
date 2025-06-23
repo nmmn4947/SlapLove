@@ -59,6 +59,8 @@ public class GameController : MonoBehaviour
     private float timeBetweenKeep = 0.0f;
 
     [SerializeField] private int beatTempo;
+    float beatDuration;
+    float distanceToMove;
 
     public RectTransform[] spawnPoints;
 
@@ -75,7 +77,7 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        beatDuration = 60f / beatTempo;
         currentState = GameState.CharacterStage;
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
@@ -310,7 +312,7 @@ public class GameController : MonoBehaviour
     private void defaultBeatSpawning()
     {
         timeBetweenKeep += Time.deltaTime;
-        Debug.Log(timeBetweenKeep);
+        //Debug.Log(timeBetweenKeep);
         if (timeBetweenKeep > timeBetweenBeats)
         {
             spawnBeats();

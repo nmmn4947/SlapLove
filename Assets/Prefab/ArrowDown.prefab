@@ -384,10 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d79a096962a8241ae62e1cd60fbd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  glowColor: {r: 1, g: 1, b: 1, a: 1}
+  image: {fileID: 9173746454552847716}
   maxIntensity: 5
-  speed: 1
 --- !u!1 &5339677307051643534
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -4346244404228752641, guid: 36be14ef3faee8e4eb9d3e4747062353, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
