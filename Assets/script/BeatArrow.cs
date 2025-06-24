@@ -6,17 +6,20 @@ public class BeatArrow : MonoBehaviour
 {
     private int direction;
 
-    private float speed = 120;
+    private float speed = 50;
 
     RectTransform rect;
+    Collider2D col;
 
     private bool isDone = false;
     [SerializeField] private MMF_Player correct_MMFPlayer;
+    [SerializeField] private MMF_Player wrong_MMFPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rect = GetComponent<RectTransform>();
+        col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,10 @@ public class BeatArrow : MonoBehaviour
         }
     }
 
+    public bool GetIsDone()
+    {
+        return isDone;
+    }
     public void setDirection(int s)
     {
 /*        switch (s)
@@ -57,12 +64,15 @@ public class BeatArrow : MonoBehaviour
         {
             //Debug.Log("Correct");
             //StartCoroutine(deadCorrectAnimation());
+            //col.enabled = false; // disable collider so it doesn't trigger again
             onCorrectAnimation();
         }
         else
         {
             //Debug.Log("Wrong");
             //StartCoroutine(deadWrongAnimation());
+            col.enabled = false; // disable collider so it doesn't trigger again
+            onWrongAnimation();
         }
         
     }
@@ -87,6 +97,10 @@ public class BeatArrow : MonoBehaviour
     void onCorrectAnimation()
     {
         correct_MMFPlayer.PlayFeedbacks(); // play correct animation
+    }
+    void onWrongAnimation()
+    {
+        wrong_MMFPlayer.PlayFeedbacks();
     }
     IEnumerator deadCorrectAnimation()
     {

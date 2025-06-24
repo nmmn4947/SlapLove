@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private int beatTempo;
     float beatDuration;
     [SerializeField] float toHitBoxDuration;
-    [SerializeField] float speed;
+    float speed;
 
     public RectTransform[] spawnPoints;
     public RectTransform hitBoxPoint;
@@ -228,7 +228,8 @@ public class GameController : MonoBehaviour
             spawnedArrow2.Peek().beatDone(correct);
             //spawnedArrow2.Dequeue();
         }
-        StartCoroutine(dequeCurrentBeat(isP1));
+        StartCoroutine(dequeCurrentBeat(isP1));   
+        //I move it to onEndAnimation in BeatArrow.
     }
 
     private void spawnBeats()

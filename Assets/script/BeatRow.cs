@@ -95,9 +95,10 @@ public class BeatRow : MonoBehaviour
         
         if (collision != null)
         {
-            if (collision.gameObject.tag == "Beat")
+            if (collision.gameObject.tag == "Beat" && !collision.GetComponent<BeatArrow>().GetIsDone())
             {
-                Debug.Log("Out" + isP1);
+                
+                Debug.Log(collision.gameObject.name+" Exit collider " + "is Player 1: "+isP1);
                 if (isPressAble)
                 {
                     resolveBeat(false);
