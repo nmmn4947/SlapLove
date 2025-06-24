@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 9173746454552847716}
-  maxIntensity: 5
+  maxIntensity: 8
 --- !u!1 &5339677307051643534
 GameObject:
   m_ObjectHideFlags: 0
