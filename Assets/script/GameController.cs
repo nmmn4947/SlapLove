@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+using System.Runtime.CompilerServices;
 
 public class GameController : MonoBehaviour
 {
@@ -60,14 +61,15 @@ public class GameController : MonoBehaviour
     float totalTime;
     private float timeBetweenKeep = 0.0f;
 
-    [SerializeField] private int beatTempo;
+    //[SerializeField] private int beatTempo;
     float beatDuration;
-    [SerializeField] float toHitBoxDuration;
+    [SerializeField] float toHitBoxDuration; // 
     float speed;
 
     public RectTransform[] spawnPoints;
     public RectTransform hitBoxPoint;
 
+    [SerializeField] private RectTransform cinderellaThreshHold;
 
     [Header("EndState")]
 
@@ -105,21 +107,6 @@ public class GameController : MonoBehaviour
                 CharacterStateObjects.SetActive(true);
                 SlapStateObjects.SetActive(false);
 
-
-                
-                switch (currentCharacter)
-                {
-                    case CharacterState.Chessur:
-
-                        break;
-                    case CharacterState.Pinocchio:
-
-                        break;
-                    case CharacterState.Cinderella:
-
-                        break;
-                }
-
                 if (ReadyCheckP1.getIsReady() && ReadyCheckP2.getIsReady())
                 {
                     //Maybe some Animation to go to next state
@@ -133,7 +120,20 @@ public class GameController : MonoBehaviour
                 CharacterStateObjects.SetActive(false);
                 SlapStateObjects.SetActive(true);
 
-                defaultBeatSpawning();
+                switch (currentCharacter)
+                {
+                    case CharacterState.Chessur:
+
+                        break;
+                    case CharacterState.Pinocchio:
+
+                        break;
+                    case CharacterState.Cinderella:
+                        BeatSpawning(spawnCinderellaBeats);
+                        break;
+                }
+
+                //defaultBeatSpawning();
 
                 //Next state
                 stateTimeKeep += Time.deltaTime;
@@ -167,8 +167,9 @@ public class GameController : MonoBehaviour
 
     private void characterRand()
     {
-        int r = randCharacter[Random.Range(0, randCharacter.Count)];
+        int r = randCharacter[UnityEngine.Random.Range(0, randCharacter.Count)];
         currentCharacter = (CharacterState)r;
+        Debug.Log(r);
         randCharacter.Remove(r);
     }
 
@@ -234,7 +235,7 @@ public class GameController : MonoBehaviour
 
     private void spawnBeats()
     {
-        int rand = Random.Range(0, 3);
+        int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
         p1BA.setSpeed(speed);
@@ -264,12 +265,23 @@ public class GameController : MonoBehaviour
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
     }
-
-    IEnumerator debugSpawn()
+    
+    private void spawnCinderellaBeats()
     {
-        spawnBeats(0);
-        yield return new WaitForSeconds(2.0f);
-        spawnBeats(1);
+        int rand = UnityEngine.Random.Range(0, 3);
+        GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
+        BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+        p1BA.setSpeed(speed);
+        p1BA.setDirection(rand);
+        p1BA.setToIsCinderella(cinderellaThreshHold.position);
+        spawnedArrow1.Enqueue(p1BA);
+
+        GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
+        BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+        p2BA.setSpeed(speed);
+        p2BA.setDirection(rand);
+        p2BA.setToIsCinderella(cinderellaThreshHold.position);
+        spawnedArrow2.Enqueue(p2BA);
     }
 
     public int getP1Health()
@@ -317,13 +329,15 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Clear();
     }
 
-    private void defaultBeatSpawning()
+    private delegate void BeatArrowDelegate();
+
+    private void BeatSpawning(BeatArrowDelegate operation)
     {
         timeBetweenKeep += Time.deltaTime;
         //Debug.Log(timeBetweenKeep);
         if (timeBetweenKeep > timeBetweenBeats)
         {
-            spawnBeats();
+            operation();
             timeBetweenKeep = 0.0f;
         }
     }

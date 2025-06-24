@@ -28,14 +28,11 @@ public class BeatRow : MonoBehaviour
             if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
             {
                 //right
-                Debug.Log("Correct" + isP1);
-
                 resolveBeat(true);
             }
             else if (Input.GetKeyDown(keyToPress))
             {
                 //wrong
-                Debug.Log("Wrong" + isP1);
                 resolveBeat(false);
             }
         }
@@ -52,8 +49,7 @@ public class BeatRow : MonoBehaviour
                 Input.GetKeyDown(KeyCode.DownArrow) ||
                 Input.GetKeyDown(KeyCode.RightArrow))
             {
-                //no beat sound?? just incase
-                Debug.Log("no beat" + isP1);
+                //no beat sound feed back
             }
             
         }

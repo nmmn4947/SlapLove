@@ -15,16 +15,45 @@ public class BeatArrow : MonoBehaviour
     [SerializeField] private MMF_Player correct_MMFPlayer;
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
+    private bool isCinderella;
+    private bool isPinoccio;
+    private Vector3 cinderellaThreshHold;
+
+    private CanvasGroup canvasGroup;
+    private float cinderellaFadeTime = 2.5f;
+    private float cinderellaFadeKeep = 0.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rect = GetComponent<RectTransform>();
         col = GetComponent<Collider2D>();
+        //isCinderella = false;
+        canvasGroup = GetComponent<CanvasGroup>();
+        cinderellaFadeKeep = cinderellaFadeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isCinderella && !isDone)
+        {
+            //Debug.Log(rect.position.y - cinderellaThreshHold.y);
+            if (rect.position.y - cinderellaThreshHold.y < 0.0f)
+            {
+                //set opacity zero
+                Debug.Log("aa");
+                cinderellaFadeKeep -= Time.deltaTime;
+                canvasGroup.alpha = Mathf.Lerp(0.0f, 1.0f, cinderellaFadeKeep/cinderellaFadeTime);
+            }
+        }
+        else if (isCinderella && isDone)
+        {
+            canvasGroup.alpha = 1.0f;
+        }
+
+        
+
         if (!isDone)
         {
             rect.position -= new Vector3(0f, speed * Time.deltaTime, 0f);
@@ -112,5 +141,12 @@ public class BeatArrow : MonoBehaviour
     public void OnEndAnimation() //trigger at the end of both correct and wrong animations
     {
         Destroy(gameObject, 0.3f);
+    }
+
+    public void setToIsCinderella(Vector3 threshHold)
+    {
+        isCinderella = true;
+        cinderellaThreshHold = threshHold;
+        //Debug.Log(isCinderella);
     }
 }
