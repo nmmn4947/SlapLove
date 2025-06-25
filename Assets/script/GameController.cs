@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject[] arrowPrefabs;
 
-    [SerializeField] private GameObject[] headArrows;
+    [SerializeField] private HeadArrow[] headArrows;
 
     Queue<BeatArrow> spawnedArrow1 = new Queue<BeatArrow>(); // .front
     Queue<BeatArrow> spawnedArrow2 = new Queue<BeatArrow>(); // .front
@@ -75,6 +75,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private float qteRandomChance;
     [SerializeField] private float qtedurationTime;
     private float qteDurationKeep;
+    
 
     [SerializeField] private RectTransform cinderellaThreshHold;
 
@@ -129,10 +130,12 @@ public class GameController : MonoBehaviour
                 CharacterStateObjects.SetActive(false);
                 SlapStateObjects.SetActive(true);
 
+
+
                 switch (currentCharacter)
                 {
                     case CharacterState.Chessur:
-
+                        
                         break;
                     case CharacterState.Pinocchio:
                         BeatSpawning(spawnPinoccioBeats);
@@ -180,6 +183,12 @@ public class GameController : MonoBehaviour
         currentCharacter = (CharacterState)r;
         Debug.Log(r);
         randCharacter.Remove(r);
+    }
+
+    private void toggleStopBeat()
+    {
+        //Set a new state in BeatArrow and set new function to stop the beat from moving.
+
     }
 
     public int getCurrentBeatDirection(bool isP1)
