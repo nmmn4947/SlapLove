@@ -52,8 +52,6 @@ public class BeatArrow : MonoBehaviour
             canvasGroup.alpha = 1.0f;
         }
 
-        
-
         if (!isDone)
         {
             rect.position -= new Vector3(0f, speed * Time.deltaTime, 0f);
@@ -147,6 +145,14 @@ public class BeatArrow : MonoBehaviour
     {
         isCinderella = true;
         cinderellaThreshHold = threshHold;
+        //Debug.Log(isCinderella);
+    }
+
+    public void setToIsPinoccio()
+    {
+        isPinoccio = true;
+        this.gameObject.tag = "Fake";
+        
         //Debug.Log(isCinderella);
     }
 }

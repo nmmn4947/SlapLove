@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using System.Runtime.CompilerServices;
+using Unity.Hierarchy;
 
 public class GameController : MonoBehaviour
 {
@@ -69,7 +70,15 @@ public class GameController : MonoBehaviour
     public RectTransform[] spawnPoints;
     public RectTransform hitBoxPoint;
 
+    [SerializeField] private float qteRangeTime;
+    private float qteRangeKeep;
+    [SerializeField] private float qteRandomChance;
+    [SerializeField] private float qtedurationTime;
+    private float qteDurationKeep;
+
     [SerializeField] private RectTransform cinderellaThreshHold;
+
+    [SerializeField] private int pinoccioChance;
 
     [Header("EndState")]
 
@@ -126,7 +135,7 @@ public class GameController : MonoBehaviour
 
                         break;
                     case CharacterState.Pinocchio:
-
+                        BeatSpawning(spawnPinoccioBeats);
                         break;
                     case CharacterState.Cinderella:
                         BeatSpawning(spawnCinderellaBeats);
@@ -188,10 +197,11 @@ public class GameController : MonoBehaviour
 
     IEnumerator dequeCurrentBeat(bool isP1)
     {
-/*        if (spawnedArrow1.Count == 0)
-        {
-            yield return null;
-        }*/
+        /*        if (spawnedArrow1.Count == 0)
+                {
+                    yield return null;
+                }*/
+        Debug.Log("remove");
         yield return new WaitForSeconds(0f); //temporary remove delay
         if (isP1)
         {
@@ -219,6 +229,7 @@ public class GameController : MonoBehaviour
 
     public void doneCurrentBeat(bool isP1, bool correct)
     {
+        Debug.Log("Hello?");
         if (isP1)
         {
             spawnedArrow1.Peek().beatDone(correct);
@@ -229,7 +240,7 @@ public class GameController : MonoBehaviour
             spawnedArrow2.Peek().beatDone(correct);
             //spawnedArrow2.Dequeue();
         }
-        StartCoroutine(dequeCurrentBeat(isP1));   
+        StartCoroutine(dequeCurrentBeat(isP1));
         //I move it to onEndAnimation in BeatArrow.
     }
 
@@ -265,7 +276,42 @@ public class GameController : MonoBehaviour
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
     }
-    
+
+    private void spawnPinoccioBeats()
+    {
+        int randPinoc = UnityEngine.Random.Range(0, pinoccioChance);
+        int rand = UnityEngine.Random.Range(0, 3);
+        List<int> four = new List<int>();
+        four.Add(0);
+        four.Add(1);
+        four.Add(2);
+        four.Add(3);
+        
+        if (randPinoc == 2) // 1/pinoccioChance - chance
+        {
+            four.Remove(rand);
+            int randFour = four[Random.Range(0, 3)];
+
+            GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[randFour]);
+            BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+            p1BA.setSpeed(speed);
+            p1BA.setDirection(rand);
+            p1BA.setToIsPinoccio();
+            spawnedArrow1.Enqueue(p1BA);
+
+            GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[randFour + 4]);
+            BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+            p2BA.setSpeed(speed);
+            p2BA.setDirection(rand);
+            p2BA.setToIsPinoccio();
+            spawnedArrow2.Enqueue(p2BA);
+        }
+        else
+        {
+            spawnBeats(rand);
+        }
+    }
+
     private void spawnCinderellaBeats()
     {
         int rand = UnityEngine.Random.Range(0, 3);

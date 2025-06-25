@@ -5,6 +5,7 @@ using UnityEngine;
 public class BeatRow : MonoBehaviour
 {
     bool isPressAble = false;
+    bool isFake = false;
 /*    [SerializeField] private float wrongWindowTime;
     private float wrongKeep;
     [SerializeField] private float correctWindowTime;
@@ -23,7 +24,10 @@ public class BeatRow : MonoBehaviour
 
     private void Update()
     {
-        if (isPressAble)
+        int currentDirection = GameController.instance.getCurrentBeatDirection(isP1);
+        //Debug.Log(currentDirection);
+
+        if (isPressAble && !isFake)
         {
             if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
             {
@@ -34,6 +38,29 @@ public class BeatRow : MonoBehaviour
             {
                 //wrong
                 resolveBeat(false);
+            }
+        }else if (isPressAble && isFake)
+        {
+            if (isP1) {
+                if (Input.GetKeyDown(KeyCode.W) ||
+                    Input.GetKeyDown(KeyCode.A) ||
+                    Input.GetKeyDown(KeyCode.S) ||
+                    Input.GetKeyDown(KeyCode.D))
+                {
+                    Debug.Log("Press Fake");
+                    resolveBeat(false);
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.UpArrow) ||
+                Input.GetKeyDown(KeyCode.LeftArrow) ||
+                Input.GetKeyDown(KeyCode.DownArrow) ||
+                Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    Debug.Log("Press Fake");
+                    resolveBeat(false);
+                }
             }
         }
         else
@@ -82,6 +109,10 @@ public class BeatRow : MonoBehaviour
                         else { keyToPress = KeyCode.RightArrow; }
                         break;
                 }
+            }else if (collision.gameObject.tag == "Fake")
+            {
+                isPressAble = true;
+                isFake = true;
             }
         }
     }
@@ -99,18 +130,23 @@ public class BeatRow : MonoBehaviour
                 {
                     resolveBeat(false);
                 }
+            }else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().GetIsDone())
+            {
+                resolveBeat(true);
             }
         }
     }
 
     private void resolveBeat(bool correct)
     {
+        Debug.Log("resolve");
         if (!correct)
         {
             GameController.instance.minusPlayerHealth(isP1);
         }
         GameController.instance.doneCurrentBeat(isP1, correct);
         isPressAble = false;
+        isFake = false;
     }
 
     public void setIsP1(bool b)
