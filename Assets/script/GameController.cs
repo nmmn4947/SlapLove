@@ -2,10 +2,6 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
-using System.Runtime.CompilerServices;
-using Unity.Hierarchy;
 
 public class GameController : MonoBehaviour
 {
@@ -36,8 +32,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject CharacterStateObjects;
 
-    [SerializeField] private ReadyCheck ReadyCheckP1;
-    [SerializeField] private ReadyCheck ReadyCheckP2;
+    [SerializeField] public ReadyCheck ReadyCheckP1 { get; private set; }
+    [SerializeField] public ReadyCheck ReadyCheckP2 { get; private set; }
 
 
 
@@ -436,6 +432,16 @@ public class GameController : MonoBehaviour
     {
         p1Health = 3;
         p2Health = 3;
+    }
+
+    public void setP1Health(int amount)
+    {
+        p1Health = amount;
+    }
+
+    public void setP2Health(int amount)
+    {
+        p2Health = amount;
     }
 
     public int getStateCount()
