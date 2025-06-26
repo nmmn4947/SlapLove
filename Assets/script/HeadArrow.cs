@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeadArrow : MonoBehaviour
 {
@@ -9,15 +10,32 @@ public class HeadArrow : MonoBehaviour
     float transitionTime = 1.0f;
     float transitionKeep = 0.0f;
 
+    bool capturedOriginalPos = false;
+
+    Image ch;
+
     RectTransform rectTransform;
     //[SerializeField] bool isP1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        // Force layout rebuild
+        LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform.parent as RectTransform);
+        ch = GetComponent<Image>();
         originalPos = rectTransform.position;
-        
     }
+
+
+    /*    void LateUpdate()
+        {
+            if (!capturedOriginalPos)
+            {
+                originalPos = rectTransform.position;
+                capturedOriginalPos = true;
+                Debug.Log("Captured original position: " + originalPos);
+            }
+        }*/
 
     // Update is called once per frame
     void Update()
@@ -41,11 +59,23 @@ public class HeadArrow : MonoBehaviour
         isChessur = true;
         chessurPosition = chessurPos;
         transitionKeep = 0.0f;
+        ch.color = Color.white;
     }
 
     public void setToNormal()
     {
         isChessur = false;
         transitionKeep = 0.0f;
+        ch.color = Color.black;
+    }
+
+    public Vector3 getRectPos()
+    {
+        return originalPos;
+    }
+
+    public RectTransform getRectTransform()
+    {
+        return this.rectTransform;
     }
 }

@@ -81,6 +81,12 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private int pinoccioChance;
 
+    [SerializeField] private float chessurDurationTime;
+    private float chessurDurationKeep = 0;
+    [SerializeField] private float chessurCooldownTime;
+    private float chessurCooldownKeep = 0;
+    private bool chessurIsActive = false;
+
     [Header("EndState")]
 
     [SerializeField] private GameObject EndStateObjects;
@@ -135,7 +141,8 @@ public class GameController : MonoBehaviour
                 switch (currentCharacter)
                 {
                     case CharacterState.Chessur:
-                        
+                        swapHeadArrowRandomly();
+                        BeatSpawning(spawnBeats);
                         break;
                     case CharacterState.Pinocchio:
                         BeatSpawning(spawnPinoccioBeats);
@@ -210,7 +217,6 @@ public class GameController : MonoBehaviour
                 {
                     yield return null;
                 }*/
-        Debug.Log("remove");
         yield return new WaitForSeconds(0f); //temporary remove delay
         if (isP1)
         {
@@ -238,7 +244,6 @@ public class GameController : MonoBehaviour
 
     public void doneCurrentBeat(bool isP1, bool correct)
     {
-        Debug.Log("Hello?");
         if (isP1)
         {
             spawnedArrow1.Peek().beatDone(correct);
@@ -258,12 +263,14 @@ public class GameController : MonoBehaviour
         int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+        p1BA.assignThisHeadArrow(headArrows[rand].getRectTransform());
         p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
         spawnedArrow1.Enqueue(p1BA);
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
         BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+        p2BA.assignThisHeadArrow(headArrows[rand + 4].getRectTransform());
         p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
@@ -275,12 +282,14 @@ public class GameController : MonoBehaviour
         int rand = i;
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+        p1BA.assignThisHeadArrow(headArrows[rand].getRectTransform());
         p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
         spawnedArrow1.Enqueue(p1BA);
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
         BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+        p2BA.assignThisHeadArrow(headArrows[rand + 4].getRectTransform());
         p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
         spawnedArrow2.Enqueue(p2BA);
@@ -303,6 +312,7 @@ public class GameController : MonoBehaviour
 
             GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[randFour]);
             BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+            p1BA.assignThisHeadArrow(headArrows[randFour].getRectTransform());
             p1BA.setSpeed(speed);
             p1BA.setDirection(rand);
             p1BA.setToIsPinoccio();
@@ -310,6 +320,7 @@ public class GameController : MonoBehaviour
 
             GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[randFour + 4]);
             BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+            p2BA.assignThisHeadArrow(headArrows[randFour + 4].getRectTransform());
             p2BA.setSpeed(speed);
             p2BA.setDirection(rand);
             p2BA.setToIsPinoccio();
@@ -326,6 +337,7 @@ public class GameController : MonoBehaviour
         int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
         BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+        p1BA.assignThisHeadArrow(headArrows[rand].getRectTransform());
         p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
         p1BA.setToIsCinderella(cinderellaThreshHold.position);
@@ -333,12 +345,84 @@ public class GameController : MonoBehaviour
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
         BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+        p2BA.assignThisHeadArrow(headArrows[rand + 4].getRectTransform());
         p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
         p2BA.setToIsCinderella(cinderellaThreshHold.position);
         spawnedArrow2.Enqueue(p2BA);
     }
 
+    private void spawnChessurBeats()
+    {
+        int rand = UnityEngine.Random.Range(0, 3);
+        GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
+        BeatArrow p1BA = p1.GetComponent<BeatArrow>();
+        p1BA.assignThisHeadArrow(headArrows[rand].getRectTransform());
+        p1BA.setSpeed(speed);
+        p1BA.setDirection(rand);
+        //p1BA.setToChessur(spawnPoints[rand]);
+        spawnedArrow1.Enqueue(p1BA);
+
+        GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
+        BeatArrow p2BA = p2.GetComponent<BeatArrow>();
+        p2BA.assignThisHeadArrow(headArrows[rand + 4].getRectTransform());
+        p2BA.setSpeed(speed);
+        p2BA.setDirection(rand);
+        //p2BA.setToChessur(spawnPoints[rand]);
+        spawnedArrow2.Enqueue(p2BA);
+    }
+
+    private void swapHeadArrowRandomly()
+    {
+        chessurCooldownKeep += Time.deltaTime;
+        if (chessurCooldownKeep > chessurCooldownTime && !chessurIsActive)
+        {
+            List<int> rander = new List<int>();
+            rander.Add(0);
+            rander.Add(1);
+            rander.Add(2);
+            rander.Add(3);
+            List<int> keeper = new List<int>();
+            for (int i = 0; i < 4; i++)
+            {
+                int chosen = Random.Range(0, rander.Count);
+                keeper.Add(rander[chosen]);
+                Debug.Log(rander[chosen]);
+                rander.RemoveAt(chosen);
+                
+            }
+            headArrows[0].setToChessur(headArrows[keeper[0]].getRectPos());
+            headArrows[1].setToChessur(headArrows[keeper[1]].getRectPos());
+            headArrows[2].setToChessur(headArrows[keeper[2]].getRectPos());
+            headArrows[3].setToChessur(headArrows[keeper[3]].getRectPos());
+
+            headArrows[4].setToChessur(headArrows[keeper[0] + 4].getRectPos());
+            headArrows[5].setToChessur(headArrows[keeper[1] + 4].getRectPos());
+            headArrows[6].setToChessur(headArrows[keeper[2] + 4].getRectPos());
+            headArrows[7].setToChessur(headArrows[keeper[3] + 4].getRectPos());
+            chessurDurationKeep = 0.0f;
+            keeper.Clear();
+            chessurIsActive = true;
+        }
+        else
+        {
+            chessurDurationKeep += Time.deltaTime;
+            if (chessurDurationKeep > chessurDurationTime && chessurIsActive)
+            {
+                headArrows[0].setToNormal();
+                headArrows[1].setToNormal();
+                headArrows[2].setToNormal();
+                headArrows[3].setToNormal();
+
+                headArrows[4].setToNormal();
+                headArrows[5].setToNormal();
+                headArrows[6].setToNormal();
+                headArrows[7].setToNormal();
+                chessurCooldownKeep = 0.0f;
+                chessurIsActive = false;
+            }
+        }
+    }
     public int getP1Health()
     {
         return p1Health;
@@ -395,5 +479,10 @@ public class GameController : MonoBehaviour
             operation();
             timeBetweenKeep = 0.0f;
         }
+    }
+    
+    public Vector3 getHeadArrowPosition(int i)
+    {
+        return headArrows[i].getRectPos();
     }
 }

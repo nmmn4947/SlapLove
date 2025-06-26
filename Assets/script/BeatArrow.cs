@@ -9,6 +9,7 @@ public class BeatArrow : MonoBehaviour
     private float speed = 50;
 
     RectTransform rect;
+    private RectTransform thisHeadArrow;
     Collider2D col;
 
     private bool isDone = false;
@@ -16,7 +17,7 @@ public class BeatArrow : MonoBehaviour
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
     private bool isCinderella;
-    private bool isPinoccio;
+    private bool isChessur = false;
     private Vector3 cinderellaThreshHold;
 
     private CanvasGroup canvasGroup;
@@ -54,8 +55,17 @@ public class BeatArrow : MonoBehaviour
 
         if (!isDone)
         {
-            rect.position -= new Vector3(0f, speed * Time.deltaTime, 0f);
+/*            if (isChessur)
+            {
+                rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
+            }
+            else
+            {
+                rect.position -= new Vector3(0.0f, speed * Time.deltaTime, 0f);
+            }*/
+            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f); 
         }
+        Debug.Log(thisHeadArrow.position);
     }
 
     public bool GetIsDone()
@@ -150,9 +160,17 @@ public class BeatArrow : MonoBehaviour
 
     public void setToIsPinoccio()
     {
-        isPinoccio = true;
         this.gameObject.tag = "Fake";
-        
-        //Debug.Log(isCinderella);
+    }
+
+    public void setToChessur(RectTransform rct)
+    {
+        isChessur = true;
+        assignThisHeadArrow(rct);
+    }
+
+    public void assignThisHeadArrow(RectTransform rct)
+    {
+        thisHeadArrow = rct;
     }
 }
