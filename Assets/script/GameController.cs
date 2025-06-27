@@ -7,15 +7,20 @@ public class GameController : MonoBehaviour
 {
     //[Header("General")]
     public static GameController instance;
-    enum CharacterState
+    public enum CharacterState
     {
         Chessur,
         Pinocchio,
         Cinderella
     };
     CharacterState currentCharacter;
+    public CharacterState GetCharacterState()
+    {
+        return currentCharacter;
+    }
+
     private List<int> randCharacter = new List<int>();
-    private int stateCount = 0;
+    public int stateCount { get; private set; }
 
     enum GameState
     {
@@ -23,7 +28,7 @@ public class GameController : MonoBehaviour
         SlapState,
         GameEndState
     };
-    GameState currentState;
+    GameBaseState currentState;
 
     int p1Health = 3;
     int p2Health = 3;
@@ -32,6 +37,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject CharacterStateObjects;
 
+    public UIManager uiManager { get; private set; }
     [SerializeField] public ReadyCheck ReadyCheckP1 { get; private set; }
     [SerializeField] public ReadyCheck ReadyCheckP2 { get; private set; }
 
@@ -87,30 +93,48 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject EndStateObjects;
 
+    [Header("Game States")]
+    public RandomCharacterState randomCharacterState = new RandomCharacterState();
+    public GameplayState gameplayState;
+    public GameOverState gameOverState = new GameOverState();
+
     private void Awake()
     {
         instance = this;
+        gameplayState = new GameplayState(stateTime);
+        uiManager = FindFirstObjectByType<UIManager>();
+        Debug.Log(uiManager);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        stateCount = 0;
         float distance = Mathf.Abs(spawnPoints[0].position.y - hitBoxPoint.position.y);
         speed = distance / toHitBoxDuration;
 
-        currentState = GameState.CharacterStage;
+        
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
         //StartCoroutine(debugSpawn());
         randCharacter.Add(0);
         randCharacter.Add(1);
         randCharacter.Add(2);
-        characterRand();
+        currentState = randomCharacterState;
+        currentState.EnterState(this);
+    }
+    private void Update()
+    {
+        currentState.UpdateState(this);
     }
 
+    public void SwitchState(GameBaseState state)
+    {
+        currentState = state;
+        currentState.EnterState(this);
+    }
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         switch (currentState)
         {
@@ -178,13 +202,12 @@ public class GameController : MonoBehaviour
 
                 break;
         }
-    }
+    }*/
 
-    private void characterRand()
+    public void characterRand()
     {
-        int r = randCharacter[UnityEngine.Random.Range(0, randCharacter.Count)];
+        int r = randCharacter[Random.Range(0, randCharacter.Count)];
         currentCharacter = (CharacterState)r;
-        Debug.Log(r);
         randCharacter.Remove(r);
     }
 
@@ -205,6 +228,11 @@ public class GameController : MonoBehaviour
             return spawnedArrow2.Peek().getDirection(); // peek = front
         }
 
+    }
+
+    public void AddStateCount()
+    {
+        stateCount++;
     }
 
     IEnumerator dequeCurrentBeat(bool isP1)
@@ -238,7 +266,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void doneCurrentBeat(bool isP1, bool correct)
+    public void DoneCurrentBeat(bool isP1, bool correct)
     {
         if (isP1)
         {
@@ -254,7 +282,7 @@ public class GameController : MonoBehaviour
         //I move it to onEndAnimation in BeatArrow.
     }
 
-    private void spawnBeats()
+    public void SpawnBeats()
     {
         int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
@@ -272,7 +300,7 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Enqueue(p2BA);
     }
 
-    private void spawnBeats(int i)
+    private void SpawnBeats(int i)
     {
         //int rand = Random.Range(0, 3);
         int rand = i;
@@ -291,7 +319,7 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Enqueue(p2BA);
     }
 
-    private void spawnPinoccioBeats()
+    public void SpawnPinoccioBeats()
     {
         int randPinoc = UnityEngine.Random.Range(0, pinoccioChance);
         int rand = UnityEngine.Random.Range(0, 3);
@@ -324,11 +352,11 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            spawnBeats(rand);
+            SpawnBeats(rand);
         }
     }
 
-    private void spawnCinderellaBeats()
+    public void SpawnCinderellaBeats()
     {
         int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
@@ -348,7 +376,7 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Enqueue(p2BA);
     }
 
-    private void spawnChessurBeats()
+    public void SpawnChessurBeats()
     {
         int rand = UnityEngine.Random.Range(0, 3);
         GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[rand]);
@@ -368,7 +396,7 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Enqueue(p2BA);
     }
 
-    private void swapHeadArrowRandomly()
+    public void SwapHeadArrowRandomly()
     {
         chessurCooldownKeep += Time.deltaTime;
         if (chessurCooldownKeep > chessurCooldownTime && !chessurIsActive)
@@ -434,32 +462,32 @@ public class GameController : MonoBehaviour
         p2Health = 3;
     }
 
-    public void setP1Health(int amount)
+    public void SetP1Health(int amount)
     {
         p1Health = amount;
     }
 
-    public void setP2Health(int amount)
+    public void SetP2Health(int amount)
     {
         p2Health = amount;
     }
 
-    public int getStateCount()
+    public int GetStateCount()
     {
         return stateCount;
     }
 
-    public float getCurrentStateTime()
+    public float GetCurrentStateTime()
     {
         return stateTime - stateTimeKeep;
     }
 
-    public int getCurrentCharState()
+    public int GetCurrentCharState()
     {
         return (int)currentCharacter;
     }
 
-    private void clearBeats()
+    public void ClearBeats()
     {
         foreach (BeatArrow arr in spawnedArrow1)
         {
@@ -474,9 +502,9 @@ public class GameController : MonoBehaviour
         spawnedArrow2.Clear();
     }
 
-    private delegate void BeatArrowDelegate();
+    public delegate void BeatArrowDelegate();
 
-    private void BeatSpawning(BeatArrowDelegate operation)
+    public void BeatSpawning(BeatArrowDelegate operation)
     {
         timeBetweenKeep += Time.deltaTime;
         //Debug.Log(timeBetweenKeep);
@@ -487,7 +515,7 @@ public class GameController : MonoBehaviour
         }
     }
     
-    public Vector3 getHeadArrowPosition(int i)
+    public Vector3 GetHeadArrowPosition(int i)
     {
         return headArrows[i].getRectPos();
     }

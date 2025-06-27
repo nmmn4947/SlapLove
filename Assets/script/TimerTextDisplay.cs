@@ -14,6 +14,6 @@ public class TimerTextDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_TextMeshProUGUI.text = GameController.instance.getCurrentStateTime().ToString();
+        m_TextMeshProUGUI.text = GameController.instance.GetCurrentStateTime().ToString();
     }
 }

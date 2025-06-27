@@ -24,7 +24,7 @@ public class BeatRow : MonoBehaviour
 
     private void Update()
     {
-        int currentDirection = GameController.instance.getCurrentBeatDirection(isP1);
+        //int currentDirection = GameController.instance.getCurrentBeatDirection(isP1);
         //Debug.Log(currentDirection);
 
         if (isPressAble && !isFake)
@@ -144,7 +144,7 @@ public class BeatRow : MonoBehaviour
         {
             GameController.instance.minusPlayerHealth(isP1);
         }
-        GameController.instance.doneCurrentBeat(isP1, correct);
+        GameController.instance.DoneCurrentBeat(isP1, correct);
         isPressAble = false;
         isFake = false;
     }

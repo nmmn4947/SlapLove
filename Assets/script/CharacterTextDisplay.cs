@@ -21,7 +21,7 @@ public class CharacterTextDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (gameController.getCurrentCharState()) {
+        switch (gameController.GetCurrentCharState()) {
             case 0:
                 nameText.text = "Chessur";
                 descriptionText.text = chessurDescription;

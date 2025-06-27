@@ -16,7 +16,7 @@ public class BGCharacterDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (GameController.instance.getCurrentCharState())
+        switch (GameController.instance.GetCurrentCharState())
         {
             case 0:
                 nameText.text = "Chessur";
