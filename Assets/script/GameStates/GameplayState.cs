@@ -29,21 +29,20 @@ public class GameplayState : GameBaseState
         stateTimeKeep += Time.deltaTime;
         if (stateTimeKeep > stateTime)
         {
+            gc.uiManager.UpdateTimer(stateTimeKeep);
             gc.AddStateCount();
             if (gc.stateCount >= 3)
             {
-                gc.uiManager.SetCharacterStage(false);
-                gc.uiManager.SetGameplayState(false);
+               
 
                 gc.SwitchState(gc.gameOverState);
             }
             else
             {
-                gc.SwitchState(gc.randomCharacterState);
-                gc.ReadyCheckP1.resetReady();
-                gc.ReadyCheckP2.resetReady();
+                
+                
 
-                gc.characterRand();
+                gc.SwitchState(gc.randomCharacterState);
             }
         }
     }

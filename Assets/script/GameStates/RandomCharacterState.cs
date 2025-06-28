@@ -7,11 +7,15 @@ public class RandomCharacterState : GameBaseState
 
     public override void EnterState(GameController gc)
     {
+        Debug.Log("Entering RandomCharacterState");
         gameController = gc;
         gc.ClearBeats();
         gc.characterRand();
+        
         gc.uiManager.SetCharacterStage(true);
         gc.uiManager.SetGameplayState(false);
+        gc.uiManager.ResetP1ReadyState();
+        gc.uiManager.ResetP2ReadyState();
     }
 
     public override void UpdateState(GameController gc)

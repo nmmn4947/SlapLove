@@ -1368,6 +1368,8 @@ MonoBehaviour:
   readyCheckP1: {fileID: 1174297501}
   readyCheckP2: {fileID: 466855188}
   SlapStateObjects: {fileID: 391344705}
+  timerText: {fileID: 733184353}
+  EndGameObjects: {fileID: 1316866342}
 --- !u!1 &585724189
 GameObject:
   m_ObjectHideFlags: 0

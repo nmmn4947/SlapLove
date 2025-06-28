@@ -65,7 +65,7 @@ public class BeatArrow : MonoBehaviour
             }*/
             rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f); 
         }
-        Debug.Log(thisHeadArrow.position);
+        //Debug.Log(thisHeadArrow.position);
     }
 
     public bool GetIsDone()
