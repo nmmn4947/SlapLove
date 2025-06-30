@@ -17,11 +17,11 @@ public class BeatArrow : MonoBehaviour
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
     private bool isCinderella;
-    private bool isChessur = false;
+    //private bool isChessur = false;
     private Vector3 cinderellaThreshHold;
 
     private CanvasGroup canvasGroup;
-    private float cinderellaFadeTime = 2.5f;
+    private float cinderellaFadeTime = 3.5f;
     private float cinderellaFadeKeep = 0.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -63,7 +63,11 @@ public class BeatArrow : MonoBehaviour
             {
                 rect.position -= new Vector3(0.0f, speed * Time.deltaTime, 0f);
             }*/
-            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f); 
+            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
+        }
+        else
+        {
+            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y, 0f);
         }
         //Debug.Log(thisHeadArrow.position);
     }
@@ -165,7 +169,7 @@ public class BeatArrow : MonoBehaviour
 
     public void setToChessur(RectTransform rct)
     {
-        isChessur = true;
+        //isChessur = true;
         assignThisHeadArrow(rct);
     }
 

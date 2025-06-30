@@ -139,7 +139,6 @@ public class BeatRow : MonoBehaviour
 
     private void resolveBeat(bool correct)
     {
-        Debug.Log("resolve");
         if (!correct)
         {
             GameController.instance.minusPlayerHealth(isP1);

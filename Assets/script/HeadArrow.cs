@@ -7,10 +7,10 @@ public class HeadArrow : MonoBehaviour
     Vector3 originalPos;
     bool isChessur = false;
     Vector3 chessurPosition;
-    float transitionTime = 1.0f;
+    float transitionTime = 0.5f;
     float transitionKeep = 0.0f;
 
-    bool capturedOriginalPos = false;
+    //bool capturedOriginalPos = false;
 
     Image ch;
 
@@ -41,16 +41,17 @@ public class HeadArrow : MonoBehaviour
     void Update()
     {
         transitionKeep += Time.deltaTime;
-        if (transitionKeep > transitionTime)
+/*        if (transitionKeep > transitionTime)
         {
-            if (isChessur)
-            {
-                rectTransform.position = new Vector3(Mathf.Lerp(originalPos.x, chessurPosition.x, transitionKeep/transitionTime), rectTransform.position.y, rectTransform.position.z);
-            }
-            else
-            {
-                rectTransform.position = new Vector3(Mathf.Lerp(chessurPosition.x, originalPos.x, transitionKeep / transitionTime), rectTransform.position.y, rectTransform.position.z);
-            }
+
+        }*/
+        if (isChessur)
+        {
+            rectTransform.position = new Vector3(Mathf.Lerp(rectTransform.position.x, chessurPosition.x, transitionKeep / transitionTime), rectTransform.position.y, rectTransform.position.z);
+        }
+        else
+        {
+            rectTransform.position = new Vector3(Mathf.Lerp(rectTransform.position.x, originalPos.x, transitionKeep / transitionTime), rectTransform.position.y, rectTransform.position.z);
         }
     }
 
