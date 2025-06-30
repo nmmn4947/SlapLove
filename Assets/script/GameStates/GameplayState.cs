@@ -7,6 +7,7 @@ public class GameplayState : GameBaseState
     GameController gameController;
     float stateTimeKeep = 0;
     float stateTime; // Duration of the gameplay state
+
     public GameplayState(float stateTime)
     {
         this.stateTime = stateTime;
@@ -20,29 +21,34 @@ public class GameplayState : GameBaseState
 
     public override void UpdateState(GameController gc)
     {
-        CharacterLogicHandling();
+        if (!gc.checkQTE())
+        {
+            CharacterLogicHandling();
 
-        if (gc.getP1Health() <= 0 || gc.getP2Health() <= 0)
-        {
-            gc.SwitchState(gc.gameOverState);
-        }
-        stateTimeKeep += Time.deltaTime;
-        if (stateTimeKeep > stateTime)
-        {
-            gc.uiManager.UpdateTimer(stateTimeKeep);
-            gc.AddStateCount();
-            if (gc.stateCount >= 3)
+            if (gc.getP1Health() <= 0 || gc.getP2Health() <= 0)
             {
-               
-
                 gc.SwitchState(gc.gameOverState);
             }
-            else
+        
+            stateTimeKeep += Time.deltaTime;
+            gc.uiManager.UpdateTimer(stateTime - stateTimeKeep);
+            if (stateTimeKeep > stateTime)
             {
-                
-                
 
-                gc.SwitchState(gc.randomCharacterState);
+                gc.AddStateCount();
+                if (gc.stateCount >= 3)
+                {
+
+
+                    gc.SwitchState(gc.gameOverState);
+                }
+                else
+                {
+
+
+
+                    gc.SwitchState(gc.randomCharacterState);
+                }
             }
         }
     }

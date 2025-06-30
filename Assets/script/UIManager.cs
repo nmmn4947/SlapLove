@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour
     {
         if (timerText != null)
         {
+            
             timerText.text = time.ToString(); // Format to 1 decimal places
         }
         else

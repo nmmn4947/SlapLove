@@ -1,5 +1,6 @@
 using System.Collections;
 using MoreMountains.Feedbacks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BeatArrow : MonoBehaviour
@@ -13,12 +14,19 @@ public class BeatArrow : MonoBehaviour
     Collider2D col;
 
     private bool isDone = false;
+    private bool isStop = false;
+
+    private float stopTime = 1.0f;
+    private float stopTimeKeep = 0.0f;
+    private float keptStopYPosition;
+
     [SerializeField] private MMF_Player correct_MMFPlayer;
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
     private bool isCinderella;
     //private bool isChessur = false;
     private Vector3 cinderellaThreshHold;
+    private Vector3 cinderellaGonePos;
 
     private CanvasGroup canvasGroup;
     private float cinderellaFadeTime = 3.5f;
@@ -39,20 +47,18 @@ public class BeatArrow : MonoBehaviour
     {
         if (isCinderella && !isDone)
         {
-            //Debug.Log(rect.position.y - cinderellaThreshHold.y);
-            if (rect.position.y - cinderellaThreshHold.y < 0.0f)
-            {
-                //set opacity zero
-                cinderellaFadeKeep -= Time.deltaTime;
-                canvasGroup.alpha = Mathf.Lerp(0.0f, 1.0f, cinderellaFadeKeep/cinderellaFadeTime);
-            }
+            float totalDistance = cinderellaThreshHold.y - cinderellaGonePos.y;
+            float currentDistance = rect.position.y - cinderellaGonePos.y;
+            float t = Mathf.Clamp01(currentDistance / totalDistance);
+            canvasGroup.alpha = t;
         }
         else if (isCinderella && isDone)
         {
             canvasGroup.alpha = 1.0f;
         }
 
-        if (!isDone)
+
+        if (!isDone && !isStop)
         {
 /*            if (isChessur)
             {
@@ -63,6 +69,11 @@ public class BeatArrow : MonoBehaviour
                 rect.position -= new Vector3(0.0f, speed * Time.deltaTime, 0f);
             }*/
             rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
+        }
+        else if (!isDone && isStop)
+        {
+            stopTimeKeep += Time.deltaTime;
+            rect.position = new Vector3(thisHeadArrow.position.x, Mathf.Lerp(rect.position.y, keptStopYPosition, stopTimeKeep/stopTime), 0f);
         }
         else
         {
@@ -154,10 +165,11 @@ public class BeatArrow : MonoBehaviour
         Destroy(gameObject, 0.3f);
     }
 
-    public void setToIsCinderella(Vector3 threshHold)
+    public void setToIsCinderella(Vector3 threshHold, Vector3 gonePos)
     {
         isCinderella = true;
         cinderellaThreshHold = threshHold;
+        cinderellaGonePos = gonePos;
         //Debug.Log(isCinderella);
     }
 
@@ -175,5 +187,20 @@ public class BeatArrow : MonoBehaviour
     public void assignThisHeadArrow(RectTransform rct)
     {
         thisHeadArrow = rct;
+    }
+
+    public void setIsStop(bool b)
+    {
+        if (b)
+        {
+            isStop = true;
+            stopTimeKeep = 0;
+            keptStopYPosition = rect.position.y + 1.0f;
+        }
+        else
+        {
+            isStop = false;
+        }
+
     }
 }

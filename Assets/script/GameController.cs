@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameController : MonoBehaviour
 {
@@ -72,14 +73,8 @@ public class GameController : MonoBehaviour
     public RectTransform[] spawnPoints;
     public RectTransform hitBoxPoint;
 
-    [SerializeField] private float qteRangeTime;
-    private float qteRangeKeep;
-    [SerializeField] private float qteRandomChance;
-    [SerializeField] private float qtedurationTime;
-    private float qteDurationKeep;
-    
-
     [SerializeField] private RectTransform cinderellaThreshHold;
+    [SerializeField] private RectTransform cinderellaGonePos;
 
     [SerializeField] private int pinoccioChance;
 
@@ -88,6 +83,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private float chessurCooldownTime;
     private float chessurCooldownKeep = 0;
     private bool chessurIsActive = false;
+
+    private bool beatIsStop = false;
+    [SerializeField] private float qteDuration;
+    private float qteDurationKeep = 0.0f;
+    [SerializeField] private float qteCooldownMin;
+    [SerializeField] private float qteCooldownMax;
+    private float qteCooldown;
+    private float qteCooldownKeep = 0.0f;
 
     [Header("EndState")]
 
@@ -103,6 +106,7 @@ public class GameController : MonoBehaviour
         instance = this;
         gameplayState = new GameplayState(stateTime);
         uiManager = FindFirstObjectByType<UIManager>();
+        qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
         Debug.Log(uiManager);
     }
 
@@ -209,12 +213,6 @@ public class GameController : MonoBehaviour
         int r = randCharacter[Random.Range(0, randCharacter.Count)];
         currentCharacter = (CharacterState)r;
         randCharacter.Remove(r);
-    }
-
-    private void toggleStopBeat()
-    {
-        //Set a new state in BeatArrow and set new function to stop the beat from moving.
-
     }
 
     public int getCurrentBeatDirection(bool isP1)
@@ -364,7 +362,7 @@ public class GameController : MonoBehaviour
         p1BA.assignThisHeadArrow(headArrows[rand].getRectTransform());
         p1BA.setSpeed(speed);
         p1BA.setDirection(rand);
-        p1BA.setToIsCinderella(cinderellaThreshHold.position);
+        p1BA.setToIsCinderella(cinderellaThreshHold.position, cinderellaGonePos.position);
         spawnedArrow1.Enqueue(p1BA);
 
         GameObject p2 = Instantiate(arrowPrefabs[rand], spawnPoints[rand + 4]);
@@ -372,7 +370,7 @@ public class GameController : MonoBehaviour
         p2BA.assignThisHeadArrow(headArrows[rand + 4].getRectTransform());
         p2BA.setSpeed(speed);
         p2BA.setDirection(rand);
-        p2BA.setToIsCinderella(cinderellaThreshHold.position);
+        p2BA.setToIsCinderella(cinderellaThreshHold.position, cinderellaGonePos.position);
         spawnedArrow2.Enqueue(p2BA);
     }
 
@@ -518,5 +516,49 @@ public class GameController : MonoBehaviour
     public Vector3 GetHeadArrowPosition(int i)
     {
         return headArrows[i].getRectPos();
+    }
+
+    public void setBeatToStop(bool b)
+    {
+        beatIsStop = b;
+    }
+
+    public bool checkQTE()
+    {
+        if (!beatIsStop) {
+            qteCooldownKeep += Time.deltaTime;
+            if (qteCooldownKeep > qteCooldown)
+            {
+                Debug.Log("stop");
+                beatIsStop = true;
+                qteDurationKeep = 0.0f;
+                stopAllBeats(true);
+            }
+        }
+        else
+        {
+            qteDurationKeep += Time.deltaTime;
+            if (qteDurationKeep > qteDuration)
+            {
+                Debug.Log("unstop");
+                beatIsStop = false;
+                qteCooldownKeep = 0.0f;
+                qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
+                stopAllBeats(false);
+            }
+        }
+        return beatIsStop;
+    }
+
+    public void stopAllBeats(bool bull)
+    {
+        foreach (BeatArrow b in spawnedArrow1)
+        {
+            b.setIsStop(bull);
+        }
+        foreach (BeatArrow b2 in spawnedArrow2)
+        {
+            b2.setIsStop(bull);
+        }
     }
 }
