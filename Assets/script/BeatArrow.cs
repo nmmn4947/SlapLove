@@ -43,7 +43,6 @@ public class BeatArrow : MonoBehaviour
             if (rect.position.y - cinderellaThreshHold.y < 0.0f)
             {
                 //set opacity zero
-                Debug.Log("aa");
                 cinderellaFadeKeep -= Time.deltaTime;
                 canvasGroup.alpha = Mathf.Lerp(0.0f, 1.0f, cinderellaFadeKeep/cinderellaFadeTime);
             }
