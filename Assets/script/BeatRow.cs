@@ -122,7 +122,7 @@ public class BeatRow : MonoBehaviour
         
         if (collision != null)
         {
-            if (collision.gameObject.tag == "Beat" && !collision.GetComponent<BeatArrow>().GetIsDone())
+            if (collision.gameObject.tag == "Beat" && !collision.GetComponent<BeatArrow>().getIsDone())
             {
                 
                 Debug.Log(collision.gameObject.name+" Exit collider " + "is Player 1: "+isP1);
@@ -130,7 +130,7 @@ public class BeatRow : MonoBehaviour
                 {
                     resolveBeat(false);
                 }
-            }else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().GetIsDone())
+            }else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().getIsDone())
             {
                 resolveBeat(true);
             }

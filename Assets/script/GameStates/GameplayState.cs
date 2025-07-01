@@ -44,9 +44,6 @@ public class GameplayState : GameBaseState
                 }
                 else
                 {
-
-
-
                     gc.SwitchState(gc.randomCharacterState);
                 }
             }

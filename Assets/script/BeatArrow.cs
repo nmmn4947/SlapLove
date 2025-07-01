@@ -20,6 +20,8 @@ public class BeatArrow : MonoBehaviour
     private float stopTimeKeep = 0.0f;
     private float keptStopYPosition;
 
+    private float doneLifeTime = 1.5f; // placeholder , need to some how fix de bug
+
     [SerializeField] private MMF_Player correct_MMFPlayer;
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
@@ -77,12 +79,17 @@ public class BeatArrow : MonoBehaviour
         }
         else
         {
+            doneLifeTime -= Time.deltaTime;
+            if (doneLifeTime < 0.0f)
+            {
+                Destroy(this.gameObject);
+            }
             rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y, 0f);
         }
         //Debug.Log(thisHeadArrow.position);
     }
 
-    public bool GetIsDone()
+    public bool getIsDone()
     {
         return isDone;
     }
