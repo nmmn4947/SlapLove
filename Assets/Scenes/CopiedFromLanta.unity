@@ -3221,7 +3221,7 @@ MonoBehaviour:
   p1Row: {fileID: 922493418}
   p2Row: {fileID: 1069362773}
   stateTime: 120
-  timeBetweenBeats: 2
+  timeBetweenBeats: 1
   toHitBoxDuration: 3
   spawnPoints:
   - {fileID: 1727258635}

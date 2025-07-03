@@ -31,8 +31,8 @@ public class GameController : MonoBehaviour
     };
     GameBaseState currentState;
 
-    int p1Health = 3;
-    int p2Health = 3;
+    int p1Health = 100;
+    int p2Health = 100;
 
     [Header("CharacterState")]
 
@@ -452,12 +452,6 @@ public class GameController : MonoBehaviour
     public int getP2Health()
     {
         return p2Health;
-    }
-
-    private void resetHealth()
-    {
-        p1Health = 3;
-        p2Health = 3;
     }
 
     public void SetP1Health(int amount)

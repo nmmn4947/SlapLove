@@ -13,6 +13,7 @@ public class BeatRow : MonoBehaviour
     [SerializeField] private bool isP1;
 
     public ArrowChecker correctCol;
+    public ArrowChecker goodCol;
 
     KeyCode keyToPress;
 
@@ -32,11 +33,17 @@ public class BeatRow : MonoBehaviour
             if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
             {
                 //right
+                Debug.Log("Perfect");
+                resolveBeat(true);
+            }else if (Input.GetKeyDown(keyToPress) && goodCol.getBeatIsTouched())
+            {
+                Debug.Log("Good");
                 resolveBeat(true);
             }
             else if (Input.GetKeyDown(keyToPress))
             {
                 //wrong
+                Debug.Log("Miss");
                 resolveBeat(false);
             }
         }else if (isPressAble && isFake)
