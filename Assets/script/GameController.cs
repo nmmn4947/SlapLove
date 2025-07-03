@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
 
     private List<int> randCharacter = new List<int>();
     public int stateCount { get; private set; }
+    
 
     enum GameState
     {
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour
 
 
     [Header("Slap/RhythmState")]
+    private bool[] playerPressed = new bool[2];
 
     [SerializeField] private GameObject SlapStateObjects;
 
@@ -264,20 +266,33 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void DoneCurrentBeat(bool isP1, bool correct)
+    public void DoneCurrentBeat(bool isP1, bool correct) // use this function to resolve the beat after receiving both players' input
     {
-        if (isP1)
+        if (!playerPressed[0] || !playerPressed[1])
         {
+            Debug.Log("One player pressed, resolving beat");
+            if (isP1)
+            {
+                playerPressed[0] = true; // P1 pressed
+            }
+            else
+            {
+                playerPressed[1] = true; // P2 pressed
+            }
+        }
+
+        if (playerPressed[0] && playerPressed[1])
+        {
+            Debug.Log("Both players pressed, resolving beat");
+            playerPressed[0] = false;
+            playerPressed[1] = false;
+
             spawnedArrow1.Peek().beatDone(correct);
-            //spawnedArrow1.Dequeue();
-        }
-        else
-        {
             spawnedArrow2.Peek().beatDone(correct);
-            //spawnedArrow2.Dequeue();
+            StartCoroutine(dequeCurrentBeat(isP1));
         }
-        StartCoroutine(dequeCurrentBeat(isP1));
-        //I move it to onEndAnimation in BeatArrow.
+        
+
     }
 
     public void SpawnBeats()
