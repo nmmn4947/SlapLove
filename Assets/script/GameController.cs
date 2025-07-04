@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour
 
     [Header("Slap/RhythmState")]
     private bool[] playerPressed = new bool[2];
+    [SerializeField]private bool[] playerBeatResult = new bool[2];
 
     [SerializeField] private GameObject SlapStateObjects;
 
@@ -237,19 +238,22 @@ public class GameController : MonoBehaviour
 
     IEnumerator dequeCurrentBeat(bool isP1)
     {
+        spawnedArrow1.Dequeue();
+        spawnedArrow2.Dequeue();
+        yield return new WaitForSeconds(0f); //temporary remove delay
         /*        if (spawnedArrow1.Count == 0)
                 {
                     yield return null;
-                }*/
-        yield return new WaitForSeconds(0f); //temporary remove delay
+                }*//*
+        
         if (isP1)
         {
-            spawnedArrow1.Dequeue();
+            
         }
         else
         {
-            spawnedArrow2.Dequeue();
-        }
+            
+        }*/
 
     }
 
@@ -274,10 +278,12 @@ public class GameController : MonoBehaviour
             if (isP1)
             {
                 playerPressed[0] = true; // P1 pressed
+                playerBeatResult[0] = correct; // store result for P1
             }
             else
             {
                 playerPressed[1] = true; // P2 pressed
+                playerBeatResult[1] = correct; // store result for P2
             }
         }
 
@@ -287,8 +293,8 @@ public class GameController : MonoBehaviour
             playerPressed[0] = false;
             playerPressed[1] = false;
 
-            spawnedArrow1.Peek().beatDone(correct);
-            spawnedArrow2.Peek().beatDone(correct);
+            spawnedArrow1.Peek().beatDone(playerBeatResult[0]);
+            spawnedArrow2.Peek().beatDone(playerBeatResult[1]);
             StartCoroutine(dequeCurrentBeat(isP1));
         }
         

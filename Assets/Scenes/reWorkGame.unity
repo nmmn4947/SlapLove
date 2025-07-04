@@ -3538,6 +3538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterStateObjects: {fileID: 149770443}
+  playerBeatResult: 0000
   SlapStateObjects: {fileID: 391344705}
   arrowPrefabs:
   - {fileID: 1423551744614779759, guid: 049aca58f8dd3bd44bd2185df659f996, type: 3}
@@ -3694,7 +3695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isP1: 0
   correctCol: {fileID: 1055738293}
-  goodCol: {fileID: 0}
+  goodCol: {fileID: 1203265747}
 --- !u!114 &1069362774
 MonoBehaviour:
   m_ObjectHideFlags: 0

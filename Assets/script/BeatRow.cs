@@ -35,7 +35,8 @@ public class BeatRow : MonoBehaviour
                 //right
                 Debug.Log("Perfect");
                 resolveBeat(true);
-            }else if (Input.GetKeyDown(keyToPress) && goodCol.getBeatIsTouched())
+            }
+            else if (Input.GetKeyDown(keyToPress) && goodCol.getBeatIsTouched())
             {
                 Debug.Log("Good");
                 resolveBeat(true);
@@ -46,7 +47,8 @@ public class BeatRow : MonoBehaviour
                 Debug.Log("Miss");
                 resolveBeat(false);
             }
-        }else if (isPressAble && isFake)
+        }
+        else if (isPressAble && isFake)
         {
             if (isP1) {
                 if (Input.GetKeyDown(KeyCode.W) ||
@@ -135,9 +137,11 @@ public class BeatRow : MonoBehaviour
                 Debug.Log(collision.gameObject.name+" Exit collider " + "is Player 1: "+isP1);
                 if (isPressAble)
                 {
+                    
                     resolveBeat(false);
                 }
-            }else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().getIsDone())
+            }
+            else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().getIsDone())
             {
                 resolveBeat(true);
             }

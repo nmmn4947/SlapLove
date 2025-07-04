@@ -120,7 +120,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2185206500252759230}
           m_TargetAssemblyTypeName: BeatArrow, Assembly-CSharp
-          m_MethodName: OnEndAnimation
+          m_MethodName: killBeat
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -621,7 +621,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2185206500252759230}
           m_TargetAssemblyTypeName: BeatArrow, Assembly-CSharp
-          m_MethodName: OnEndAnimation
+          m_MethodName: killBeat
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1238,7 +1238,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.11216736, y: -39.2099}
+  m_Offset: {x: 0.11216736, y: -43.55121}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1248,7 +1248,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 99.76065, y: 19.321167}
+  m_Size: {x: 99.76065, y: 10.63855}
   m_EdgeRadius: 0
 --- !u!114 &8841255602472251312
 MonoBehaviour:

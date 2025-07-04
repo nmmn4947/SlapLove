@@ -77,7 +77,7 @@ public class BeatArrow : MonoBehaviour
             stopTimeKeep += Time.deltaTime;
             rect.position = new Vector3(thisHeadArrow.position.x, Mathf.Lerp(rect.position.y, keptStopYPosition, stopTimeKeep/stopTime), 0f);
         }
-        else
+        /*else
         {
             doneLifeTime -= Time.deltaTime;
             if (doneLifeTime < 0.0f)
@@ -85,7 +85,7 @@ public class BeatArrow : MonoBehaviour
                 Destroy(this.gameObject);
             }
             rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y, 0f);
-        }
+        }*/
         //Debug.Log(thisHeadArrow.position);
     }
 
@@ -129,7 +129,7 @@ public class BeatArrow : MonoBehaviour
         {
             //Debug.Log("Wrong");
             //StartCoroutine(deadWrongAnimation());
-            col.enabled = false; // disable collider so it doesn't trigger again
+            //col.enabled = false; // disable collider so it doesn't trigger again
             onWrongAnimation();
         }
         
@@ -164,12 +164,11 @@ public class BeatArrow : MonoBehaviour
     {
         rect.localScale -= new Vector3(0.25f, 0.25f, 0.25f); // place holder anim
         yield return new WaitForSeconds(0.5f);
-        //Destroy(this.gameObject);
     }
 
     public void OnEndAnimation() //trigger at the end of both correct and wrong animations
     {
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 0.5f);
     }
 
     public void setToIsCinderella(Vector3 threshHold, Vector3 gonePos)
