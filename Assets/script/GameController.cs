@@ -95,6 +95,9 @@ public class GameController : MonoBehaviour
     private float qteCooldown;
     private float qteCooldownKeep = 0.0f;
 
+    private int damageThisBeatP1 = -1;
+    private int damageThisBeatP2 = -1;
+
     [Header("EndState")]
 
     [SerializeField] private GameObject EndStateObjects;
@@ -110,7 +113,7 @@ public class GameController : MonoBehaviour
         gameplayState = new GameplayState(stateTime);
         uiManager = FindFirstObjectByType<UIManager>();
         qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
-        Debug.Log(uiManager);
+        //Debug.Log(uiManager);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -119,7 +122,6 @@ public class GameController : MonoBehaviour
         stateCount = 0;
         float distance = Mathf.Abs(spawnPoints[0].position.y - hitBoxPoint.position.y);
         speed = distance / toHitBoxDuration;
-
         
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
@@ -140,76 +142,6 @@ public class GameController : MonoBehaviour
         currentState = state;
         currentState.EnterState(this);
     }
-    // Update is called once per frame
-    /*void Update()
-    {
-        switch (currentState)
-        {
-            case GameState.CharacterStage:
-
-                CharacterStateObjects.SetActive(true);
-                SlapStateObjects.SetActive(false);
-
-                if (ReadyCheckP1.getIsReady() && ReadyCheckP2.getIsReady())
-                {
-                    //Maybe some Animation to go to next state
-                    resetHealth();
-                    currentState = GameState.SlapState;
-                    stateTimeKeep = 0.0f;
-                }
-                break;
-
-            case GameState.SlapState:
-                CharacterStateObjects.SetActive(false);
-                SlapStateObjects.SetActive(true);
-
-
-
-                switch (currentCharacter)
-                {
-                    case CharacterState.Chessur:
-                        swapHeadArrowRandomly();
-                        BeatSpawning(spawnBeats);
-                        break;
-                    case CharacterState.Pinocchio:
-                        BeatSpawning(spawnPinoccioBeats);
-                        break;
-                    case CharacterState.Cinderella:
-                        BeatSpawning(spawnCinderellaBeats);
-                        break;
-                }
-
-                //defaultBeatSpawning();
-
-                //Next state
-                stateTimeKeep += Time.deltaTime;
-                if (stateTimeKeep > stateTime || p1Health <= 0 || p2Health <= 0)
-                {
-                    stateCount++;
-                    if (stateCount >= 3)
-                    {
-                        CharacterStateObjects.SetActive(false);
-                        SlapStateObjects.SetActive(false);
-                        EndStateObjects.SetActive(true);
-                        currentState = GameState.GameEndState;
-                    }
-                    else
-                    {
-                        ReadyCheckP1.resetReady();
-                        ReadyCheckP2.resetReady();
-                        clearBeats();
-                        characterRand();
-                        currentState = GameState.CharacterStage;
-                    }
-
-                }
-                break;
-
-            case GameState.GameEndState:
-
-                break;
-        }
-    }*/
 
     public void characterRand()
     {
@@ -272,9 +204,9 @@ public class GameController : MonoBehaviour
 
     public void DoneCurrentBeat(bool isP1, bool correct) // use this function to resolve the beat after receiving both players' input
     {
-        if (!playerPressed[0] || !playerPressed[1])
+/*        if (!playerPressed[0] || !playerPressed[1])
         {
-            Debug.Log("One player pressed, resolving beat");
+            //Debug.Log("One player pressed, resolving beat");
             if (isP1)
             {
                 playerPressed[0] = true; // P1 pressed
@@ -289,16 +221,67 @@ public class GameController : MonoBehaviour
 
         if (playerPressed[0] && playerPressed[1])
         {
-            Debug.Log("Both players pressed, resolving beat");
+            //Debug.Log("Both players pressed, resolving beat");
             playerPressed[0] = false;
             playerPressed[1] = false;
 
             spawnedArrow1.Peek().beatDone(playerBeatResult[0]);
             spawnedArrow2.Peek().beatDone(playerBeatResult[1]);
             StartCoroutine(dequeCurrentBeat(isP1));
-        }
+        }*/
         
 
+    }
+
+    public void PlayCurrentBeatDeadAnimation(bool isP1, bool isCorrect)
+    {
+        if (isP1)
+        {
+            spawnedArrow1.Peek().beatDone(isCorrect);
+        }
+        else
+        {
+            spawnedArrow2.Peek().beatDone(isCorrect);
+        }
+    }
+
+    public void DoneCurrentBeat(bool isP1, int damage)
+    {
+        if (isP1)
+        {
+            damageThisBeatP1 = damage;
+            spawnedArrow1.Dequeue();
+        }
+        else
+        {
+            damageThisBeatP2 = damage;
+            spawnedArrow2.Dequeue();
+        }
+    }
+
+    public void checkIfDamagable()
+    {
+        if (damageThisBeatP1 != -1 && damageThisBeatP2 != -1)
+        {
+            if (damageThisBeatP1 > damageThisBeatP2)
+            {
+                SetP2Health(getP2Health() - (damageThisBeatP1 - damageThisBeatP2));
+            }
+            else if (damageThisBeatP2 > damageThisBeatP1)
+            {
+                SetP1Health(getP1Health() - (damageThisBeatP2 - damageThisBeatP1));
+            }
+            else
+            {
+                //both misses
+            }
+
+            damageThisBeatP1 = -1; damageThisBeatP2 = -1;
+        }
+        else
+        {
+            
+        }
     }
 
     public void SpawnBeats()
@@ -430,7 +413,7 @@ public class GameController : MonoBehaviour
             {
                 int chosen = Random.Range(0, rander.Count);
                 keeper.Add(rander[chosen]);
-                Debug.Log(rander[chosen]);
+                //Debug.Log(rander[chosen]);
                 rander.RemoveAt(chosen);
                 
             }
@@ -465,6 +448,19 @@ public class GameController : MonoBehaviour
                 chessurIsActive = false;
             }
         }
+    }
+
+    public void SwapHeadArrowToNormal()
+    {
+        headArrows[0].setToNormal();
+        headArrows[1].setToNormal();
+        headArrows[2].setToNormal();
+        headArrows[3].setToNormal();
+
+        headArrows[4].setToNormal();
+        headArrows[5].setToNormal();
+        headArrows[6].setToNormal();
+        headArrows[7].setToNormal();
     }
     public int getP1Health()
     {
@@ -540,26 +536,26 @@ public class GameController : MonoBehaviour
 
     public bool checkQTE()
     {
-        if (!beatIsStop) {
-            qteCooldownKeep += Time.deltaTime;
-            if (qteCooldownKeep > qteCooldown)
-            {
-                Debug.Log("stop");
-                beatIsStop = true;
-                qteDurationKeep = 0.0f;
-                stopAllBeats(true);
+        if (currentState is GameplayState) {
+            if (!beatIsStop) {
+                qteCooldownKeep += Time.deltaTime;
+                if (qteCooldownKeep > qteCooldown)
+                {
+                    beatIsStop = true;
+                    qteDurationKeep = 0.0f;
+                    stopAllBeats(true);
+                }
             }
-        }
-        else
-        {
-            qteDurationKeep += Time.deltaTime;
-            if (qteDurationKeep > qteDuration)
+            else
             {
-                Debug.Log("unstop");
-                beatIsStop = false;
-                qteCooldownKeep = 0.0f;
-                qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
-                stopAllBeats(false);
+                qteDurationKeep += Time.deltaTime;
+                if (qteDurationKeep > qteDuration)
+                {
+                    beatIsStop = false;
+                    qteCooldownKeep = 0.0f;
+                    qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
+                    stopAllBeats(false);
+                }
             }
         }
         return beatIsStop;
@@ -574,6 +570,18 @@ public class GameController : MonoBehaviour
         foreach (BeatArrow b2 in spawnedArrow2)
         {
             b2.setIsStop(bull);
+        }
+    }
+
+    public void stopAllBeatsNoRetract(bool bull)
+    {
+        foreach (BeatArrow b in spawnedArrow1)
+        {
+            b.setIsStopNoRetract(bull);
+        }
+        foreach (BeatArrow b2 in spawnedArrow2)
+        {
+            b2.setIsStopNoRetract(bull);
         }
     }
 }

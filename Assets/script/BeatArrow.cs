@@ -20,8 +20,6 @@ public class BeatArrow : MonoBehaviour
     private float stopTimeKeep = 0.0f;
     private float keptStopYPosition;
 
-    private float doneLifeTime = 1.5f; // placeholder , need to some how fix de bug
-
     [SerializeField] private MMF_Player correct_MMFPlayer;
     [SerializeField] private MMF_Player wrong_MMFPlayer;
 
@@ -47,6 +45,7 @@ public class BeatArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        keptStopYPosition = rect.position.y;
         if (isCinderella && !isDone)
         {
             float totalDistance = cinderellaThreshHold.y - cinderellaGonePos.y;
@@ -76,7 +75,9 @@ public class BeatArrow : MonoBehaviour
         {
             stopTimeKeep += Time.deltaTime;
             rect.position = new Vector3(thisHeadArrow.position.x, Mathf.Lerp(rect.position.y, keptStopYPosition, stopTimeKeep/stopTime), 0f);
+
         }
+        
         /*else
         {
             doneLifeTime -= Time.deltaTime;
@@ -201,7 +202,21 @@ public class BeatArrow : MonoBehaviour
         {
             isStop = true;
             stopTimeKeep = 0;
-            keptStopYPosition = rect.position.y + 1.0f;
+            //keptStopYPosition = rect.position.y + 1.0f;
+        }
+        else
+        {
+            isStop = false;
+        }
+
+    }
+
+    public void setIsStopNoRetract(bool b)
+    {
+        if (b)
+        {
+            isStop = true;
+            stopTimeKeep = 0;
         }
         else
         {

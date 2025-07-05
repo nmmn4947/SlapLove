@@ -32,20 +32,15 @@ public class BeatRow : MonoBehaviour
         {
             if (Input.GetKeyDown(keyToPress) && correctCol.getBeatIsTouched())
             {
-                //right
-                Debug.Log("Perfect");
-                resolveBeat(true);
+                resolveBeat("perfect");
             }
             else if (Input.GetKeyDown(keyToPress) && goodCol.getBeatIsTouched())
             {
-                Debug.Log("Good");
-                resolveBeat(true);
+                resolveBeat("good");
             }
             else if (Input.GetKeyDown(keyToPress))
             {
-                //wrong
-                Debug.Log("Miss");
-                resolveBeat(false);
+                resolveBeat("miss");
             }
         }
         else if (isPressAble && isFake)
@@ -57,7 +52,7 @@ public class BeatRow : MonoBehaviour
                     Input.GetKeyDown(KeyCode.D))
                 {
                     Debug.Log("Press Fake");
-                    resolveBeat(false);
+                    resolveBeat("miss");
                 }
             }
             else
@@ -68,7 +63,7 @@ public class BeatRow : MonoBehaviour
                 Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     Debug.Log("Press Fake");
-                    resolveBeat(false);
+                    resolveBeat("miss");
                 }
             }
         }
@@ -134,27 +129,38 @@ public class BeatRow : MonoBehaviour
             if (collision.gameObject.tag == "Beat" && !collision.GetComponent<BeatArrow>().getIsDone())
             {
                 
-                Debug.Log(collision.gameObject.name+" Exit collider " + "is Player 1: "+isP1);
+                //Debug.Log(collision.gameObject.name+" Exit collider " + "is Player 1: "+isP1);
                 if (isPressAble)
                 {
                     
-                    resolveBeat(false);
+                    resolveBeat("miss");
                 }
             }
             else if (collision.gameObject.tag == "Fake" && !collision.GetComponent<BeatArrow>().getIsDone())
             {
-                resolveBeat(true);
+                resolveBeat("good"); // Count as good for now, (This is a scenario where you don't press the fake pinoccio beat arrow)
             }
         }
     }
 
-    private void resolveBeat(bool correct)
+    private void resolveBeat(string s)
     {
-        if (!correct)
+        switch (s)
         {
-            GameController.instance.minusPlayerHealth(isP1);
+            case "perfect":
+                GameController.instance.PlayCurrentBeatDeadAnimation(isP1, true);
+                GameController.instance.DoneCurrentBeat(isP1, 100);
+                break;
+            case "good":
+                GameController.instance.PlayCurrentBeatDeadAnimation(isP1, true);
+                GameController.instance.DoneCurrentBeat(isP1, 50);
+                break;
+            case "miss":
+                GameController.instance.PlayCurrentBeatDeadAnimation(isP1, false);
+                GameController.instance.DoneCurrentBeat(isP1, 0);
+                break;
         }
-        GameController.instance.DoneCurrentBeat(isP1, correct);
+            
         isPressAble = false;
         isFake = false;
     }

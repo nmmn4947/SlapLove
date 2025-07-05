@@ -13,7 +13,7 @@ public class RandomCharacterState : GameBaseState
         gc.characterRand();
         
         gc.uiManager.SetCharacterStage(true);
-        gc.uiManager.SetGameplayState(false);
+        gc.uiManager.SetGameplayState(true);
         gc.uiManager.ResetP1ReadyState();
         gc.uiManager.ResetP2ReadyState();
     }
@@ -29,8 +29,8 @@ public class RandomCharacterState : GameBaseState
 
     private void ResetHealth()
     {
-        gameController.SetP1Health(100);
-        gameController.SetP2Health(100);
+        gameController.SetP1Health(1000);
+        gameController.SetP2Health(1000);
     }
 
 }
