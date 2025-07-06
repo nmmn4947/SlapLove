@@ -32,8 +32,9 @@ public class GameController : MonoBehaviour
     };
     GameBaseState currentState;
 
-    int p1Health = 100;
-    int p2Health = 100;
+    [SerializeField] int playerMaxHealth = 1000;
+    int p1Health = 1000;
+    int p2Health = 1000;
 
     [Header("CharacterState")]
 
@@ -137,6 +138,11 @@ public class GameController : MonoBehaviour
         currentState.UpdateState(this);
     }
 
+    public int getMaxPlayerHealth()
+    {
+        return playerMaxHealth;
+    }
+
     public void SwitchState(GameBaseState state)
     {
         currentState = state;
@@ -159,7 +165,7 @@ public class GameController : MonoBehaviour
         else
         {
             return spawnedArrow2.Peek().getDirection(); // peek = front
-        }
+        } 
 
     }
 
