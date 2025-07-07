@@ -4526,8 +4526,8 @@ MonoBehaviour:
   chessurDurationTime: 10
   chessurCooldownTime: 10
   qteDuration: 3
-  qteCooldownMin: 5
-  qteCooldownMax: 10
+  qteCooldownMin: 15
+  qteCooldownMax: 20
   animatorP1Fight: {fileID: 1139933493}
   animatorP2Fight: {fileID: 1785893476}
   EndStateObjects: {fileID: 1316866342}
