@@ -33,8 +33,15 @@ public class GameplayState : GameBaseState
             {
                 CharacterLogicHandling();
 
-                if (gc.getP1Health() <= 0 || gc.getP2Health() <= 0)
+                if (gc.getP1Health() <= 0)
                 {
+                    gc.addP1WinScore(false);
+                    stateDone = true;
+                }
+
+                if (gc.getP2Health() <= 0)
+                {
+                    gc.addP1WinScore(true);
                     stateDone = true;
                 }
 
@@ -80,14 +87,25 @@ public class GameplayState : GameBaseState
     {
         if (gc.stateCount >= 2)
         {
-            gc.SwitchState(gc.gameOverState);
+            //gc.stopAllBeatsNoRetract(true);
+            Time.timeScale = 0.25f;
+            keepBeforeChangeState += Time.unscaledDeltaTime;
+            if (keepBeforeChangeState > timeBeforeChangeState)
+            {
+                Time.timeScale = 1.0f;
+                gc.stopAllBeatsNoRetract(false);
+                gc.SwitchState(gc.gameOverState);
+            }
         }
         else
         {
-            gc.stopAllBeatsNoRetract(true);
-            keepBeforeChangeState += Time.deltaTime;
+            //gc.stopAllBeatsNoRetract(true);
+            Time.timeScale = 0.25f;
+            keepBeforeChangeState += Time.unscaledDeltaTime;
             if (keepBeforeChangeState > timeBeforeChangeState)
             {
+                Debug.Log("what");
+                Time.timeScale = 1.0f;
                 gc.SwapHeadArrowToNormal();
                 gc.AddStateCount();
                 gc.stopAllBeatsNoRetract(false);

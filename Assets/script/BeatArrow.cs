@@ -61,15 +61,22 @@ public class BeatArrow : MonoBehaviour
 
         if (!isDone && !isStop)
         {
-/*            if (isChessur)
+            /*            if (isChessur)
+                        {
+                            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
+                        }
+                        else
+                        {
+                            rect.position -= new Vector3(0.0f, speed * Time.deltaTime, 0f);
+                        }*/
+            if (!GameController.instance.isReverse)
             {
                 rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
             }
             else
             {
-                rect.position -= new Vector3(0.0f, speed * Time.deltaTime, 0f);
-            }*/
-            rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y - speed * Time.deltaTime, 0f);
+                rect.position = new Vector3(thisHeadArrow.position.x, rect.position.y + speed * Time.deltaTime, 0f);
+            }
         }
         else if (!isDone && isStop)
         {

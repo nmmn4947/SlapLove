@@ -3,11 +3,13 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     //[Header("General")]
     public static GameController instance;
+    public bool isReverse;
     public enum CharacterState
     {
         Chessur,
@@ -22,7 +24,11 @@ public class GameController : MonoBehaviour
 
     private List<int> randCharacter = new List<int>();
     public int stateCount { get; private set; }
-    
+
+    private int[] player1ScoreEachStage = { -1, -1, -1 };
+    private int player1TotalScore = 0;
+    private int[] player2ScoreEachStage = { -1, -1, -1 };
+    private int player2TotalScore = 0;
 
     enum GameState
     {
@@ -47,8 +53,6 @@ public class GameController : MonoBehaviour
 
 
     [Header("Slap/RhythmState")]
-    private bool[] playerPressed = new bool[2];
-    [SerializeField]private bool[] playerBeatResult = new bool[2];
 
     [SerializeField] private GameObject SlapStateObjects;
 
@@ -99,9 +103,13 @@ public class GameController : MonoBehaviour
     private int damageThisBeatP1 = -1;
     private int damageThisBeatP2 = -1;
 
+    [SerializeField] playerFightDisplay animatorP1Fight;
+    [SerializeField] playerFightDisplay animatorP2Fight;
+
     [Header("EndState")]
 
     [SerializeField] private GameObject EndStateObjects;
+    [SerializeField] private TextMeshProUGUI textWin;
 
     [Header("Game States")]
     public RandomCharacterState randomCharacterState = new RandomCharacterState();
@@ -208,37 +216,6 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void DoneCurrentBeat(bool isP1, bool correct) // use this function to resolve the beat after receiving both players' input
-    {
-/*        if (!playerPressed[0] || !playerPressed[1])
-        {
-            //Debug.Log("One player pressed, resolving beat");
-            if (isP1)
-            {
-                playerPressed[0] = true; // P1 pressed
-                playerBeatResult[0] = correct; // store result for P1
-            }
-            else
-            {
-                playerPressed[1] = true; // P2 pressed
-                playerBeatResult[1] = correct; // store result for P2
-            }
-        }
-
-        if (playerPressed[0] && playerPressed[1])
-        {
-            //Debug.Log("Both players pressed, resolving beat");
-            playerPressed[0] = false;
-            playerPressed[1] = false;
-
-            spawnedArrow1.Peek().beatDone(playerBeatResult[0]);
-            spawnedArrow2.Peek().beatDone(playerBeatResult[1]);
-            StartCoroutine(dequeCurrentBeat(isP1));
-        }*/
-        
-
-    }
-
     public void PlayCurrentBeatDeadAnimation(bool isP1, bool isCorrect)
     {
         if (isP1)
@@ -271,15 +248,27 @@ public class GameController : MonoBehaviour
         {
             if (damageThisBeatP1 > damageThisBeatP2)
             {
+                animatorP1Fight.playSlap();
+                animatorP2Fight.playHurt();
                 SetP2Health(getP2Health() - (damageThisBeatP1 - damageThisBeatP2));
             }
             else if (damageThisBeatP2 > damageThisBeatP1)
             {
+                animatorP1Fight.playHurt();
+                animatorP2Fight.playSlap();
                 SetP1Health(getP1Health() - (damageThisBeatP2 - damageThisBeatP1));
+            }
+            else if (damageThisBeatP1 == damageThisBeatP2 && damageThisBeatP1 != 0)
+            {
+                //equal damage
+                animatorP1Fight.playSlap();
+                animatorP2Fight.playSlap();
             }
             else
             {
                 //both misses
+                animatorP1Fight.playMiss();
+                animatorP2Fight.playMiss();
             }
 
             damageThisBeatP1 = -1; damageThisBeatP2 = -1;
@@ -506,6 +495,7 @@ public class GameController : MonoBehaviour
     {
         foreach (BeatArrow arr in spawnedArrow1)
         {
+            Debug.Log("gone");
             arr.killBeat();
         }
         spawnedArrow1.Clear();
@@ -589,5 +579,54 @@ public class GameController : MonoBehaviour
         {
             b2.setIsStopNoRetract(bull);
         }
+    }
+
+    public void addP1WinScore(bool isP1)
+    {
+        if (isP1)
+        {
+            player1ScoreEachStage[stateCount] = 1;
+            player2ScoreEachStage[stateCount] = 0;
+            player1TotalScore++;
+        }
+        else
+        {
+            player1ScoreEachStage[stateCount] = 0;
+            player2ScoreEachStage[stateCount] = 1;
+            player2TotalScore++;
+        }
+    }
+
+    public int[] getP1ScoreEachStage()
+    {
+        return player1ScoreEachStage;
+    }
+
+    public int getTotalP1Score()
+    {
+        return player1TotalScore;
+    }
+
+    public int[] getP2ScoreEachStage()
+    {
+        return player2ScoreEachStage;
+    }
+
+    public int getTotalP2Score()
+    {
+        return player2TotalScore;
+    }
+
+    public void updateEndStateWinText()
+    {
+        if (getTotalP1Score() > getTotalP2Score())
+        {
+            textWin.text = "Player1 Wins!";
+        }
+        else
+        {
+            textWin.text = "Player2 Wins!";
+        }
+        
     }
 }

@@ -13,6 +13,6 @@ public class GameOverState : GameBaseState
 
     public override void UpdateState(GameController gc)
     {
-        
+        gc.updateEndStateWinText();
     }
 }
