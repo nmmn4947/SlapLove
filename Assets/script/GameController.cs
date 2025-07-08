@@ -406,23 +406,39 @@ public class GameController : MonoBehaviour
             rander.Add(2);
             rander.Add(3);
             List<int> keeper = new List<int>();
+            List<Color> color = new List<Color>();
             for (int i = 0; i < 4; i++)
             {
                 int chosen = Random.Range(0, rander.Count);
                 keeper.Add(rander[chosen]);
+                switch (rander[chosen])
+                {
+                    case 0:
+                        color.Add(Color.magenta);
+                        break;
+                    case 1:
+                        color.Add(Color.blue);
+                        break;
+                    case 2:
+                        color.Add(Color.green);
+                        break;
+                    case 3:
+                        color.Add(Color.red);
+                        break;
+                }
                 //Debug.Log(rander[chosen]);
                 rander.RemoveAt(chosen);
                 
             }
-            headArrows[0].setToChessur(headArrows[keeper[0]].getRectPos());
-            headArrows[1].setToChessur(headArrows[keeper[1]].getRectPos());
-            headArrows[2].setToChessur(headArrows[keeper[2]].getRectPos());
-            headArrows[3].setToChessur(headArrows[keeper[3]].getRectPos());
+            headArrows[0].setToChessur(headArrows[keeper[0]].getRectPos(), color[0]);
+            headArrows[1].setToChessur(headArrows[keeper[1]].getRectPos(), color[1]);
+            headArrows[2].setToChessur(headArrows[keeper[2]].getRectPos(), color[2]);
+            headArrows[3].setToChessur(headArrows[keeper[3]].getRectPos(), color[3]);
 
-            headArrows[4].setToChessur(headArrows[keeper[0] + 4].getRectPos());
-            headArrows[5].setToChessur(headArrows[keeper[1] + 4].getRectPos());
-            headArrows[6].setToChessur(headArrows[keeper[2] + 4].getRectPos());
-            headArrows[7].setToChessur(headArrows[keeper[3] + 4].getRectPos());
+            headArrows[4].setToChessur(headArrows[keeper[0] + 4].getRectPos(), color[0]);
+            headArrows[5].setToChessur(headArrows[keeper[1] + 4].getRectPos(), color[1]);
+            headArrows[6].setToChessur(headArrows[keeper[2] + 4].getRectPos(), color[2]);
+            headArrows[7].setToChessur(headArrows[keeper[3] + 4].getRectPos(), color[3]);
             chessurDurationKeep = 0.0f;
             keeper.Clear();
             chessurIsActive = true;
@@ -432,15 +448,15 @@ public class GameController : MonoBehaviour
             chessurDurationKeep += Time.deltaTime;
             if (chessurDurationKeep > chessurDurationTime && chessurIsActive)
             {
-                headArrows[0].setToNormal();
-                headArrows[1].setToNormal();
-                headArrows[2].setToNormal();
-                headArrows[3].setToNormal();
+                headArrows[0].setToNormal(Color.magenta);
+                headArrows[1].setToNormal(Color.blue);
+                headArrows[2].setToNormal(Color.green);
+                headArrows[3].setToNormal(Color.red);
 
-                headArrows[4].setToNormal();
-                headArrows[5].setToNormal();
-                headArrows[6].setToNormal();
-                headArrows[7].setToNormal();
+                headArrows[4].setToNormal(Color.magenta);
+                headArrows[5].setToNormal(Color.blue);
+                headArrows[6].setToNormal(Color.green);
+                headArrows[7].setToNormal(Color.red);
                 chessurCooldownKeep = 0.0f;
                 chessurIsActive = false;
             }
@@ -449,15 +465,15 @@ public class GameController : MonoBehaviour
 
     public void SwapHeadArrowToNormal()
     {
-        headArrows[0].setToNormal();
-        headArrows[1].setToNormal();
-        headArrows[2].setToNormal();
-        headArrows[3].setToNormal();
+        headArrows[0].setToNormal(Color.magenta);
+        headArrows[1].setToNormal(Color.blue);
+        headArrows[2].setToNormal(Color.green);
+        headArrows[3].setToNormal(Color.red);
 
-        headArrows[4].setToNormal();
-        headArrows[5].setToNormal();
-        headArrows[6].setToNormal();
-        headArrows[7].setToNormal();
+        headArrows[4].setToNormal(Color.magenta);
+        headArrows[5].setToNormal(Color.blue);
+        headArrows[6].setToNormal(Color.green);
+        headArrows[7].setToNormal(Color.red);
     }
     public int getP1Health()
     {

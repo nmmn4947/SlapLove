@@ -20,6 +20,7 @@ public class GameplayState : GameBaseState
         gameController = gc;
         gc.uiManager.SetCharacterStage(false);
         gc.uiManager.SetGameplayState(true);
+        gc.SwapHeadArrowToNormal();
         keepBeforeChangeState = 0.0f;
         stateTimeKeep = 0;
         stateDone = false;
