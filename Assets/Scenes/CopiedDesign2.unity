@@ -511,6 +511,7 @@ MonoBehaviour:
   FeedbacksList:
   - rid: 1223399294722113536
   - rid: 1223399294722113537
+  - rid: 1223399294722113638
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   RestoreInitialValuesOnDisable: 0
@@ -524,7 +525,7 @@ MonoBehaviour:
       data:
         Active: 1
         UniqueID: -1926373203
-        Label: AudioSource
+        Label: AudioSourceBGM
         OriginalLabel: AudioSource
         ChannelMode: 0
         Channel: 0
@@ -699,6 +700,88 @@ MonoBehaviour:
         ResetEvents:
           m_PersistentCalls:
             m_Calls: []
+    - rid: 1223399294722113638
+      type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Tools}
+      data:
+        Active: 1
+        UniqueID: -64727342
+        Label: AudioSourceEnd
+        OriginalLabel: AudioSource
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 3
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          PlayCount: 0
+          LimitPlayCount: 0
+          MaxPlayCount: 3
+          SetPlayCountToZeroOnReset: 0
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        AutomaticShakerSetupButton:
+          ButtonText: 
+        Owner: {fileID: 57731967}
+        DebugActive: 0
+        TargetAudioSource: {fileID: 222644371}
+        Mode: 2
+        RandomSfx: []
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        SfxAudioMixerGroup: {fileID: 0}
 --- !u!1 &98459392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,15 +2725,15 @@ RectTransform:
   m_GameObject: {fileID: 552759094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6806, y: 1.6806, z: 1.6806}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 391344706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 149}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 400, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552759096
 MonoBehaviour:
@@ -2672,7 +2755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8138928554494985883, guid: 8602de3ca0786b24196fb708ca9dc25e, type: 3}
+  m_Sprite: {fileID: -7133770118449080209, guid: 5ea3548f0daec4d4a8f68dcb82a1943d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2702,8 +2785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6004a5be7e5cfdd418cf28f18474b9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteOpen: {fileID: -2303395695159363299, guid: 567d4c569b90638448f963dce21ab135, type: 3}
-  _spriteClose: {fileID: -8138928554494985883, guid: 8602de3ca0786b24196fb708ca9dc25e, type: 3}
+  _spriteOpen: {fileID: -6253640411997750976, guid: c602d8d4a8e756342a8592df5f794e11, type: 3}
+  _spriteClose: {fileID: -7133770118449080209, guid: 5ea3548f0daec4d4a8f68dcb82a1943d, type: 3}
 --- !u!1 &575949982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,14 +3744,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -234148691441979262, guid: ba62b329f234b06489f1f325206eb6cb, type: 3}
+  m_Sprite: {fileID: -6695950386315148514, guid: 2c04a19e5d3f88242bb81152679d7905, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5092,7 +5175,7 @@ MonoBehaviour:
   p1Row: {fileID: 922493418}
   p2Row: {fileID: 1935588059}
   stateTime: 120
-  timeBetweenBeats: 0.5
+  timeBetweenBeats: 1
   toHitBoxDuration: 3
   spawnPoints:
   - {fileID: 1727258635}
@@ -8988,6 +9071,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 59e4cd66fb33784478dd63ce25981b39, type: 3}
     outputGroup: {fileID: -4036974143370673452, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
     audioSource_m: {fileID: 386236273}
+  onQTE: {fileID: 57731967}
 --- !u!4 &2039095951
 Transform:
   m_ObjectHideFlags: 0

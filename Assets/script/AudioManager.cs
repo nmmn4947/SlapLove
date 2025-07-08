@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using MoreMountains.Feedbacks;
 
 
 public class AudioManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioMixer audioMixer;
     public Sound[] musicSounds, sfxSounds;
+    public MMF_Player onQTE;
     //public AudioSource musicSource, sfxSource;
 
     private void Awake()
@@ -32,6 +34,11 @@ public class AudioManager : MonoBehaviour
     {
         CreateAudioSources(musicSounds, "Music Audio Source: ");
         CreateAudioSources(sfxSounds, "SFX Audio Source: ");
+        foreach(MMF_AudioSource audioSource in onQTE.GetFeedbacksOfType<MMF_AudioSource>())
+        {
+            audioSource.TargetAudioSource = musicSounds[0].audioSource_m; // Assuming the first SFX sound is the one to be used for QTE feedback
+        }
+        //onQTE.GetFeedbackOfType<MMF_AudioSource>().TargetAudioSource = musicSounds[0].audioSource_m; // Assuming the first music sound is the one to be used for QTE feedback
     }
 
     private void CreateAudioSources(Sound[] sounds, string prefix)

@@ -557,6 +557,7 @@ public class GameController : MonoBehaviour
                 {
                     beatIsStop = true;
                     qteDurationKeep = 0.0f;
+                    audioManager.onQTE.PlayFeedbacks();
                     stopAllBeats(true);
                 }
             }
