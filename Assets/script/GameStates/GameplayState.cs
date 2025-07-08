@@ -24,6 +24,7 @@ public class GameplayState : GameBaseState
         stateTimeKeep = 0;
         stateDone = false;
         Debug.Log("Enter Gameplay State");
+        gameController.audioManager.PlayMusic("Chessur");
     }
 
     public override void UpdateState(GameController gc)
@@ -66,6 +67,7 @@ public class GameplayState : GameBaseState
         switch (characterState)
         {
             case CharacterState.Chessur:
+                
                 gameController.SwapHeadArrowRandomly();
                 gameController.BeatSpawning(gameController.SpawnBeats);
                 break;

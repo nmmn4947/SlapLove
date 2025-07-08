@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour
 
 
     [Header("Slap/RhythmState")]
+    [SerializeField] public AudioManager audioManager { get; private set; }
 
     [SerializeField] private GameObject SlapStateObjects;
 
@@ -121,6 +122,7 @@ public class GameController : MonoBehaviour
         instance = this;
         gameplayState = new GameplayState(stateTime);
         uiManager = FindFirstObjectByType<UIManager>();
+        audioManager = FindFirstObjectByType<AudioManager>();
         qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
         //Debug.Log(uiManager);
     }
