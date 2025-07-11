@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     [Header("Character State")]
 
     [SerializeField] private GameObject CharacterStateObjects;
+    [SerializeField] private GameObject ResultObjects;
 
     public UIManager uiManager { get; private set; }
     [SerializeField] private ReadyCheck readyCheckP1;
