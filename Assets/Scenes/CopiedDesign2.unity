@@ -5155,7 +5155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 1
-  playerMaxHealth: 1000
+  playerMaxHealth: 10000
   CharacterStateObjects: {fileID: 149770443}
   SlapStateObjects: {fileID: 391344705}
   arrowPrefabs:
@@ -5175,8 +5175,8 @@ MonoBehaviour:
   p1Row: {fileID: 922493418}
   p2Row: {fileID: 1935588059}
   stateTime: 120
-  timeBetweenBeats: 1
-  toHitBoxDuration: 3
+  bpm: 114
+  toHitBoxDuration: 2
   spawnPoints:
   - {fileID: 1727258635}
   - {fileID: 872625288}

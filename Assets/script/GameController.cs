@@ -70,7 +70,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private float stateTime = 120.0f;
     private float stateTimeKeep = 0.0f;
 
-    [SerializeField] private float timeBetweenBeats = 0.5f;
+    [SerializeField] private float bpm;
+    private float timeBetweenBeats = 0.5f;
     float totalTime;
     private float timeBetweenKeep = 0.0f;
 
@@ -133,7 +134,9 @@ public class GameController : MonoBehaviour
         stateCount = 0;
         float distance = Mathf.Abs(spawnPoints[0].position.y - hitBoxPoint.position.y);
         speed = distance / toHitBoxDuration;
-        
+
+        timeBetweenBeats = 60f / bpm;
+
         p1Row.setIsP1(true);
         p2Row.setIsP1(false);
         //StartCoroutine(debugSpawn());

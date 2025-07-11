@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chessur_front_0: -6253640411997750976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
