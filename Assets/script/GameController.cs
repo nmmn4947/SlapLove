@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class GameController : MonoBehaviour
 {
@@ -76,7 +77,6 @@ public class GameController : MonoBehaviour
     private float timeBetweenKeep = 0.0f;
 
     //[SerializeField] private int beatTempo;
-    float beatDuration;
     [SerializeField] float toHitBoxDuration; // 
     float speed;
 
@@ -149,6 +149,15 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         currentState.UpdateState(this);
+    }
+    public void SetBPM(float bpm, float toHit)
+    {
+        this.bpm = bpm;
+        toHitBoxDuration = toHit;
+        float distance = Mathf.Abs(spawnPoints[0].position.y - hitBoxPoint.position.y);
+        speed = distance / toHitBoxDuration;
+
+        timeBetweenBeats = 60f / bpm;
     }
 
     public int getMaxPlayerHealth()

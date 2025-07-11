@@ -24,8 +24,9 @@ public class GameplayState : GameBaseState
         keepBeforeChangeState = 0.0f;
         stateTimeKeep = 0;
         stateDone = false;
+        SetBGMusic();
         Debug.Log("Enter Gameplay State");
-        gameController.audioManager.PlayMusic("Chessur");
+        
     }
 
     public override void UpdateState(GameController gc)
@@ -79,6 +80,30 @@ public class GameplayState : GameBaseState
                 gameController.BeatSpawning(gameController.SpawnCinderellaBeats);
                 break;
         }
+    }
+
+    void SetBGMusic()
+    {
+        CharacterState characterState = gameController.GetCharacterState();
+        AudioManager audioManager = gameController.audioManager;
+        BPMData bpmData = audioManager.GetBPMData(characterState.ToString());
+        Debug.Log("Enum Value " + characterState.ToString());
+        gameController.SetBPM(bpmData.BPM, bpmData.ToHitTime);
+        switch (characterState)
+        {
+            
+            case CharacterState.Chessur:
+                
+                gameController.audioManager.PlayMusic("Chessur");
+                break;
+            case CharacterState.Pinocchio:
+                gameController.audioManager.PlayMusic("Pinocchio");
+                break;
+            case CharacterState.Cinderella:
+                gameController.audioManager.PlayMusic("Cinderella");
+                break;
+        }
+        
     }
 
     void DamageHandling()

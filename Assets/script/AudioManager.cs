@@ -116,6 +116,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public BPMData GetBPMData(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+            return null;
+        }
+        else
+        {
+            return s.bpmData; // Return the BPM data associated with the sound
+        }
+    }
+
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
@@ -137,4 +151,5 @@ public class Sound
     public AudioClip clip;
     public AudioMixerGroup outputGroup;
     public AudioSource audioSource_m;
+    public BPMData bpmData; // Optional BPM data for the sound
 }

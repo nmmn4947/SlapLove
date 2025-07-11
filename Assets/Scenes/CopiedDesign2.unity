@@ -2692,6 +2692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterStateObjects: {fileID: 149770443}
+  ResultObjects: {fileID: 0}
   readyCheckP1: {fileID: 1174297501}
   readyCheckP2: {fileID: 466855188}
   SlapStateObjects: {fileID: 391344705}
@@ -5175,7 +5176,7 @@ MonoBehaviour:
   p1Row: {fileID: 922493418}
   p2Row: {fileID: 1935588059}
   stateTime: 120
-  bpm: 114
+  bpm: 60
   toHitBoxDuration: 2
   spawnPoints:
   - {fileID: 1727258635}
@@ -9066,11 +9067,23 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 013af61d1ed639a4f8b5b6a4992d7a64, type: 3}
     outputGroup: {fileID: -6132329790880960455, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
     audioSource_m: {fileID: 222644371}
+    bpmData: {fileID: 11400000, guid: 27a0e457e59d9364d83b1157eb0751e1, type: 2}
+  - name: Cinderella
+    clip: {fileID: 8300000, guid: 27dd75e878dfccd4682ad7c8928ab4be, type: 3}
+    outputGroup: {fileID: -6132329790880960455, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
+    audioSource_m: {fileID: 222644371}
+    bpmData: {fileID: 11400000, guid: 7539d2f0113e78b4687a9de7d7eabf00, type: 2}
+  - name: Pinocchio
+    clip: {fileID: 8300000, guid: 49f1447e49d6c174680fe89718cc58b4, type: 3}
+    outputGroup: {fileID: -6132329790880960455, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
+    audioSource_m: {fileID: 222644371}
+    bpmData: {fileID: 11400000, guid: 40ba7ddc747079d4fb299b7c71c3b8ea, type: 2}
   sfxSounds:
   - name: VinylStop
     clip: {fileID: 8300000, guid: 59e4cd66fb33784478dd63ce25981b39, type: 3}
     outputGroup: {fileID: -4036974143370673452, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
     audioSource_m: {fileID: 386236273}
+    bpmData: {fileID: 0}
   onQTE: {fileID: 57731967}
 --- !u!4 &2039095951
 Transform:
