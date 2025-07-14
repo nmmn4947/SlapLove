@@ -116,6 +116,32 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PauseMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+        else
+        {
+            s.audioSource_m.Pause();
+        }
+    }
+
+    public void ResumeMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+        else
+        {
+            s.audioSource_m.UnPause();
+        }
+    }
+
     public BPMData GetBPMData(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.name == name);

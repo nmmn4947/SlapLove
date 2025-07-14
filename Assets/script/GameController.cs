@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+using static GameController;
 
 public class GameController : MonoBehaviour
 {
@@ -638,5 +639,37 @@ public class GameController : MonoBehaviour
             textWin.text = "Player2 Wins!";
         }
         
+    }
+
+    public void pauseCurrentMusic()
+    {
+        switch (currentCharacter)
+        {
+            case CharacterState.Chessur:
+                AudioManager.Instance.PauseMusic("Chessur");
+                break;
+            case CharacterState.Pinocchio:
+                AudioManager.Instance.PauseMusic("Pinocchio");
+                break;
+            case CharacterState.Cinderella:
+                AudioManager.Instance.PauseMusic("Cinderella");
+                break;
+        }
+    }
+
+    public void resumeCurrentMusic()
+    {
+        switch (currentCharacter)
+        {
+            case CharacterState.Chessur:
+                AudioManager.Instance.ResumeMusic("Chessur");
+                break;
+            case CharacterState.Pinocchio:
+                AudioManager.Instance.ResumeMusic("Pinocchio");
+                break;
+            case CharacterState.Cinderella:
+                AudioManager.Instance.ResumeMusic("Cinderella");
+                break;
+        }
     }
 }
