@@ -196,27 +196,6 @@ public class GameController : MonoBehaviour
         stateCount++;
     }
 
-    IEnumerator dequeCurrentBeat(bool isP1)
-    {
-        spawnedArrow1.Dequeue();
-        spawnedArrow2.Dequeue();
-        yield return new WaitForSeconds(0f); //temporary remove delay
-        /*        if (spawnedArrow1.Count == 0)
-                {
-                    yield return null;
-                }*//*
-        
-        if (isP1)
-        {
-            
-        }
-        else
-        {
-            
-        }*/
-
-    }
-
     public void minusPlayerHealth(bool p1)
     {
         if (p1)
