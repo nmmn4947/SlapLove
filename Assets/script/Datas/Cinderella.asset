@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c79928df37b1c140b027ce3f0862d60, type: 3}
   m_Name: Cinderella
   m_EditorClassIdentifier: 
-  BPM: 60
+  BPM: 61
   ToHitTime: 1

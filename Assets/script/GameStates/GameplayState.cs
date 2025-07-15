@@ -52,6 +52,7 @@ public class GameplayState : GameBaseState
                 gc.uiManager.UpdateTimer(stateTime - stateTimeKeep);
                 if (stateTimeKeep > stateTime)
                 {
+                    gc.pauseCurrentMusic();
                     stateDone = true;
                 }
             }
