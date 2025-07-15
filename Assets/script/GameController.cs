@@ -641,6 +641,22 @@ public class GameController : MonoBehaviour
         
     }
 
+    public void stopCurrentMusic()
+    {
+        switch (currentCharacter)
+        {
+            case CharacterState.Chessur:
+                AudioManager.Instance.StopMusic("Chessur");
+                break;
+            case CharacterState.Pinocchio:
+                AudioManager.Instance.StopMusic("Pinocchio");
+                break;
+            case CharacterState.Cinderella:
+                AudioManager.Instance.StopMusic("Cinderella");
+                break;
+        }
+    }
+
     public void pauseCurrentMusic()
     {
         switch (currentCharacter)
