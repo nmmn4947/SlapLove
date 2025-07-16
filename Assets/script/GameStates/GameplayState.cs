@@ -106,11 +106,6 @@ public class GameplayState : GameBaseState
         
     }
 
-    void DamageHandling()
-    {
-
-    }
-
     void GoNextState(GameController gc)
     {
         gc.stopCurrentMusic();

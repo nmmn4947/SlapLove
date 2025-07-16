@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class qteVisual : MonoBehaviour
 {
     [SerializeField] private Sprite _spriteOpen;
+    [SerializeField] private Sprite _spriteWindUp;
     [SerializeField] private Sprite _spriteClose;
     Image image;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,6 +19,10 @@ public class qteVisual : MonoBehaviour
         if (GameController.instance.checkQTE())
         {
             image.sprite = _spriteOpen;
+        }
+        else if (GameController.instance.checkQTEWindUp())
+        {
+            image.sprite = _spriteWindUp;
         }
         else
         {

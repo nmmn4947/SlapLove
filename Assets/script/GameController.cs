@@ -28,8 +28,11 @@ public class GameController : MonoBehaviour
     public int stateCount { get; private set; }
 
     private int[] player1ScoreEachStage = { -1, -1, -1 };
+    public int getP1ScoreEachStage(int i) { return player1ScoreEachStage[i];  }
+
     private int player1TotalScore = 0;
     private int[] player2ScoreEachStage = { -1, -1, -1 };
+    public int getP2ScoreEachStage(int i) { return player2ScoreEachStage[i]; }
     private int player2TotalScore = 0;
 
     enum GameState
@@ -98,6 +101,7 @@ public class GameController : MonoBehaviour
     private bool beatIsStop = false;
     [SerializeField] private float qteDuration;
     private float qteDurationKeep = 0.0f;
+    [SerializeField] private float qteWindUpTime;
     [SerializeField] private float qteCooldownMin;
     [SerializeField] private float qteCooldownMax;
     private float qteCooldown;
@@ -566,6 +570,18 @@ public class GameController : MonoBehaviour
             }
         }
         return beatIsStop;
+    }
+
+    public bool checkQTEWindUp()
+    {
+        if (qteCooldownKeep > qteCooldown - qteWindUpTime)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void stopAllBeats(bool bull)

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -30,6 +31,17 @@ public class UIManager : MonoBehaviour
         else
         { 
             Debug.LogWarning("CharacterStateObjects is not assigned in the UIManager.");
+        }
+        if (ResultObjects != null && GameController.instance.stateCount != 0)
+        {
+            ResultObjects.SetActive(state);
+        }
+    }
+    public void SetResultStage(bool state)
+    {
+        if (ResultObjects != null)
+        {
+            ResultObjects.SetActive(state);
         }
     }
 
