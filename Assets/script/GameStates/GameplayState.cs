@@ -109,6 +109,7 @@ public class GameplayState : GameBaseState
     void GoNextState(GameController gc)
     {
         gc.stopCurrentMusic();
+
         if (gc.stateCount >= 2)
         {
             //gc.stopAllBeatsNoRetract(true);

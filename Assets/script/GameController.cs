@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 using TMPro;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using static GameController;
+using UnityEditor.Search;
 
 public class GameController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class GameController : MonoBehaviour
         Cinderella
     };
     CharacterState currentCharacter;
+    string previousCharacter;
+    public string getPrevCharacter() { return previousCharacter; }
     public CharacterState GetCharacterState()
     {
         return currentCharacter;
@@ -199,6 +202,18 @@ public class GameController : MonoBehaviour
     public void AddStateCount()
     {
         stateCount++;
+        switch (currentCharacter)
+        {
+            case CharacterState.Chessur:
+                previousCharacter = "Chessur";
+                break;
+            case CharacterState.Pinocchio:
+                previousCharacter = "Pinocchio";
+                break;
+            case CharacterState.Cinderella:
+                previousCharacter = "Cinderella";
+                break;
+        }
     }
 
     public void minusPlayerHealth(bool p1)

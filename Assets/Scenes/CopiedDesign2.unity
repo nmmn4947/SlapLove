@@ -904,6 +904,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &191109999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7620852555960582166, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+  m_PrefabInstance: {fileID: 1803418708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &212111745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,6 +4150,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922493415}
   m_CullTransparentMesh: 1
+--- !u!114 &940127524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4967841392118351165, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+  m_PrefabInstance: {fileID: 1803418708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &947280170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,6 +4539,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017489077}
   m_CullTransparentMesh: 1
+--- !u!114 &1042557176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2836584529156230932, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+  m_PrefabInstance: {fileID: 1803418708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1047601876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5796,6 +5829,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1175920417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8735272039266101202, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+  m_PrefabInstance: {fileID: 1803418708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1179767322
 GameObject:
   m_ObjectHideFlags: 0
@@ -8081,6 +8125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2836584529156230932, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_margin.z
+      value: -261.03513
+      objectReference: {fileID: 0}
     - target: {fileID: 3327850435826167073, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8096,6 +8144,38 @@ PrefabInstance:
     - target: {fileID: 3327850435826167073, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: nameText1
+      value: 
+      objectReference: {fileID: 191109999}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: nameText2
+      value: 
+      objectReference: {fileID: 1042557176}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: dialogueText1
+      value: 
+      objectReference: {fileID: 1175920417}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: dialogueText2
+      value: 
+      objectReference: {fileID: 940127524}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: chessurDialogue
+      value: I'm Chessur, I'm a box of chocolate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: pinocchioDialogue
+      value: I'm Pinocchio, I'm a box of chocolate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: cinderrellaDialogue
+      value: I'm Cinderella, I'm a box of chocolate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236453878650855751, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5749863986315763532, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8144,6 +8224,14 @@ PrefabInstance:
     - target: {fileID: 6088936351941978159, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369177420342150656, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620852555960582166, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_margin.z
+      value: -494.48114
       objectReference: {fileID: 0}
     - target: {fileID: 7740671112321650418, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_Name
