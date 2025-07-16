@@ -42,6 +42,9 @@ public class BeatRow : MonoBehaviour
             {
                 resolveBeat("miss");
             }
+        }else if (isPressAble && !isFake && GameController.instance.checkQTE())
+        {
+            resolveBeat("miss"); // pressing while qte
         }
         else if (isPressAble && isFake)
         {
