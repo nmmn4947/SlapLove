@@ -39,12 +39,14 @@ public class GameplayState : GameBaseState
                 if (gc.getP1Health() <= 0)
                 {
                     gc.addP1WinScore(false);
+                    gc.cameraShake();
                     stateDone = true;
                 }
 
                 if (gc.getP2Health() <= 0)
                 {
                     gc.addP1WinScore(true);
+                    gc.cameraShake();
                     stateDone = true;
                 }
 
@@ -52,6 +54,7 @@ public class GameplayState : GameBaseState
                 gc.uiManager.UpdateTimer(stateTime - stateTimeKeep);
                 if (stateTimeKeep > stateTime)
                 {
+                    gc.cameraShake();
                     stateDone = true;
                 }
             }
@@ -91,9 +94,7 @@ public class GameplayState : GameBaseState
         gameController.SetBPM(bpmData.BPM, bpmData.ToHitTime);
         switch (characterState)
         {
-            
             case CharacterState.Chessur:
-                
                 gameController.audioManager.PlayMusic("Chessur");
                 break;
             case CharacterState.Pinocchio:
@@ -103,13 +104,11 @@ public class GameplayState : GameBaseState
                 gameController.audioManager.PlayMusic("Cinderella");
                 break;
         }
-        
     }
 
     void GoNextState(GameController gc)
     {
         gc.stopCurrentMusic();
-
         if (gc.stateCount >= 2)
         {
             //gc.stopAllBeatsNoRetract(true);
@@ -129,7 +128,6 @@ public class GameplayState : GameBaseState
             keepBeforeChangeState += Time.unscaledDeltaTime;
             if (keepBeforeChangeState > timeBeforeChangeState)
             {
-                Debug.Log("what");
                 Time.timeScale = 1.0f;
                 gc.SwapHeadArrowToNormal();
                 gc.AddStateCount();

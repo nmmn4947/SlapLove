@@ -7,6 +7,7 @@ using TMPro;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using static GameController;
 using UnityEditor.Search;
+using MoreMountains.Feedbacks;
 
 public class GameController : MonoBehaviour
 {
@@ -125,6 +126,7 @@ public class GameController : MonoBehaviour
     public RandomCharacterState randomCharacterState = new RandomCharacterState();
     public GameplayState gameplayState;
     public GameOverState gameOverState = new GameOverState();
+    [SerializeField] MMF_Player mMF_CameraShake;
 
     private void Awake()
     {
@@ -718,5 +720,10 @@ public class GameController : MonoBehaviour
                 AudioManager.Instance.ResumeMusic("Cinderella");
                 break;
         }
+    }
+
+    public void cameraShake()
+    {
+        mMF_CameraShake.PlayFeedbacks();
     }
 }
