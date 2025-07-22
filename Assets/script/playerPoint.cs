@@ -5,6 +5,7 @@ public class playerPoint : MonoBehaviour
 {
     public Image[] pointDisplay;
     public bool isP1;
+    public Sprite[] scoreImages;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,13 +34,13 @@ public class playerPoint : MonoBehaviour
         switch (j)
         {
             case -1:
-                pointDisplay[i].color = Color.gray;
+                pointDisplay[i].sprite = scoreImages[0];
                 break;
             case 0:
-                pointDisplay[i].color = Color.red;
+                pointDisplay[i].sprite = scoreImages[1];
                 break;
             case 1:
-                pointDisplay[i].color = Color.white;
+                pointDisplay[i].sprite = scoreImages[2];
                 break;
         }
     }

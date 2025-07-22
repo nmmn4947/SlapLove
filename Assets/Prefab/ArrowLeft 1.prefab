@@ -100,9 +100,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4450686522686610317, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6784842a757fad4ea47ceb81140615d, type: 3}
     - target: {fileID: 6579514134988118119, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
       propertyPath: m_Name
       value: ArrowLeft 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052996892150784913, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052996892150784913, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052996892150784913, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6784842a757fad4ea47ceb81140615d, type: 3}
+    - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
       propertyPath: m_Color.b
@@ -110,11 +134,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
       propertyPath: m_Color.g
-      value: 0.34212565
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173746454552847716, guid: 46ba5aee37c21a4468e99885bacda6b8, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
