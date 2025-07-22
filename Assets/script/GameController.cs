@@ -265,11 +265,13 @@ public class GameController : MonoBehaviour
             {
                 animatorP1Fight.playMiss();
                 animatorP2Fight.playSlap();
+                SetP1Health(getP1Health() - (damageThisBeatP2));
             }
             else if (damageThisBeatP2 == 0 && damageThisBeatP1 > 0)
             {
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playMiss();
+                SetP2Health(getP2Health() - (damageThisBeatP1));
             }
             else if (damageThisBeatP1 > damageThisBeatP2)
             {
