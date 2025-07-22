@@ -55,19 +55,19 @@ public class HeadArrow : MonoBehaviour
         }
     }
 
-    public void setToChessur(Vector3 chessurPos, Color c)
+    public void setToChessur(Vector3 chessurPos)
     {
         isChessur = true;
         chessurPosition = chessurPos;
         transitionKeep = 0.0f;
-        ch.color = c;
+        //ch.color = c;
     }
 
     public void setToNormal(Color c)
     {
         isChessur = false;
         transitionKeep = 0.0f;
-        ch.color = c;
+        //ch.color = c;
     }
 
     public Vector3 getRectPos()

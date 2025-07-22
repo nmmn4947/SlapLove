@@ -455,15 +455,15 @@ public class GameController : MonoBehaviour
                 rander.RemoveAt(chosen);
                 
             }
-            headArrows[0].setToChessur(headArrows[keeper[0]].getRectPos(), color[0]);
-            headArrows[1].setToChessur(headArrows[keeper[1]].getRectPos(), color[1]);
-            headArrows[2].setToChessur(headArrows[keeper[2]].getRectPos(), color[2]);
-            headArrows[3].setToChessur(headArrows[keeper[3]].getRectPos(), color[3]);
+            headArrows[0].setToChessur(headArrows[keeper[0]].getRectPos());
+            headArrows[1].setToChessur(headArrows[keeper[1]].getRectPos());
+            headArrows[2].setToChessur(headArrows[keeper[2]].getRectPos());
+            headArrows[3].setToChessur(headArrows[keeper[3]].getRectPos());
 
-            headArrows[4].setToChessur(headArrows[keeper[0] + 4].getRectPos(), color[0]);
-            headArrows[5].setToChessur(headArrows[keeper[1] + 4].getRectPos(), color[1]);
-            headArrows[6].setToChessur(headArrows[keeper[2] + 4].getRectPos(), color[2]);
-            headArrows[7].setToChessur(headArrows[keeper[3] + 4].getRectPos(), color[3]);
+            headArrows[4].setToChessur(headArrows[keeper[0] + 4].getRectPos());
+            headArrows[5].setToChessur(headArrows[keeper[1] + 4].getRectPos());
+            headArrows[6].setToChessur(headArrows[keeper[2] + 4].getRectPos());
+            headArrows[7].setToChessur(headArrows[keeper[3] + 4].getRectPos());
             chessurDurationKeep = 0.0f;
             keeper.Clear();
             chessurIsActive = true;
