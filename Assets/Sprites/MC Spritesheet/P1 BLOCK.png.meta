@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 8cba9202767468d44ab296239ddaec17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8521581668104243555
+    second: P1 BLOCK_0
+  - first:
+      213: -5133577238521257515
+    second: P1 BLOCK_1
+  - first:
+      213: -6291712615399233096
+    second: P1 BLOCK_2
+  - first:
+      213: -4596635520739768963
+    second: P1 BLOCK_3
+  - first:
+      213: 9080982255122559866
+    second: P1 BLOCK_4
+  - first:
+      213: 2426976218888820361
+    second: P1 BLOCK_5
+  - first:
+      213: -6081884425581900716
+    second: P1 BLOCK_6
+  - first:
+      213: -4413664731422194183
+    second: P1 BLOCK_7
+  - first:
+      213: 6856649836664804568
+    second: P1 BLOCK_8
+  - first:
+      213: -927646688320815659
+    second: P1 BLOCK_9
+  - first:
+      213: -11810873290225424
+    second: P1 BLOCK_10
+  - first:
+      213: 3842557451184127526
+    second: P1 BLOCK_11
+  - first:
+      213: -7055362791618932298
+    second: P1 BLOCK_12
+  - first:
+      213: 56308207604115081
+    second: P1 BLOCK_13
+  - first:
+      213: 3354057050559982806
+    second: P1 BLOCK_14
+  - first:
+      213: 4146047102562070272
+    second: P1 BLOCK_15
+  - first:
+      213: 7442858903955867849
+    second: P1 BLOCK_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P1 BLOCK_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5978b121cbbd840aa0cf0039ea6a42
+      internalID: -656614551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09614463baf727449093f022a66a7fe
+      internalID: -391741706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5fec636012f2a4ba980a358a8f683d
+      internalID: -1656478548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a69877125cd5449aeda157b3314c72
+      internalID: -1935369108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89d6c6252636b4409e5712830aeb651
+      internalID: 364212873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_5
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28e5cd0a8b22e94d85d18350894fa73
+      internalID: -1007442440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636109ad696c59f41ac7a35f35cdae5b
+      internalID: -195712186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0db5f24239a96c41856dae3be5af424
+      internalID: 759712813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_8
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaf7cb419517e2408f6edf42658e363
+      internalID: -1801859190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613c76a834cd91d4b87a3f18d54e2e48
+      internalID: -1985100201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5891415d066451b40877183bf78a9a52
+      internalID: 194988854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 BLOCK_11
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31bd9ed9c015324e9accd05fc645f5a
+      internalID: -2137676049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8849eac05542abb4abb955618ec3d86b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P1 BLOCK_0: -656614551
+      P1 BLOCK_1: -391741706
+      P1 BLOCK_10: 194988854
+      P1 BLOCK_11: -2137676049
+      P1 BLOCK_2: -1656478548
+      P1 BLOCK_3: -1935369108
+      P1 BLOCK_4: 364212873
+      P1 BLOCK_5: -1007442440
+      P1 BLOCK_6: -195712186
+      P1 BLOCK_7: 759712813
+      P1 BLOCK_8: -1801859190
+      P1 BLOCK_9: -1985100201
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

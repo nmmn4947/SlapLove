@@ -116,6 +116,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] playerFightDisplay animatorP1Fight;
     [SerializeField] playerFightDisplay animatorP2Fight;
+    [SerializeField] Canvas p1Canvas;
+    [SerializeField] Canvas p2Canvas;
 
     [Header("EndState")]
 
@@ -263,33 +265,48 @@ public class GameController : MonoBehaviour
         {
             if (damageThisBeatP1 == 0 && damageThisBeatP2 > 0)
             {
+                p1Canvas.sortingOrder = 1;
+                p2Canvas.sortingOrder = 0;
                 animatorP1Fight.playMiss();
                 animatorP2Fight.playSlap();
+                
                 SetP1Health(getP1Health() - (damageThisBeatP2));
             }
             else if (damageThisBeatP2 == 0 && damageThisBeatP1 > 0)
             {
+                p1Canvas.sortingOrder = 0;
+                p2Canvas.sortingOrder = 1;
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playMiss();
+                
                 SetP2Health(getP2Health() - (damageThisBeatP1));
             }
             else if (damageThisBeatP1 > damageThisBeatP2)
             {
+                p1Canvas.sortingOrder = 0;
+                p2Canvas.sortingOrder = 1;
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playHurt();
+                
                 SetP2Health(getP2Health() - (damageThisBeatP1 - damageThisBeatP2));
             }
             else if (damageThisBeatP2 > damageThisBeatP1)
             {
+                p1Canvas.sortingOrder = 1;
+                p2Canvas.sortingOrder = 0;
                 animatorP1Fight.playHurt();
                 animatorP2Fight.playSlap();
+                
                 SetP1Health(getP1Health() - (damageThisBeatP2 - damageThisBeatP1));
             }
             else if (damageThisBeatP1 == damageThisBeatP2 && damageThisBeatP1 != 0)
             {
                 //equal damage
+                p1Canvas.sortingOrder = 0;
+                p2Canvas.sortingOrder = 1;
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playHurt();
+
             }
             else
             {

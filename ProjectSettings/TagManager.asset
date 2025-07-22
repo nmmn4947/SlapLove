@@ -43,5 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 1187732475
+    locked: 0
+  - name: Arrows
+    uniqueID: 83318583
+    locked: 0
+  - name: Panel
+    uniqueID: 740842527
+    locked: 0
   m_RenderingLayers:
   - Default

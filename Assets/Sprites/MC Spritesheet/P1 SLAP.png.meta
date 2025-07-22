@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: d06dbadea826dae43843b0908b81f460
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7675678502448147654
+    second: P1 SLAP_0
+  - first:
+      213: 5563738371872716954
+    second: P1 SLAP_1
+  - first:
+      213: -6338518350548798371
+    second: P1 SLAP_2
+  - first:
+      213: 2801387426554730782
+    second: P1 SLAP_3
+  - first:
+      213: -6644520588946832340
+    second: P1 SLAP_4
+  - first:
+      213: 4840535850353551579
+    second: P1 SLAP_5
+  - first:
+      213: -6274219722506435056
+    second: P1 SLAP_6
+  - first:
+      213: -2410044347340437159
+    second: P1 SLAP_7
+  - first:
+      213: -8483884209513182816
+    second: P1 SLAP_8
+  - first:
+      213: 8303533071943493460
+    second: P1 SLAP_9
+  - first:
+      213: 8109073139057387625
+    second: P1 SLAP_10
+  - first:
+      213: 956359051319607865
+    second: P1 SLAP_11
+  - first:
+      213: -5758848745033291942
+    second: P1 SLAP_12
+  - first:
+      213: -1198316284947297825
+    second: P1 SLAP_13
+  - first:
+      213: 7261804745077074211
+    second: P1 SLAP_14
+  - first:
+      213: 704091105693166376
+    second: P1 SLAP_15
+  - first:
+      213: 1867293050813154000
+    second: P1 SLAP_16
+  - first:
+      213: 6427969249087277489
+    second: P1 SLAP_17
+  - first:
+      213: 7980063522703339558
+    second: P1 SLAP_18
+  - first:
+      213: -8383691658092031923
+    second: P1 SLAP_19
+  - first:
+      213: 4294885171162751978
+    second: P1 SLAP_20
+  - first:
+      213: -5995922597025857902
+    second: P1 SLAP_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P1 SLAP_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a253bb61c5cef2b4e90faa7d9c317ccc
+      internalID: 1725036113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376dec7e89cb20f40b1e11041dd466dd
+      internalID: -2003743674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2121
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e87ac967fb5584f96f249bee0626c0
+      internalID: -2128756092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ef4519606379c45805df7671b29c2c
+      internalID: -894851859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a58a19e54262c047aeea0d5067bc4c8
+      internalID: 415591726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_5
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1414
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a04883a48aba2142a3f8e944c59a1ff
+      internalID: -455638473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e24c7bcca52af540bc28e33d2c00cc5
+      internalID: -792335682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c064e5867c8fa4491db665ce8ac90b
+      internalID: 896731624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_8
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 707
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39135bbed4d6a2a4d99d999099080f03
+      internalID: 1327350330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ad07f9dd14e5147a176b63504583aa
+      internalID: -1626307246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cdb2f0c33088541b528d2313c21ac7
+      internalID: -474316916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1 SLAP_11
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfda09a69c3be6448ad5a64c1011fadb
+      internalID: -1753200172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 08ad0eb34b3526b4cb37e0c8c324f6a2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P1 SLAP_0: 1725036113
+      P1 SLAP_1: -2003743674
+      P1 SLAP_10: -474316916
+      P1 SLAP_11: -1753200172
+      P1 SLAP_2: -2128756092
+      P1 SLAP_3: -894851859
+      P1 SLAP_4: 415591726
+      P1 SLAP_5: -455638473
+      P1 SLAP_6: -792335682
+      P1 SLAP_7: 896731624
+      P1 SLAP_8: 1327350330
+      P1 SLAP_9: -1626307246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
