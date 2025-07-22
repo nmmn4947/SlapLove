@@ -261,7 +261,17 @@ public class GameController : MonoBehaviour
     {
         if (damageThisBeatP1 != -1 && damageThisBeatP2 != -1)
         {
-            if (damageThisBeatP1 > damageThisBeatP2)
+            if (damageThisBeatP1 == 0 && damageThisBeatP2 > 0)
+            {
+                animatorP1Fight.playMiss();
+                animatorP2Fight.playSlap();
+            }
+            else if (damageThisBeatP2 == 0 && damageThisBeatP1 > 0)
+            {
+                animatorP1Fight.playSlap();
+                animatorP2Fight.playMiss();
+            }
+            else if (damageThisBeatP1 > damageThisBeatP2)
             {
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playHurt();
@@ -277,13 +287,13 @@ public class GameController : MonoBehaviour
             {
                 //equal damage
                 animatorP1Fight.playSlap();
-                animatorP2Fight.playSlap();
+                animatorP2Fight.playHurt();
             }
             else
             {
                 //both misses
-                animatorP1Fight.playMiss();
-                animatorP2Fight.playMiss();
+                animatorP1Fight.playIdle();
+                animatorP2Fight.playIdle();
             }
 
             damageThisBeatP1 = -1; damageThisBeatP2 = -1;

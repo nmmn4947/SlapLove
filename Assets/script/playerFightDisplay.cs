@@ -37,6 +37,11 @@ public class playerFightDisplay : MonoBehaviour
         animator.Play("playerMiss");
     }
 
+    public void playIdle()
+    {
+        animator.Play("playerIdle");
+    }
+
     private IEnumerator shake()
     {
         float duration = 0.3f;
