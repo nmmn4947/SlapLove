@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: f7137a75b608ab641b9e7292b55038a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1933732761302048630
+    second: P2 Slap missed_0
+  - first:
+      213: 7243070347835422124
+    second: P2 Slap missed_1
+  - first:
+      213: 2964129304565796128
+    second: P2 Slap missed_2
+  - first:
+      213: -7408202018725121725
+    second: P2 Slap missed_3
+  - first:
+      213: 9183670680747446880
+    second: P2 Slap missed_4
+  - first:
+      213: 3279337916430331804
+    second: P2 Slap missed_5
+  - first:
+      213: -1723913192019086360
+    second: P2 Slap missed_6
+  - first:
+      213: 6623978498108745591
+    second: P2 Slap missed_7
+  - first:
+      213: 8318181244044881965
+    second: P2 Slap missed_8
+  - first:
+      213: -1240117984333411164
+    second: P2 Slap missed_9
+  - first:
+      213: 3146184021410075817
+    second: P2 Slap missed_10
+  - first:
+      213: -4486950398579751261
+    second: P2 Slap missed_11
+  - first:
+      213: -6387142384676651239
+    second: P2 Slap missed_12
+  - first:
+      213: 3104242572316035792
+    second: P2 Slap missed_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P2 Slap missed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2e8ce1cb08a6e4982e8dbb148a15c3
+      internalID: 545715596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_1
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 2160
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d04d087ac4480489243a11654910b5
+      internalID: -1136595003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_2
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 2160
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3291ada0bb70e6498a9ded6c0208693
+      internalID: -1751369011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e265ba4678b8b694796d21835b0c8477
+      internalID: 186872503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_4
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1440
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffeffb5b36a85a4d87ab9b0e31b7168
+      internalID: 1811601503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_5
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 1440
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1327d0bc87993e4f97fca3aa319525e
+      internalID: -1431991502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1772daba41aaaa4428070fef9035f7a1
+      internalID: -1661700702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_7
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 720
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480d1aaab70d85e4da1cb1b30c809c70
+      internalID: 1197404438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_8
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 720
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9431220998cedac48b9aba8ad96e42e9
+      internalID: -758067143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11941d0ad8da7a9478c79e5a4d7368b2
+      internalID: -1046162305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_10
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 0
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae37fb64bc0f8ec44b7844bc8118e1da
+      internalID: -1179733195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2 Slap missed_11
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 0
+        width: 1502
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1fa0e357d6afe4ca7c3eef3fe3e945
+      internalID: 487823614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ca8f9d45acc53c14b981d2d9d82ab974
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P2 Slap missed_0: 545715596
+      P2 Slap missed_1: -1136595003
+      P2 Slap missed_10: -1179733195
+      P2 Slap missed_11: 487823614
+      P2 Slap missed_2: -1751369011
+      P2 Slap missed_3: 186872503
+      P2 Slap missed_4: 1811601503
+      P2 Slap missed_5: -1431991502
+      P2 Slap missed_6: -1661700702
+      P2 Slap missed_7: 1197404438
+      P2 Slap missed_8: -758067143
+      P2 Slap missed_9: -1046162305
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
