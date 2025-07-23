@@ -42,6 +42,11 @@ public class playerFightDisplay : MonoBehaviour
         animator.Play("playerIdle");
     }
 
+    public void playSlapMissed()
+    {
+        animator.Play("playerSlapMissed");
+    }
+
     private IEnumerator shake()
     {
         float duration = 0.3f;
