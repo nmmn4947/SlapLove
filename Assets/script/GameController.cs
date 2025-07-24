@@ -630,6 +630,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+
     public void stopAllBeats(bool bull)
     {
         foreach (BeatArrow b in spawnedArrow1)
