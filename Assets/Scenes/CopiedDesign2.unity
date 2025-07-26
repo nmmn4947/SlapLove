@@ -3202,6 +3202,7 @@ GameObject:
   - component: {fileID: 552759097}
   - component: {fileID: 552759096}
   - component: {fileID: 552759098}
+  - component: {fileID: 552759099}
   m_Layer: 5
   m_Name: QteGuy
   m_TagString: Untagged
@@ -3278,9 +3279,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6004a5be7e5cfdd418cf28f18474b9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterAnimators:
+  - {fileID: 9100000, guid: 922fa49c2cf355443ba8ecc7631e9f0c, type: 2}
+  - {fileID: 9100000, guid: 922fa49c2cf355443ba8ecc7631e9f0c, type: 2}
+  - {fileID: 9100000, guid: 922fa49c2cf355443ba8ecc7631e9f0c, type: 2}
   _spriteOpen: {fileID: -1918056375, guid: 5d8349f154c30f34e9499fea8815c1e9, type: 3}
   _spriteWindUp: {fileID: 721825510, guid: 5d8349f154c30f34e9499fea8815c1e9, type: 3}
   _spriteClose: {fileID: 2056505305, guid: 5d8349f154c30f34e9499fea8815c1e9, type: 3}
+--- !u!95 &552759099
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552759094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 922fa49c2cf355443ba8ecc7631e9f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &575949982
 GameObject:
   m_ObjectHideFlags: 0

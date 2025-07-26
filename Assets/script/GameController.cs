@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 using TMPro;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using static GameController;
 using UnityEditor.Search;
 using MoreMountains.Feedbacks;
@@ -622,6 +620,7 @@ public class GameController : MonoBehaviour
     {
         if (qteCooldownKeep > qteCooldown - qteWindUpTime)
         {
+            Debug.Log("QTE Cooldown Keep: "+qteCooldownKeep + " qteCooldown: "+ qteCooldown+ " QTE WindUp Time: "+ qteWindUpTime);
             return true;
         }
         else
