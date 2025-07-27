@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using MoreMountains.Feedbacks;
-using Unity.VisualScripting;
+
 
 public class MaterialController : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class MaterialController : MonoBehaviour
     private float currentIntensity = 0f;
     private MMF_Player mMF_Player;
 
-    void Start()
+   void Start()
     {
         
         mMF_Player = GetComponent<MMF_Player>();
@@ -28,7 +28,8 @@ public class MaterialController : MonoBehaviour
 
 
     public void StartGlow()
-    { 
+    {
+        Debug.Log("Starting glow effect with intensity: " + maxIntensity);
         StartCoroutine(GlowCoroutine());
     }
 
@@ -43,6 +44,7 @@ public class MaterialController : MonoBehaviour
             lerpedValue = Mathf.Lerp(currentIntensity, maxIntensity, time);
             image.material.SetFloat("_GlowAmount", lerpedValue);
             timeElapsed += Time.deltaTime;
+            Debug.Log("Current lerped value: " + lerpedValue);
             yield return null;
             
         }

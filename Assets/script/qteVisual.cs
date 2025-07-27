@@ -1,11 +1,12 @@
 using System;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class qteVisual : MonoBehaviour
 {
-    [SerializeField] private AnimatorController[] characterAnimators;
+    [SerializeField] private GameObject[] character = new GameObject[3];
 
     [SerializeField] private Sprite _spriteOpen;
     [SerializeField] private Sprite _spriteWindUp;
@@ -17,17 +18,22 @@ public class qteVisual : MonoBehaviour
     void Start()
     {
         image = GetComponent<Image>();
+        Debug.Log(transform.name +"   character Length  "+character.Length);
+
         if (GameController.instance.GetCurrentCharState() == 0)
         {
-            animator.runtimeAnimatorController = characterAnimators[0];
+            GameObject obj = Instantiate(character[0], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
         }
         else if (GameController.instance.GetCurrentCharState() == 1)
         {
-            animator.runtimeAnimatorController = characterAnimators[1];
+            GameObject obj = Instantiate(character[1], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
         }
         else if (GameController.instance.GetCurrentCharState() == 2)
         {
-            animator.runtimeAnimatorController = characterAnimators[2];
+            GameObject obj = Instantiate(character[2], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
         }
         else
         {
