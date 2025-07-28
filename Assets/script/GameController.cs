@@ -323,6 +323,14 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
         setHealth(i);
+        if (getP1Health() <= 0 || getP2Health() <= 0)
+        {
+            AudioManager.Instance.PlaySFX("EchoSlap");
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("Slap");
+        }
     }
 
     public void SpawnBeats()

@@ -10540,6 +10540,16 @@ MonoBehaviour:
     outputGroup: {fileID: -4036974143370673452, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
     audioSource_m: {fileID: 386236273}
     bpmData: {fileID: 0}
+  - name: Slap
+    clip: {fileID: 8300000, guid: 7c34f4589b91ff74a9999d190790f33d, type: 3}
+    outputGroup: {fileID: -4036974143370673452, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
+    audioSource_m: {fileID: 386236273}
+    bpmData: {fileID: 0}
+  - name: EchoSlap
+    clip: {fileID: 8300000, guid: 0b519b4668d4782488df9225e50311df, type: 3}
+    outputGroup: {fileID: -4036974143370673452, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
+    audioSource_m: {fileID: 386236273}
+    bpmData: {fileID: 0}
   onQTE: {fileID: 57731967}
 --- !u!4 &2039095951
 Transform:
