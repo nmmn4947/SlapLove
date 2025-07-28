@@ -21,6 +21,7 @@ public class RandomCharacterState : GameBaseState
             gc.uiManager.SetResultScreen(true);
         }
         //gc.uiManager.SetGameplayState(true);
+        qteVisual.instance.spawnCharacterSprite();
         gc.uiManager.ResetP1ReadyState();
         gc.uiManager.ResetP2ReadyState();
     }

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pinocchio
+  m_Controller: {fileID: 9100000, guid: 922fa49c2cf355443ba8ecc7631e9f0c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9af8aaa51a1434848aa24358c87ad510, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cd05e915ac6a3bf41b2190a2bf86d122, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a5fd2d0fa325b0b4893978e9bfe0eda5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b7156299f176aa147baf1b0f8fb577a2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 854bc47c7ed5b1f4a9fa2ea48dda179a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2ebbb0e70a18ca54a9fc0b7f276161c1, type: 2}

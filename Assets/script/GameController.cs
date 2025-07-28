@@ -197,8 +197,7 @@ public class GameController : MonoBehaviour
         else
         {
             return spawnedArrow2.Peek().getDirection(); // peek = front
-        } 
-
+        }
     }
 
     public void AddStateCount()

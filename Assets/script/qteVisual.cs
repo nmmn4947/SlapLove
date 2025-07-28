@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class qteVisual : MonoBehaviour
 {
+    static public qteVisual instance;
+
     [SerializeField] private GameObject[] character = new GameObject[3];
 
     [SerializeField] private Sprite _spriteOpen;
@@ -14,36 +16,27 @@ public class qteVisual : MonoBehaviour
     private Animator animator;
     [SerializeField] private Sprite _spriteClose;
     Image image;
+    GameObject instantiatedObj = null;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         image = GetComponent<Image>();
-        Debug.Log(transform.name +"   character Length  "+character.Length);
-
-        if (GameController.instance.GetCurrentCharState() == 0)
-        {
-            GameObject obj = Instantiate(character[0], transform.position, Quaternion.identity, transform);
-            animator = obj.GetComponent<Animator>();
-        }
-        else if (GameController.instance.GetCurrentCharState() == 1)
-        {
-            GameObject obj = Instantiate(character[1], transform.position, Quaternion.identity, transform);
-            animator = obj.GetComponent<Animator>();
-        }
-        else if (GameController.instance.GetCurrentCharState() == 2)
-        {
-            GameObject obj = Instantiate(character[2], transform.position, Quaternion.identity, transform);
-            animator = obj.GetComponent<Animator>();
-        }
-        else
-        {
-            Debug.LogError("Invalid character state");
-        }
+        spawnCharacterSprite();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameController.instance)
+        {
+            
+        }
         if (GameController.instance.checkQTE())
         {
             animator.Play("Open");
@@ -55,6 +48,37 @@ public class qteVisual : MonoBehaviour
         else
         {
             animator.Play("Close");
+        }
+    }
+
+    public void spawnCharacterSprite()
+    {
+        if (instantiatedObj != null)
+        {
+            Destroy(instantiatedObj);
+            instantiatedObj = null;
+        }
+        if (GameController.instance.GetCurrentCharState() == 0)
+        {
+            GameObject obj = Instantiate(character[0], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
+            instantiatedObj = obj;
+        }
+        else if (GameController.instance.GetCurrentCharState() == 1)
+        {
+            GameObject obj = Instantiate(character[1], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
+            instantiatedObj = obj;
+        }
+        else if (GameController.instance.GetCurrentCharState() == 2)
+        {
+            GameObject obj = Instantiate(character[2], transform.position, Quaternion.identity, transform);
+            animator = obj.GetComponent<Animator>();
+            instantiatedObj = obj;
+        }
+        else
+        {
+            Debug.LogError("Invalid character state");
         }
     }
 }
