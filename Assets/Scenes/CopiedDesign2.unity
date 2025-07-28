@@ -11058,8 +11058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character:
-  - {fileID: 3271627775843575400, guid: 37e5e43c8b3410847a447e72d754a9c1, type: 3}
-  - {fileID: 3271627775843575400, guid: 37e5e43c8b3410847a447e72d754a9c1, type: 3}
+  - {fileID: 3271627775843575400, guid: c2471824afc3cc448a58c8f03ee7fa43, type: 3}
+  - {fileID: 3271627775843575400, guid: 70661d65f7bb89044bc0cdc7098d5cb7, type: 3}
   - {fileID: 3271627775843575400, guid: 37e5e43c8b3410847a447e72d754a9c1, type: 3}
   _spriteOpen: {fileID: -1918056375, guid: 5d8349f154c30f34e9499fea8815c1e9, type: 3}
   _spriteWindUp: {fileID: 721825510, guid: 5d8349f154c30f34e9499fea8815c1e9, type: 3}
