@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using TMPro;
 using static GameController;
@@ -134,7 +134,7 @@ public class GameController : MonoBehaviour
         gameplayState = new GameplayState(stateTime);
         uiManager = FindFirstObjectByType<UIManager>();
         audioManager = FindFirstObjectByType<AudioManager>();
-        qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
+        qteCooldown = UnityEngine.Random.Range(qteCooldownMin, qteCooldownMax);
         //Debug.Log(uiManager);
     }
 
@@ -183,7 +183,7 @@ public class GameController : MonoBehaviour
 
     public void characterRand()
     {
-        int r = randCharacter[Random.Range(0, randCharacter.Count)];
+        int r = randCharacter[UnityEngine.Random.Range(0, randCharacter.Count)];
         currentCharacter = (CharacterState)r;
         randCharacter.Remove(r);
     }
@@ -266,8 +266,7 @@ public class GameController : MonoBehaviour
                 p2Canvas.sortingOrder = 1;
                 animatorP1Fight.playMiss();
                 animatorP2Fight.playSlap();
-                
-                SetP1Health(getP1Health() - (damageThisBeatP2));
+                StartCoroutine(impactDamageDelay(SetP1Health, getP1Health() - (damageThisBeatP2)));
             }
             else if (damageThisBeatP2 == 0 && damageThisBeatP1 > 0)
             {
@@ -275,8 +274,8 @@ public class GameController : MonoBehaviour
                 p2Canvas.sortingOrder = 0;
                 animatorP1Fight.playSlap();
                 animatorP2Fight.playMiss();
-                
-                SetP2Health(getP2Health() - (damageThisBeatP1));
+
+                StartCoroutine(impactDamageDelay(SetP2Health, getP2Health() - (damageThisBeatP1)));
             }
             else if (damageThisBeatP1 > damageThisBeatP2)
             {
@@ -284,8 +283,8 @@ public class GameController : MonoBehaviour
                 p2Canvas.sortingOrder = 0;
                 animatorP1Fight.playSlapMissed();
                 animatorP2Fight.playHurt();
-                
-                SetP2Health(getP2Health() - (damageThisBeatP1 - damageThisBeatP2));
+
+                StartCoroutine(impactDamageDelay(SetP2Health, getP2Health() - (damageThisBeatP1 - damageThisBeatP2)));
             }
             else if (damageThisBeatP2 > damageThisBeatP1)
             {
@@ -294,7 +293,7 @@ public class GameController : MonoBehaviour
                 animatorP1Fight.playHurt();
                 animatorP2Fight.playSlapMissed();
 
-                SetP1Health(getP1Health() - (damageThisBeatP2 - damageThisBeatP1));
+                StartCoroutine(impactDamageDelay(SetP1Health, getP1Health() - (damageThisBeatP2 - damageThisBeatP1)));
             }
             else if (damageThisBeatP1 == damageThisBeatP2 && damageThisBeatP1 != 0)
             {
@@ -318,6 +317,12 @@ public class GameController : MonoBehaviour
         {
             
         }
+    }
+
+    IEnumerator impactDamageDelay(Action<int> setHealth, int i)
+    {
+        yield return new WaitForSeconds(0.15f);
+        setHealth(i);
     }
 
     public void SpawnBeats()
@@ -370,7 +375,7 @@ public class GameController : MonoBehaviour
         if (randPinoc == 2) // 1/pinoccioChance - chance
         {
             four.Remove(rand);
-            int randFour = four[Random.Range(0, 3)];
+            int randFour = four[UnityEngine.Random.Range(0, 3)];
 
             GameObject p1 = Instantiate(arrowPrefabs[rand], spawnPoints[randFour]);
             BeatArrow p1BA = p1.GetComponent<BeatArrow>();
@@ -448,7 +453,7 @@ public class GameController : MonoBehaviour
             List<Color> color = new List<Color>();
             for (int i = 0; i < 4; i++)
             {
-                int chosen = Random.Range(0, rander.Count);
+                int chosen = UnityEngine.Random.Range(0, rander.Count);
                 keeper.Add(rander[chosen]);
                 switch (rander[chosen])
                 {
@@ -607,7 +612,7 @@ public class GameController : MonoBehaviour
                 {
                     beatIsStop = false;
                     qteCooldownKeep = 0.0f;
-                    qteCooldown = Random.Range(qteCooldownMin, qteCooldownMax);
+                    qteCooldown = UnityEngine.Random.Range(qteCooldownMin, qteCooldownMax);
                     stopAllBeats(false);
                 }
             }
