@@ -754,4 +754,25 @@ public class GameController : MonoBehaviour
     {
         mMF_CameraShake.PlayFeedbacks();
     }
+
+    public void destroyBuggedArrows()
+    {
+        foreach (RectTransform rt in spawnPoints)
+        {
+            // Create a temporary list to store children, so we don’t modify the collection while iterating
+            List<Transform> children = new List<Transform>();
+
+            foreach (Transform child in rt)
+            {
+                children.Add(child);
+            }
+
+            foreach (Transform child in children)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+    }
+
+
 }

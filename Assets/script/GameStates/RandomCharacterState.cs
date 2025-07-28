@@ -36,6 +36,7 @@ public class RandomCharacterState : GameBaseState
         if(gc.uiManager.GetP1ReadyState() && gc.uiManager.GetP2ReadyState())
         {
             ResetHealth();
+            gc.destroyBuggedArrows();
             gc.SwitchState(gc.gameplayState);
         }
     }
