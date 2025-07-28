@@ -1,10 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResultScreen : MonoBehaviour
 {
     public GameObject p1Succ;
     public GameObject p2Succ;
+    public Image p1Image;
+    public Image p2Image;
 
     public TextMeshProUGUI dialogueText1;
     public TextMeshProUGUI nameText1;
@@ -14,6 +17,11 @@ public class ResultScreen : MonoBehaviour
     public string chessurDialogue;
     public string pinocchioDialogue;
     public string cinderrellaDialogue;
+
+    public Image displayImage;
+    public Sprite chessurSprite;
+    public Sprite pinocchioSprite;
+    public Sprite cinderrellaSprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,25 +62,30 @@ public class ResultScreen : MonoBehaviour
         {
             a = dialogueText1;
             a2 = nameText1;
+            displayImage = p1Image;
         }
         else
         {
             a = dialogueText2;
             a2 = nameText2;
+            displayImage = p2Image;
         }
         switch (GameController.instance.getPrevCharacter())
         {
             case "Chessur":
                 a.text = chessurDialogue;
                 a2.text = "Chessur";
+                displayImage.sprite = chessurSprite;
                 break;
             case "Pinocchio":
                 a.text = pinocchioDialogue;
                 a2.text = "Pinocchio";
+                displayImage.sprite = pinocchioSprite;
                 break;
             case "Cinderella":
                 a.text = cinderrellaDialogue;
                 a2.text = "Cinderella";
+                displayImage.sprite = cinderrellaSprite;
                 break;
         }
     }

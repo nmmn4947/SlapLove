@@ -32,9 +32,17 @@ public class UIManager : MonoBehaviour
         { 
             Debug.LogWarning("CharacterStateObjects is not assigned in the UIManager.");
         }
-        if (ResultObjects != null && GameController.instance.stateCount != 0)
+    }
+
+    public void SetResultScreen(bool state)
+    {
+        if (ResultObjects != null)
         {
             ResultObjects.SetActive(state);
+        }
+        else
+        {
+            Debug.LogWarning("ResultObjects is not assigned in the UIManager.");
         }
     }
     public void SetResultStage(bool state)

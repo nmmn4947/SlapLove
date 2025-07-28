@@ -11,8 +11,16 @@ public class RandomCharacterState : GameBaseState
         gameController = gc;
         gc.characterRand();
         once = false;
-        gc.uiManager.SetCharacterStage(true);
-        gc.uiManager.SetGameplayState(true);
+        gc.uiManager.SetGameplayState(false);
+        if (gc.GetStateCount() <1)
+        {
+            gc.uiManager.SetCharacterStage(true);
+        }
+        if(gc.GetStateCount() >= 1)
+        {
+            gc.uiManager.SetResultScreen(true);
+        }
+        //gc.uiManager.SetGameplayState(true);
         gc.uiManager.ResetP1ReadyState();
         gc.uiManager.ResetP2ReadyState();
     }

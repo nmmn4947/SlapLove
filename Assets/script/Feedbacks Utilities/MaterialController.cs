@@ -44,7 +44,6 @@ public class MaterialController : MonoBehaviour
             lerpedValue = Mathf.Lerp(currentIntensity, maxIntensity, time);
             image.material.SetFloat("_GlowAmount", lerpedValue);
             timeElapsed += Time.deltaTime;
-            Debug.Log("Current lerped value: " + lerpedValue);
             yield return null;
             
         }
