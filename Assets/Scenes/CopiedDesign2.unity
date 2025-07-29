@@ -1348,8 +1348,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Chessur
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 422216b8fcb6e0d468b3fe7f1241a790, type: 2}
+  m_sharedMaterial: {fileID: 286831852622971723, guid: 422216b8fcb6e0d468b3fe7f1241a790, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3960,8 +3960,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 422216b8fcb6e0d468b3fe7f1241a790, type: 2}
+  m_sharedMaterial: {fileID: 286831852622971723, guid: 422216b8fcb6e0d468b3fe7f1241a790, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
