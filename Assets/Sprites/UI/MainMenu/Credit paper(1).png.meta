@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe15ee5ff35c79342acbf55cbfdbdb12
+guid: c20ee7c52f2bef24597dd738ae5cf378
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2353571312451627304
-    second: Book_0
+      213: 3911551422639926338
+    second: Credit paper(1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Book_0
+      name: Credit paper(1)_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1207
         y: 0
-        width: 1410
-        height: 1080
+        width: 713
+        height: 845
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 829aa3093a099a020800000000000000
-      internalID: 2353571312451627304
+      spriteID: 24c602b6b4f984630800000000000000
+      internalID: 3911551422639926338
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Book_0: 2353571312451627304
+      Credit paper(1)_0: 3911551422639926338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

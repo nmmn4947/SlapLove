@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: fe15ee5ff35c79342acbf55cbfdbdb12
+guid: 22f10645678223840a0b29ad787e0a59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2353571312451627304
-    second: Book_0
+      213: 7449620113850771072
+    second: IMG_4584_0
+  - first:
+      213: -2526818941094268742
+    second: IMG_4584_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Book_0
+      name: IMG_4584_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1410
-        height: 1080
+        x: 867
+        y: 462
+        width: 194
+        height: 1135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 829aa3093a099a020800000000000000
-      internalID: 2353571312451627304
+      spriteID: 0862ea5160e526760800000000000000
+      internalID: 7449620113850771072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_4584_1
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 680
+        width: 50
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0f85c8f8feeecd0800000000000000
+      internalID: -2526818941094268742
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Book_0: 2353571312451627304
+      IMG_4584_0: 7449620113850771072
+      IMG_4584_1: -2526818941094268742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

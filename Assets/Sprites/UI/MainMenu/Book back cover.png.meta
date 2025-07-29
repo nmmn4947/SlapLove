@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe15ee5ff35c79342acbf55cbfdbdb12
+guid: 9a4def9fda30e1047a2a207ce0123073
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2353571312451627304
-    second: Book_0
+      213: -5605831605477589190
+    second: Book back cover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Book_0
+      name: Book back cover_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 117
         y: 0
-        width: 1410
+        width: 1499
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 829aa3093a099a020800000000000000
-      internalID: 2353571312451627304
+      spriteID: a3fb9d41bd51432b0800000000000000
+      internalID: -5605831605477589190
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Book_0: 2353571312451627304
+      Book back cover_0: -5605831605477589190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

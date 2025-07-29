@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe15ee5ff35c79342acbf55cbfdbdb12
+guid: 4bc90e542cc585a47bfd259992b40b60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2353571312451627304
-    second: Book_0
+      213: -5063830286385364612
+    second: Sound icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Book_0
+      name: Sound icon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1410
-        height: 1080
+        x: 473
+        y: 416
+        width: 1086
+        height: 1134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 829aa3093a099a020800000000000000
-      internalID: 2353571312451627304
+      spriteID: c71c2211f29a9b9b0800000000000000
+      internalID: -5063830286385364612
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Book_0: 2353571312451627304
+      Sound icon_0: -5063830286385364612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
