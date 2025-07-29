@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: ee7fd280563a9004cb819e9fa88009e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8501192523990106344
+    second: Nameintu_Chessur_0
+  - first:
+      213: -2748346394299813118
+    second: Nameintu_Chessur_1
+  - first:
+      213: 7504938589669244376
+    second: Nameintu_Chessur_2
+  - first:
+      213: -2298513994116840050
+    second: Nameintu_Chessur_3
+  - first:
+      213: 3835429171470536431
+    second: Nameintu_Chessur_4
+  - first:
+      213: -4828145911196824983
+    second: Nameintu_Chessur_5
+  - first:
+      213: -5941935459738270176
+    second: Nameintu_Chessur_6
+  - first:
+      213: 4311760834094944244
+    second: Nameintu_Chessur_7
+  - first:
+      213: -8165130338376154656
+    second: Nameintu_Chessur_8
+  - first:
+      213: -9130458217621330944
+    second: Nameintu_Chessur_9
+  - first:
+      213: -8629757173936436736
+    second: Nameintu_Chessur_10
+  - first:
+      213: -8277680658794649407
+    second: Nameintu_Chessur_11
+  - first:
+      213: 6304224123199706883
+    second: Nameintu_Chessur_12
+  - first:
+      213: -6653877208617785008
+    second: Nameintu_Chessur_13
+  - first:
+      213: -7450311266922770538
+    second: Nameintu_Chessur_14
+  - first:
+      213: -547605610621754507
+    second: Nameintu_Chessur_15
+  - first:
+      213: 3362056613404358659
+    second: Nameintu_Chessur_16
+  - first:
+      213: 5176617527951222370
+    second: Nameintu_Chessur_17
+  - first:
+      213: 6328882288846930987
+    second: Nameintu_Chessur_18
+  - first:
+      213: -8495957459270866021
+    second: Nameintu_Chessur_19
+  - first:
+      213: -5007801293134623518
+    second: Nameintu_Chessur_20
+  - first:
+      213: 5351522392476630025
+    second: Nameintu_Chessur_21
+  - first:
+      213: -8988337914151603556
+    second: Nameintu_Chessur_22
+  - first:
+      213: -6902475427807438001
+    second: Nameintu_Chessur_23
+  - first:
+      213: -2237300170830945387
+    second: Nameintu_Chessur_24
+  - first:
+      213: 5823573345437413085
+    second: Nameintu_Chessur_25
+  - first:
+      213: -7238368858284882049
+    second: Nameintu_Chessur_26
+  - first:
+      213: 2272419165456259282
+    second: Nameintu_Chessur_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nameintu_Chessur_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 127
+        width: 368
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e003af2f8d4af570800000000000000
+      internalID: 8501192523990106344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 92
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203b8080489ebd9d0800000000000000
+      internalID: -2748346394299813118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd3b5a62e5e62860800000000000000
+      internalID: 7504938589669244376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 92
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85c66d43b90a10e0800000000000000
+      internalID: -2298513994116840050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 112
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee0caea28e2a3530800000000000000
+      internalID: 3835429171470536431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_5
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 92
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96acb57dfdafefcb0800000000000000
+      internalID: -4828145911196824983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 112
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026c00c5e210a8da0800000000000000
+      internalID: -5941935459738270176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_7
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 91
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffcba842a376db30800000000000000
+      internalID: 4311760834094944244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_8
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 91
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1035cc731afae80800000000000000
+      internalID: -8165130338376154656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 91
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004622650a81a4180800000000000000
+      internalID: -9130458217621330944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 92
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ac3ad9291fc3880800000000000000
+      internalID: -8629757173936436736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_11
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 91
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c86c604c45cf1d80800000000000000
+      internalID: -8277680658794649407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 91
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30754c7507a1d7750800000000000000
+      internalID: 6304224123199706883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_13
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 92
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059e449beeda8a3a0800000000000000
+      internalID: -6653877208617785008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_14
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 91
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f4afc406d2b9890800000000000000
+      internalID: -7450311266922770538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 90
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57321e539938668f0800000000000000
+      internalID: -547605610621754507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_16
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 91
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30838bc4dac68ae20800000000000000
+      internalID: 3362056613404358659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 91
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266e79bf63a07d740800000000000000
+      internalID: 5176617527951222370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_18
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 91
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b248bfbe8e4b4d750800000000000000
+      internalID: 6328882288846930987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 91
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b645d44bb481a80800000000000000
+      internalID: -8495957459270866021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_20
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 27
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec08f0a147b08ab0800000000000000
+      internalID: -5007801293134623518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_21
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 28
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c3e1b234d644a40800000000000000
+      internalID: 5351522392476630025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_22
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 27
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9271d11a42034380800000000000000
+      internalID: -8988337914151603556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_23
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 27
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bdca65b2b7530a0800000000000000
+      internalID: -6902475427807438001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 27
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59363bd295383f0e0800000000000000
+      internalID: -2237300170830945387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_25
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 27
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddeea326a1d71d050800000000000000
+      internalID: 5823573345437413085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 28
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f770ea8bfd52c8b90800000000000000
+      internalID: -7238368858284882049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Chessur_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 10
+        width: 369
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d85fc1f031498f10800000000000000
+      internalID: 2272419165456259282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

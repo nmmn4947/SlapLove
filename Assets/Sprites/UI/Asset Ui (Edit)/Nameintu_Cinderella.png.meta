@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 2322462b94689ed4c8ca6ec32c868d5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2543215106967213954
+    second: Nameintu_Cinderella_0
+  - first:
+      213: 7752285215950928718
+    second: Nameintu_Cinderella_1
+  - first:
+      213: -8319661413872143776
+    second: Nameintu_Cinderella_2
+  - first:
+      213: -4355420851719844386
+    second: Nameintu_Cinderella_3
+  - first:
+      213: 8530261431752066657
+    second: Nameintu_Cinderella_4
+  - first:
+      213: 8203590541218694063
+    second: Nameintu_Cinderella_5
+  - first:
+      213: 2816474848601155916
+    second: Nameintu_Cinderella_6
+  - first:
+      213: 1913114781502062326
+    second: Nameintu_Cinderella_7
+  - first:
+      213: 3041470778569857993
+    second: Nameintu_Cinderella_8
+  - first:
+      213: -838619454580966573
+    second: Nameintu_Cinderella_9
+  - first:
+      213: -1990263024260136366
+    second: Nameintu_Cinderella_10
+  - first:
+      213: 1898516531400430590
+    second: Nameintu_Cinderella_11
+  - first:
+      213: -8537208273625347446
+    second: Nameintu_Cinderella_12
+  - first:
+      213: 7253737863432993161
+    second: Nameintu_Cinderella_13
+  - first:
+      213: -2905448245072793606
+    second: Nameintu_Cinderella_14
+  - first:
+      213: -9172199627285145246
+    second: Nameintu_Cinderella_15
+  - first:
+      213: 3555557840178012421
+    second: Nameintu_Cinderella_16
+  - first:
+      213: 6945839126705976697
+    second: Nameintu_Cinderella_17
+  - first:
+      213: -7284680656254141014
+    second: Nameintu_Cinderella_18
+  - first:
+      213: -5100959785901152653
+    second: Nameintu_Cinderella_19
+  - first:
+      213: 7678773538734187038
+    second: Nameintu_Cinderella_20
+  - first:
+      213: -5865392439350284958
+    second: Nameintu_Cinderella_21
+  - first:
+      213: -7287767652644112069
+    second: Nameintu_Cinderella_22
+  - first:
+      213: 2536829205871743044
+    second: Nameintu_Cinderella_23
+  - first:
+      213: -5320694027395960573
+    second: Nameintu_Cinderella_24
+  - first:
+      213: -5816145663620446162
+    second: Nameintu_Cinderella_25
+  - first:
+      213: 6407937306084182990
+    second: Nameintu_Cinderella_26
+  - first:
+      213: -4447563194369313050
+    second: Nameintu_Cinderella_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 137
+        width: 368
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287103e4aa05b4320800000000000000
+      internalID: 2543215106967213954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 102
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b744e9456a59b60800000000000000
+      internalID: 7752285215950928718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 102
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06270a60600aa8c80800000000000000
+      internalID: -8319661413872143776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 102
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eddc8e5bfcf6e83c0800000000000000
+      internalID: -4355420851719844386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 122
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1660cc0b393916670800000000000000
+      internalID: 8530261431752066657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 101
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3481cf12209d170800000000000000
+      internalID: 8203590541218694063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_6
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 101
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49a1b5d3f0261720800000000000000
+      internalID: 2816474848601155916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 101
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6febaf5f1cfbc8a10800000000000000
+      internalID: 1913114781502062326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_8
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 101
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb13670f89753a20800000000000000
+      internalID: 3041470778569857993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 101
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b38fb9c00ac54f0800000000000000
+      internalID: -838619454580966573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 102
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2524165035a2164e0800000000000000
+      internalID: -1990263024260136366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 101
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3545ef9b2e85a10800000000000000
+      internalID: 1898516531400430590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 102
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a0905ae4eb58980800000000000000
+      internalID: -8537208273625347446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 102
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98979b3a7247aa460800000000000000
+      internalID: 7253737863432993161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_14
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 101
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff672ff636cda7d0800000000000000
+      internalID: -2905448245072793606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_15
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 101
+        width: 46
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269d2be090dc5b080800000000000000
+      internalID: -9172199627285145246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_16
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 37
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5016a2a7401e75130800000000000000
+      internalID: 3555557840178012421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 73
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975b15692e3946060800000000000000
+      internalID: 6945839126705976697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_18
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 37
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aadffcdf98d97ea90800000000000000
+      internalID: -7284680656254141014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 38
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3762fcbc910c539b0800000000000000
+      internalID: -5100959785901152653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_20
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 38
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12abee79db709a60800000000000000
+      internalID: 7678773538734187038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_21
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 38
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26da34017a0f99ea0800000000000000
+      internalID: -5865392439350284958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_22
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 38
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39b092aee5acda90800000000000000
+      internalID: -7287767652644112069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 37
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44052d7d8b0a43320800000000000000
+      internalID: 2536829205871743044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_24
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 38
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301758ae8f81926b0800000000000000
+      internalID: -5320694027395960573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_25
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 37
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2889fd8556e84fa0800000000000000
+      internalID: -5816145663620446162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 37
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb0f1877019de850800000000000000
+      internalID: 6407937306084182990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Cinderella_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 20
+        width: 369
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6f383c6d41742c0800000000000000
+      internalID: -4447563194369313050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

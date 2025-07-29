@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: acedf9044d04fb449bf17b3cbe4aa6a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7455151674901463149
+    second: Nameintu_Pino_0
+  - first:
+      213: 866683800659852316
+    second: Nameintu_Pino_1
+  - first:
+      213: 1577864627502302207
+    second: Nameintu_Pino_2
+  - first:
+      213: -1539119847043540327
+    second: Nameintu_Pino_3
+  - first:
+      213: 4457879934361236710
+    second: Nameintu_Pino_4
+  - first:
+      213: 1411338762397749154
+    second: Nameintu_Pino_5
+  - first:
+      213: 2329526434138218012
+    second: Nameintu_Pino_6
+  - first:
+      213: -4128528522746988282
+    second: Nameintu_Pino_7
+  - first:
+      213: -4144278905982741940
+    second: Nameintu_Pino_8
+  - first:
+      213: 2570862510846471550
+    second: Nameintu_Pino_9
+  - first:
+      213: -4325838657045416860
+    second: Nameintu_Pino_10
+  - first:
+      213: 573468736128817907
+    second: Nameintu_Pino_11
+  - first:
+      213: -1712414352275484816
+    second: Nameintu_Pino_12
+  - first:
+      213: -43287362975548088
+    second: Nameintu_Pino_13
+  - first:
+      213: 5011382185087506516
+    second: Nameintu_Pino_14
+  - first:
+      213: 8640419461717172785
+    second: Nameintu_Pino_15
+  - first:
+      213: 5311038997688756769
+    second: Nameintu_Pino_16
+  - first:
+      213: 1845888217520183589
+    second: Nameintu_Pino_17
+  - first:
+      213: 3829204951928570640
+    second: Nameintu_Pino_18
+  - first:
+      213: -2073235516597566032
+    second: Nameintu_Pino_19
+  - first:
+      213: 2524081937578981518
+    second: Nameintu_Pino_20
+  - first:
+      213: 4980345133192841587
+    second: Nameintu_Pino_21
+  - first:
+      213: -8540724330624730726
+    second: Nameintu_Pino_22
+  - first:
+      213: 4464269598951229527
+    second: Nameintu_Pino_23
+  - first:
+      213: -8185331116011223915
+    second: Nameintu_Pino_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nameintu_Pino_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 138
+        width: 368
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60092103f4067760800000000000000
+      internalID: 7455151674901463149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 103
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c7ae62354170c00800000000000000
+      internalID: 866683800659852316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 103
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3cde1d483b5e510800000000000000
+      internalID: 1577864627502302207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 102
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a573a57a2f3aae0800000000000000
+      internalID: -1539119847043540327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 102
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e471f27e229ddd30800000000000000
+      internalID: 4457879934361236710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_5
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 103
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af05767025169310800000000000000
+      internalID: 1411338762397749154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 123
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ed0b113f3245020800000000000000
+      internalID: 2329526434138218012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 102
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609f894be2584b6c0800000000000000
+      internalID: -4128528522746988282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_8
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 101
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4211c6da409c76c0800000000000000
+      internalID: -4144278905982741940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 102
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d6f5525d98da320800000000000000
+      internalID: 2570862510846471550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 102
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464b72329a887f3c0800000000000000
+      internalID: -4325838657045416860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 103
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa10c2f6ce55f700800000000000000
+      internalID: 573468736128817907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_12
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 102
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07fc65828384c38e0800000000000000
+      internalID: -1712414352275484816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_13
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 39
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d349a6f56366ff0800000000000000
+      internalID: -43287362975548088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 74
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4589cdfbb810c8540800000000000000
+      internalID: 5011382185087506516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_15
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 39
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1322606b8bfe8e770800000000000000
+      internalID: 8640419461717172785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_16
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 74
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a2c7d44d994b940800000000000000
+      internalID: 5311038997688756769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_17
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 39
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5299e5ccd89ed9910800000000000000
+      internalID: 1845888217520183589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 39
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0138ed3ad91142530800000000000000
+      internalID: 3829204951928570640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_19
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 38
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b58a7938436a33e0800000000000000
+      internalID: -2073235516597566032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_20
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 38
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88ff592627570320800000000000000
+      internalID: 2524081937578981518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 38
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3790ecaf28dbd1540800000000000000
+      internalID: 4980345133192841587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_22
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 39
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99b394d870497980800000000000000
+      internalID: -8540724330624730726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 38
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758401b2c8544fd30800000000000000
+      internalID: 4464269598951229527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nameintu_Pino_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 21
+        width: 369
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594033db7bcd76e80800000000000000
+      internalID: -8185331116011223915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

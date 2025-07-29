@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using MoreMountains.Tools;
 
 public class UIManager : MonoBehaviour
 {
@@ -99,6 +100,7 @@ public class UIManager : MonoBehaviour
     {
         if (timerText != null)
         {
+            time = time.RoundDown(1); // Round down to 1 decimal place
             timerText.text = time.ToString(); // Format to 1 decimal places
         }
         else
