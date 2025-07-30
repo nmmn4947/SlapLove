@@ -11,8 +11,10 @@ public class ResultScreen : MonoBehaviour
 
     public TextMeshProUGUI dialogueText1;
     public TextMeshProUGUI nameText1;
+    public GameObject[] nameTags1;
     public TextMeshProUGUI dialogueText2;
     public TextMeshProUGUI nameText2;
+    public GameObject[] nameTags2;
 
     public string chessurDialogue;
     public string pinocchioDialogue;
@@ -60,33 +62,65 @@ public class ResultScreen : MonoBehaviour
         TextMeshProUGUI a2;
         if (b)
         {
+            nameTags1[0].SetActive(true);
             a = dialogueText1;
             a2 = nameText1;
             displayImage = p1Image;
+            switch (GameController.instance.getPrevCharacter())
+            {
+                case "Chessur":
+                    a.text = chessurDialogue;
+                    nameTags1[0].SetActive(true);
+                    displayImage.sprite = chessurSprite;
+                    break;
+                case "Pinocchio":
+                    a.text = pinocchioDialogue;
+                    nameTags1[1].SetActive(true);
+                    displayImage.sprite = pinocchioSprite;
+                    break;
+                case "Cinderella":
+                    a.text = cinderrellaDialogue;
+                    nameTags1[2].SetActive(true);
+                    displayImage.sprite = cinderrellaSprite;
+                    break;
+            }
         }
         else
         {
             a = dialogueText2;
             a2 = nameText2;
             displayImage = p2Image;
+            switch (GameController.instance.getPrevCharacter())
+            {
+                case "Chessur":
+                    a.text = chessurDialogue;
+                    nameTags2[0].SetActive(true);
+                    displayImage.sprite = chessurSprite;
+                    break;
+                case "Pinocchio":
+                    a.text = pinocchioDialogue;
+                    nameTags2[1].SetActive(true);
+                    displayImage.sprite = pinocchioSprite;
+                    break;
+                case "Cinderella":
+                    a.text = cinderrellaDialogue;
+                    nameTags2[2].SetActive(true);
+                    displayImage.sprite = cinderrellaSprite;
+                    break;
+            }
         }
-        switch (GameController.instance.getPrevCharacter())
+        
+    }
+
+    public void setNameTagsOff()
+    {
+        foreach (GameObject tag in nameTags1)
         {
-            case "Chessur":
-                a.text = chessurDialogue;
-                a2.text = "Chessur";
-                displayImage.sprite = chessurSprite;
-                break;
-            case "Pinocchio":
-                a.text = pinocchioDialogue;
-                a2.text = "Pinocchio";
-                displayImage.sprite = pinocchioSprite;
-                break;
-            case "Cinderella":
-                a.text = cinderrellaDialogue;
-                a2.text = "Cinderella";
-                displayImage.sprite = cinderrellaSprite;
-                break;
+            tag.SetActive(false);
+        }
+        foreach (GameObject tag in nameTags2)
+        {
+            tag.SetActive(false);
         }
     }
 }

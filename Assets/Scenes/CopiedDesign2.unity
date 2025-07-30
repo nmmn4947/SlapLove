@@ -1049,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &75551843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1151,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40528ff91ce6b642848f7aacac47c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &98459392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,7 +4026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &573048711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5667,7 +5668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &788064630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10660,7 +10661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1433510514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13102,7 +13103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1646879493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13177,7 +13178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1678550265
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14407,18 +14408,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 541745374}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1863089409}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
@@ -14426,15 +14439,31 @@ PrefabInstance:
       value: SetCharacterStage
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setNameTagsOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ResultScreen, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 527525593119414744, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 928528985655008591, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
@@ -14893,6 +14922,38 @@ PrefabInstance:
       value: I'm really happy that you remembered the rhythm and played it so beautifully.
         From now on, I also want to take the time to get to know you better.
       objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: nameTags1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: nameTags2.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags1.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1678550264}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags1.Array.data[1]'
+      value: 
+      objectReference: {fileID: 75551842}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags1.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1433510513}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 788064629}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags2.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1646879492}
+    - target: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+      propertyPath: 'nameTags2.Array.data[2]'
+      value: 
+      objectReference: {fileID: 573048710}
     - target: {fileID: 4967841392118351165, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
       propertyPath: m_text
       value: "Your cheek is all red. Are you okay? I was surprised because it seemed
@@ -15705,6 +15766,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7740671112321650418, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
   m_PrefabInstance: {fileID: 1803418708}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1863089409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4727797032759590216, guid: e80d1260ab23d5845ad1d785c6e78403, type: 3}
+  m_PrefabInstance: {fileID: 1803418708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863089408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c52494143050394686e177911877ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903696790
 GameObject:
   m_ObjectHideFlags: 0
