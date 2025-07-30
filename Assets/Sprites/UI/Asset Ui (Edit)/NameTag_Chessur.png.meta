@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NameTag_Chessur_0: -7512455425103368293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
