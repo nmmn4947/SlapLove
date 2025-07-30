@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pinocchio
   m_EditorClassIdentifier: 
   BPM: 60
-  ToHitTime: 1
+  ToHitTime: 2
