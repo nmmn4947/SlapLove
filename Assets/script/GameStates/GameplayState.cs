@@ -14,7 +14,7 @@ public class GameplayState : GameBaseState
     float chessurCinder = 140.0f;
     float songTime = 0.0f;
     bool songEnds = false;
-
+    bool once = false;
     public GameplayState(float stateTime)
     {
         this.stateTime = stateTime;
@@ -133,11 +133,17 @@ public class GameplayState : GameBaseState
         gc.stopCurrentMusic();
         if (gc.stateCount >= 2 || (gc.getP1TotalScore() == 2 || gc.getP2TotalScore() == 2))
         {
+
             //gc.stopAllBeatsNoRetract(true);
             Time.timeScale = 0.25f;
             keepBeforeChangeState += Time.unscaledDeltaTime;
             if (keepBeforeChangeState > timeBeforeChangeState - 0.5f)
             {
+                if (!once)
+                {
+                    AudioManager.Instance.PlaySFX("KO");
+                    once = true;
+                }
                 gc.setActiveKO();
             }
             if (keepBeforeChangeState > timeBeforeChangeState + 3.0f)
