@@ -525,7 +525,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2418019274400353029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -533,11 +533,11 @@ RectTransform:
   - {fileID: 129129052528762190}
   m_Father: {fileID: 1378338237678076770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -820, y: -479}
-  m_SizeDelta: {x: 206.19, y: 47.88}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 50, y: 60}
+  m_SizeDelta: {x: 206.19, y: 47.880005}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &5564019082261807392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -703,6 +703,7 @@ MonoBehaviour:
   - {fileID: 2506671565178216325}
   - {fileID: 5549212632637992290}
   isP1: 0
+  scoreImages: []
 --- !u!1 &2878140530656196430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1213,7 @@ MonoBehaviour:
   - {fileID: 7329669377790482063}
   - {fileID: 7914706713684647643}
   isP1: 1
+  scoreImages: []
 --- !u!1 &4571364776313203355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1240,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4571364776313203355}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1246,11 +1248,11 @@ RectTransform:
   - {fileID: 8949385633674693910}
   m_Father: {fileID: 1378338237678076770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 821, y: -479}
-  m_SizeDelta: {x: 206.19, y: 47.88}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -50, y: 60}
+  m_SizeDelta: {x: 206.19006, y: 47.880005}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &6365620300927853836
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2114,12 +2116,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1095869824545764763}
-  - {fileID: 5918209847606749701}
-  - {fileID: 928528985655008591}
   - {fileID: 2456922199772702991}
   - {fileID: 7258776814529578367}
   - {fileID: 7854451845722229383}
   - {fileID: 5001014470855431707}
+  - {fileID: 5918209847606749701}
+  - {fileID: 928528985655008591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2141,6 +2143,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1Succ: {fileID: 5236453878650855751}
   p2Succ: {fileID: 6369177420342150656}
+  p1Image: {fileID: 0}
+  p2Image: {fileID: 0}
+  dialogueText1: {fileID: 0}
+  nameText1: {fileID: 0}
+  dialogueText2: {fileID: 0}
+  nameText2: {fileID: 0}
+  chessurDialogue: 
+  pinocchioDialogue: 
+  cinderrellaDialogue: 
+  displayImage: {fileID: 0}
+  chessurSprite: {fileID: 0}
+  pinocchioSprite: {fileID: 0}
+  cinderrellaSprite: {fileID: 0}
 --- !u!1 &7958870678882571547
 GameObject:
   m_ObjectHideFlags: 0

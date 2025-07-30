@@ -96,11 +96,12 @@ public class UIManager : MonoBehaviour
         readyCheckP2.resetReady();
     }
 
+
     public void UpdateTimer(float time)
     {
         if (timerText != null)
         {
-            time = time.RoundDown(1); // Round down to 1 decimal place
+            time = time.RoundDown(0); // Round down to 0 decimal place
             timerText.text = time.ToString(); // Format to 1 decimal places
         }
         else

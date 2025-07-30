@@ -132,8 +132,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1960
-        height: 2362
+        width: 2502
+        height: 3402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Cisher_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1960
+        x: 2502
         y: 0
-        width: 1960
-        height: 2362
+        width: 2502
+        height: 3402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: Cisher_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 3920
+        x: 5004
         y: 0
-        width: 1960
-        height: 2362
+        width: 2502
+        height: 3402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: Cisher_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 5880
+        x: 7506
         y: 0
-        width: 1960
-        height: 2362
+        width: 2502
+        height: 3402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

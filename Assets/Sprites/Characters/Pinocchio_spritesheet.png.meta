@@ -126,8 +126,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1960
-        height: 2528
+        width: 1535
+        height: 2302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: Pinocchio_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1960
+        x: 1535
         y: 0
-        width: 1960
-        height: 2528
+        width: 1535
+        height: 2302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Pinocchio_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 3920
+        x: 3070
         y: 0
-        width: 1960
-        height: 2528
+        width: 1535
+        height: 2302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: Pinocchio_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 5880
+        x: 4605
         y: 0
-        width: 1960
-        height: 2528
+        width: 1535
+        height: 2302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
