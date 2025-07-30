@@ -35,17 +35,23 @@ public class CharacterTextDisplay : MonoBehaviour
                 titleText.text = "The Mischievous Cat";
                 descriptionText.text = chessurDescription;
                 chessurImage.SetActive(true);
+                pinoccioImage.SetActive(false);
+                cinderellaImage.SetActive(false);
                 break;
             case 1:
                 nameText.text = "Pinocchio";
                 titleText.text = "The Sweet Lie";
                 descriptionText.text = pinoccioDescription;
+                chessurImage.SetActive(false);
                 pinoccioImage.SetActive(true);
+                cinderellaImage.SetActive(false);
                 break;
             case 2:
                 nameText.text = "Cinderella";
                 titleText.text = "The Transient Dream";
                 descriptionText.text = cinderellaDescription;
+                chessurImage.SetActive(false);
+                pinoccioImage.SetActive(false);
                 cinderellaImage.SetActive(true);
                 break;
         }

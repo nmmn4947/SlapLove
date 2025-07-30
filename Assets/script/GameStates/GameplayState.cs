@@ -10,6 +10,10 @@ public class GameplayState : GameBaseState
     private float timeBeforeChangeState = 1.5f;
     private float keepBeforeChangeState = 0.0f;
     bool stateDone = false;
+    float pinoc = 190.0f;
+    float chessurCinder = 140.0f;
+    float songTime = 0.0f;
+    bool songEnds = false;
 
     public GameplayState(float stateTime)
     {
@@ -34,7 +38,16 @@ public class GameplayState : GameBaseState
         if (!stateDone) {
             if (!gc.checkQTE())
             {
-                CharacterLogicHandling();
+                if (!songEnds)
+                {
+                    CharacterLogicHandling();
+                }
+                else
+                {
+                    SetBGMusic();
+                    songEnds = false;
+                }
+                
 
                 if (gc.getP1Health() <= 0)
                 {
@@ -49,16 +62,18 @@ public class GameplayState : GameBaseState
                     gc.cameraShake();
                     stateDone = true;
                 }
-
-                stateTimeKeep += Time.deltaTime;
+/*                stateTimeKeep += Time.deltaTime;
                 gc.uiManager.UpdateTimer(stateTime - stateTimeKeep);
                 if (stateTimeKeep > stateTime)
                 {
                     gc.cameraShake();
                     stateDone = true;
-                }
+                }*/
             }
-            gc.checkIfDamagable();
+            if (!stateDone)
+            {
+                gc.checkIfDamagable();
+            }
         }
         else
         {
@@ -72,7 +87,6 @@ public class GameplayState : GameBaseState
         switch (characterState)
         {
             case CharacterState.Chessur:
-                
                 gameController.SwapHeadArrowRandomly();
                 gameController.BeatSpawning(gameController.SpawnBeats);
                 break;
@@ -82,6 +96,11 @@ public class GameplayState : GameBaseState
             case CharacterState.Cinderella:
                 gameController.BeatSpawning(gameController.SpawnCinderellaBeats);
                 break;
+        }
+        songTime -= Time.deltaTime;
+        if (songTime < 0.0f)
+        {
+            songEnds = true;
         }
     }
 
@@ -95,12 +114,15 @@ public class GameplayState : GameBaseState
         switch (characterState)
         {
             case CharacterState.Chessur:
+                songTime = chessurCinder;
                 gameController.audioManager.PlayMusic("Chessur");
                 break;
             case CharacterState.Pinocchio:
+                songTime = chessurCinder;
                 gameController.audioManager.PlayMusic("Pinocchio");
                 break;
             case CharacterState.Cinderella:
+                songTime = pinoc;
                 gameController.audioManager.PlayMusic("Cinderella");
                 break;
         }
@@ -109,12 +131,16 @@ public class GameplayState : GameBaseState
     void GoNextState(GameController gc)
     {
         gc.stopCurrentMusic();
-        if (gc.stateCount >= 2)
+        if (gc.stateCount >= 2 || (gc.getP1TotalScore() == 2 || gc.getP2TotalScore() == 2))
         {
             //gc.stopAllBeatsNoRetract(true);
             Time.timeScale = 0.25f;
             keepBeforeChangeState += Time.unscaledDeltaTime;
-            if (keepBeforeChangeState > timeBeforeChangeState)
+            if (keepBeforeChangeState > timeBeforeChangeState - 0.5f)
+            {
+                gc.setActiveKO();
+            }
+            if (keepBeforeChangeState > timeBeforeChangeState + 3.0f)
             {
                 Time.timeScale = 1.0f;
                 gc.stopAllBeatsNoRetract(false);

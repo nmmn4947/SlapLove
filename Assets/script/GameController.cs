@@ -31,11 +31,13 @@ public class GameController : MonoBehaviour
 
     private int[] player1ScoreEachStage = { -1, -1, -1 };
     public int getP1ScoreEachStage(int i) { return player1ScoreEachStage[i];  }
+    public int getP1TotalScore() { return player1TotalScore; }
 
     private int player1TotalScore = 0;
     private int[] player2ScoreEachStage = { -1, -1, -1 };
     public int getP2ScoreEachStage(int i) { return player2ScoreEachStage[i]; }
     private int player2TotalScore = 0;
+    public int getP2TotalScore() { return player2TotalScore; }
 
     enum GameState
     {
@@ -121,6 +123,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject EndStateObjects;
     [SerializeField] private TextMeshProUGUI textWin;
+    [SerializeField] private GameObject KO;
+    Animator animator;
 
     [Header("Game States")]
     public RandomCharacterState randomCharacterState = new RandomCharacterState();
@@ -130,6 +134,8 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        animator = KO.GetComponent<Animator>();
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         instance = this;
         gameplayState = new GameplayState(stateTime);
         uiManager = FindFirstObjectByType<UIManager>();
@@ -317,6 +323,11 @@ public class GameController : MonoBehaviour
         {
             
         }
+    }
+
+    public void setActiveKO()
+    {
+        KO.SetActive(true);
     }
 
     IEnumerator impactDamageDelay(Action<int> setHealth, int i)
