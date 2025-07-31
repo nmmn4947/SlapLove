@@ -20,7 +20,7 @@ public class AudioManagerMenu : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,7 +32,7 @@ public class AudioManagerMenu : MonoBehaviour
 
     private void Start()
     {
-        Instance.PlayMusic("Acoustic");
+        //Instance.PlayMusic("Acoustic");
     }
 
     public void AudioSourceInit()
@@ -195,12 +195,16 @@ public class AudioManagerMenu : MonoBehaviour
         }
     }
 
+    public void paperPlanes()
+    {
+        AudioManagerMenu.Instance.PlaySFX("Paper");
+    }
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "CopiedDesign2")
+/*        if (SceneManager.GetActiveScene().name == "CopiedDesign2")
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 }
 
