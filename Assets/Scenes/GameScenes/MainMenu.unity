@@ -1120,12 +1120,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449287499}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 826.59656, y: 728.6116, z: -4.8119717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1156807256}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &449287501
 MonoBehaviour:
@@ -1140,7 +1140,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
-  musicSounds: []
+  musicSounds:
+  - name: Acoustic
+    clip: {fileID: 8300000, guid: e6776454f9855394fbddd55c6848c753, type: 3}
+    outputGroup: {fileID: -6132329790880960455, guid: 87f09bb4793639c438447bae4c4fcca7, type: 2}
+    audioSource_m: {fileID: 0}
+    volume: 0.5
   sfxSounds: []
 --- !u!1 &478061695
 GameObject:
@@ -3514,7 +3519,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1180902358}
-  - {fileID: 449287500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180902357
@@ -6162,4 +6166,5 @@ SceneRoots:
   - {fileID: 1472521268}
   - {fileID: 1450921581}
   - {fileID: 1156807256}
+  - {fileID: 449287500}
   - {fileID: 2099970029}

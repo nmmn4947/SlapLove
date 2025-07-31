@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 
 public class AudioManagerMenu : MonoBehaviour
@@ -19,19 +20,19 @@ public class AudioManagerMenu : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
         else
         {
             Destroy(gameObject);
         }
-
+        DontDestroyOnLoad(gameObject);
         AudioSourceInit();
     }
 
     private void Start()
     {
-        Instance.PlayMusic("PlaceHolder");
+        Instance.PlayMusic("Acoustic");
     }
 
     public void AudioSourceInit()
@@ -191,6 +192,14 @@ public class AudioManagerMenu : MonoBehaviour
         else
         {
             s.audioSource_m.Stop();
+        }
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "CopiedDesign2")
+        {
+            Destroy(gameObject);
         }
     }
 }

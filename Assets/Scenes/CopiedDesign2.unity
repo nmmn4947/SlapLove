@@ -8004,7 +8004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 1
-  playerMaxHealth: 300
+  playerMaxHealth: 1000
   CharacterStateObjects: {fileID: 149770443}
   SlapStateObjects: {fileID: 391344705}
   arrowPrefabs:
